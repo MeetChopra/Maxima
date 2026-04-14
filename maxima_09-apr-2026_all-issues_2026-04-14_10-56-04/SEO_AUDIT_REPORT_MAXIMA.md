@@ -334,11 +334,46 @@ Google may flag this as spammy structured data if the same FAQ appears on 32 dif
 | Potentially duplicated           | 1     | maxima-named-to-ai64 (same as seed-series-a?)                                                                                                                   |
 
 
-**Recommendation:**
+### Recommended Meta Descriptions
 
-- Write unique, descriptive meta descriptions for all 8 pages using the generic default
-- Shorten the /security and /maxima-vs-floqast descriptions to under 160 characters
-- Rewrite the product-success-one-team description to be more specific and compelling
+#### Generic/Wrong — Legal Pages (replace "Maxima automates accounting with agentic AI...")
+
+| Page | Recommended Meta Description | Length |
+|---|---|---|
+| /legal | Maxima's cookie policy: how we use strictly necessary, functional, performance, targeting, and social media cookies on maxima.ai. | 129 |
+| /legal/privacy-policy | How Maxima collects, uses, and protects your personal data — covering account info, device logs, third-party disclosures, and your privacy rights. | 146 |
+| /legal/terms-of-service | Terms governing access to Maxima's AI accounting platform and websites, including usage rights, IP, liability limits, and California jurisdiction. | 145 |
+| /legal/cookie-policy | Maxima's cookie policy: how we use strictly necessary, functional, performance, targeting, and social media cookies on maxima.ai. | 129 |
+
+**Note:** The /legal page currently renders the cookie policy content. If /legal is intended as a landing page for all legal docs, use instead: "Access Maxima's legal documents — privacy policy, terms of service, and cookie policy for our AI accounting platform." (130 chars)
+
+#### Generic/Wrong — Articles (replace "Maxima automates accounting with agentic AI...")
+
+| Page | Recommended Meta Description | Length |
+|---|---|---|
+| /articles/ey-alumni-spotlight-maxima-ceo-yogi-goel | EY alumni spotlight: CEO Yogi Goel on how Maxima's agentic AI automates journals, reconciliations, and flux for multi-entity accounting teams. | 143 |
+| /articles/kleiner-perkins-investment-perspective | How Maxima's agentic AI platform automates record-to-report workflows with audit-ready agents for high-volume enterprise accounting. | 131 |
+| /articles/why-blackline-s-former-cmo... | BlackLine's former CSO Andres Botero on why he's investing in Maxima and how AI agents are moving accounting beyond legacy close software. | 138 |
+| /articles/reuters-exclusive-maxima | AI accounting startup Maxima raises $41M to build agentic automation for enterprise journals, reconciliations, and financial close. | 130 |
+
+#### Too Long — Shortened Versions (under 160 chars)
+
+| Page | Current Length | Recommended Meta Description | New Length |
+|---|---|---|---|
+| /security | 171 | Maxima security: SOC 1 & SOC 2 Type II, ISO 42001 certified. AES-256 encryption, US-only hosting, zero model training on customer data. | 137 |
+| /maxima-vs-floqast | 194 | Maxima vs FloQast: native integrations with 100+ systems, continuous daily automation, and AI agents that draft entries for accountant review. | 143 |
+
+#### Too Short/Vague — Rewritten
+
+| Page | Current | Recommended Meta Description | Length |
+|---|---|---|---|
+| /articles/product-success-one-team | Learn why product and deployment or success teams need to be unified | Why Maxima merged product and deployment into one team — how unified incentives cut resolution times from months to days in accounting software. | 143 |
+
+#### Potentially Duplicated — Unique Version
+
+| Page | Current (duplicated from seed-series-a) | Recommended Meta Description | Length |
+|---|---|---|---|
+| /articles/maxima-named-to-ai64... | Maxima announces $41M in funding to build an agentic AI platform for enterprise accounting... | Maxima named to Redpoint's AI64 list of top enterprise AI apps — delivering up to 80% faster close cycles and 95% task automation. | 129 |
 
 ---
 
