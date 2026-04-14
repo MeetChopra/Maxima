@@ -67,7 +67,8 @@ These images appear on every page (or nearly every page) via Framer's global hea
 **`w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png`** -- Article template shared image (13 article pages)
 ![w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png](images/w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png)
 - **Current Alt:** MISSING
-- **Status:** Pending
+- **Suggested Alt:** "Maxima logo icon" (blue mountain/M shape)
+- **Status:** Identified
 
 ---
 
@@ -105,13 +106,15 @@ For each page below, images are listed in the order they appear. Shared site-wid
 
 **`mI3M74ioo3PzJxjmiwybXMRKg.png`** -- Customer logo (1772x756)
 ![mI3M74ioo3PzJxjmiwybXMRKg.png](images/mI3M74ioo3PzJxjmiwybXMRKg.png)
-- **Suggested Alt:** Identify which company, e.g. "Scale AI logo"
+- **Suggested Alt:** "Groupe ADP logo"
+- **Status:** Identified
 
 ---
 
 **`aNadLCO7oIVRXVvqymeSiWwHrg.png`** -- Customer logo (1392x401)
 ![aNadLCO7oIVRXVvqymeSiWwHrg.png](images/aNadLCO7oIVRXVvqymeSiWwHrg.png)
-- **Suggested Alt:** Identify which company, e.g. "Rippling logo"
+- **Suggested Alt:** "Owl Labs logo"
+- **Status:** Identified
 
 ---
 
@@ -187,10 +190,10 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 
 | # | Preview | Framer Filename | What It Is | Suggested Alt Text |
 |---|---|---|---|---|
-| 1 | ![](images/7Megt5YYEEUMfEwmCgM9HZPFI9k.png) | `7Megt5YYEEUMfEwmCgM9HZPFI9k.png` | Blog article thumbnail | Use article title as alt |
-| 2 | ![](images/OMTw88vPFqJzaiaSmbYqndjFGU.png) | `OMTw88vPFqJzaiaSmbYqndjFGU.png` | Blog article thumbnail | Use article title as alt |
-| 3 | ![](images/PTvcVBayFg0cqO5C2sDLc5KD8.png) | `PTvcVBayFg0cqO5C2sDLc5KD8.png` | Blog article thumbnail | Use article title as alt |
-| 4 | ![](images/iee3e1EfvQdYNE5a9EhBmAIfgpo.png) | `iee3e1EfvQdYNE5a9EhBmAIfgpo.png` | Blog article thumbnail | Use article title as alt |
+| 1 | ![](images/7Megt5YYEEUMfEwmCgM9HZPFI9k.png) | `7Megt5YYEEUMfEwmCgM9HZPFI9k.png` | Abstract decorative blog thumbnail (3D geometric shapes in purple/blue) | Use article title as alt, e.g. "[Article Title] blog post thumbnail" |
+| 2 | ![](images/OMTw88vPFqJzaiaSmbYqndjFGU.png) | `OMTw88vPFqJzaiaSmbYqndjFGU.png` | Abstract decorative blog thumbnail (blue layered rectangles and circles) | Use article title as alt, e.g. "[Article Title] blog post thumbnail" |
+| 3 | ![](images/PTvcVBayFg0cqO5C2sDLc5KD8.png) | `PTvcVBayFg0cqO5C2sDLc5KD8.png` | Abstract decorative blog thumbnail (dark blue rectangles and grid) | Use article title as alt, e.g. "[Article Title] blog post thumbnail" |
+| 4 | ![](images/iee3e1EfvQdYNE5a9EhBmAIfgpo.png) | `iee3e1EfvQdYNE5a9EhBmAIfgpo.png` | Abstract decorative blog thumbnail (blue waves and circles) | Use article title as alt, e.g. "[Article Title] blog post thumbnail" |
 
 ---
 
@@ -200,12 +203,12 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 
 | # | Preview | Framer Filename | What It Is | Suggested Alt Text |
 |---|---|---|---|---|
-| 1 | ![](images/ED3hsTQ3LEeIySbLRVlbGg0dSd4.png) | `ED3hsTQ3LEeIySbLRVlbGg0dSd4.png` | Press article thumbnail | "Kleiner Perkins investment perspective article thumbnail" |
-| 2 | ![](images/9H3yHdrmyxt1xPG0X0L4ZnwChTg.png) | `9H3yHdrmyxt1xPG0X0L4ZnwChTg.png` | Press article thumbnail | "EY Alumni spotlight: Maxima CEO Yogi Goel article thumbnail" |
-| 3 | ![](images/aD3QabVBTs47OgmXph0lxmiKgeg.png) | `aD3QabVBTs47OgmXph0lxmiKgeg.png` | Press article thumbnail | "Why BlackLine's former CMO is investing in Maxima article thumbnail" |
-| 4 | ![](images/dbBES67ciKLqTaakFnv4qoBRs2E.png) | `dbBES67ciKLqTaakFnv4qoBRs2E.png` | Press article thumbnail | Identify article and add descriptive alt |
-| 5 | ![](images/diLXsJ7yohKZoAbDL6JEO5BEbko.png) | `diLXsJ7yohKZoAbDL6JEO5BEbko.png` | Press article thumbnail | Identify article and add descriptive alt |
-| 6 | ![](images/X7pEzANd3psWwBZE0aPIr2npYjE.png) | `X7pEzANd3psWwBZE0aPIr2npYjE.png` | Press article thumbnail | Identify article and add descriptive alt |
+| 1 | ![](images/ED3hsTQ3LEeIySbLRVlbGg0dSd4.png) | `ED3hsTQ3LEeIySbLRVlbGg0dSd4.png` | Publication logo | "TBPN logo" |
+| 2 | ![](images/9H3yHdrmyxt1xPG0X0L4ZnwChTg.png) | `9H3yHdrmyxt1xPG0X0L4ZnwChTg.png` | Publication logo | "FintechTV Exponential Voices logo" |
+| 3 | ![](images/aD3QabVBTs47OgmXph0lxmiKgeg.png) | `aD3QabVBTs47OgmXph0lxmiKgeg.png` | Publication logo | "Finimize logo" |
+| 4 | ![](images/dbBES67ciKLqTaakFnv4qoBRs2E.png) | `dbBES67ciKLqTaakFnv4qoBRs2E.png` | Publication logo | "Kleiner Perkins logo" |
+| 5 | ![](images/diLXsJ7yohKZoAbDL6JEO5BEbko.png) | `diLXsJ7yohKZoAbDL6JEO5BEbko.png` | Publication logo | "PYMNTS logo" |
+| 6 | ![](images/X7pEzANd3psWwBZE0aPIr2npYjE.png) | `X7pEzANd3psWwBZE0aPIr2npYjE.png` | Publication logo | "EY (Ernst & Young) logo" |
 
 ---
 
@@ -216,9 +219,9 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 | # | Preview | Framer Filename | What It Is | Suggested Alt Text |
 |---|---|---|---|---|
 | 1 | ![](images/FFNcjyi8WJ7aW7sXOOL0txwkw.webp) | `FFNcjyi8WJ7aW7sXOOL0txwkw.webp` | Customer logo or trust badge | Identify -- e.g. "G2 badge" or "[Company] logo" |
-| 2 | ![](images/jSJTx8xWClKJEVWqUbZZhSkZM.png) | `jSJTx8xWClKJEVWqUbZZhSkZM.png` | Customer logo or trust badge | Same |
-| 3 | ![](images/vZUp1eP4XzpEvfPWortIpfeJc.png) | `vZUp1eP4XzpEvfPWortIpfeJc.png` | Customer logo or trust badge | Same |
-| 4 | ![](images/VRrbQoRqaK06OBmVmnXn3EJgARU.png) | `VRrbQoRqaK06OBmVmnXn3EJgARU.png` | Customer logo or trust badge | Same |
+| 2 | ![](images/jSJTx8xWClKJEVWqUbZZhSkZM.png) | `jSJTx8xWClKJEVWqUbZZhSkZM.png` | Customer logo (white on transparent, very small) | "Customer logo" (too small/faint to identify precisely) |
+| 3 | ![](images/vZUp1eP4XzpEvfPWortIpfeJc.png) | `vZUp1eP4XzpEvfPWortIpfeJc.png` | Customer logo | "Rippling logo" |
+| 4 | ![](images/VRrbQoRqaK06OBmVmnXn3EJgARU.png) | `VRrbQoRqaK06OBmVmnXn3EJgARU.png` | Customer logo | "Gorgias logo" |
 
 ---
 
@@ -230,22 +233,22 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 
 | # | Preview | Framer Filename | Suggested Alt Text |
 |---|---|---|---|
-| 1 | ![](images/45E0cvGSRszAJnnlVamFD8Gec.jpeg) | `45E0cvGSRszAJnnlVamFD8Gec.jpeg` | Identify person -- "Name, Title at Company" |
-| 2 | ![](images/b4SAq6WcvsRoMgWzPYLaFL2CX0.jpeg) | `b4SAq6WcvsRoMgWzPYLaFL2CX0.jpeg` | Same |
-| 3 | ![](images/9WElAoGejJcGiyHN56SLSXWJ2U.jpeg) | `9WElAoGejJcGiyHN56SLSXWJ2U.jpeg` | Same |
-| 4 | ![](images/1G7SVddymDiD7MafqecJSKzz4ts.jpeg) | `1G7SVddymDiD7MafqecJSKzz4ts.jpeg` | Same |
+| 1 | ![](images/45E0cvGSRszAJnnlVamFD8Gec.jpeg) | `45E0cvGSRszAJnnlVamFD8Gec.jpeg` | Headshot of man in denim shirt against stone wall (needs name from Framer) |
+| 2 | ![](images/b4SAq6WcvsRoMgWzPYLaFL2CX0.jpeg) | `b4SAq6WcvsRoMgWzPYLaFL2CX0.jpeg` | Headshot of smiling man in pink t-shirt (needs name from Framer) |
+| 3 | ![](images/9WElAoGejJcGiyHN56SLSXWJ2U.jpeg) | `9WElAoGejJcGiyHN56SLSXWJ2U.jpeg` | Headshot of man in navy quarter-zip with chicken logo, teal t-shirt (needs name from Framer) |
+| 4 | ![](images/1G7SVddymDiD7MafqecJSKzz4ts.jpeg) | `1G7SVddymDiD7MafqecJSKzz4ts.jpeg` | Headshot of man with dark spiked hair and goatee, blue shirt under plaid blazer (needs name from Framer) |
 
 #### Comparison graphics & icons (missing alt):
 
 | # | Preview | Framer Filename | Suggested Alt Text |
 |---|---|---|---|
-| 1 | ![](images/6stZUxUReRn72GHdCCPoD4SGskI.png) | `6stZUxUReRn72GHdCCPoD4SGskI.png` | Identify -- likely feature comparison graphic |
-| 2 | ![](images/uNag2J6pd8UlLeQ9myHyTIvJXIA.png) | `uNag2J6pd8UlLeQ9myHyTIvJXIA.png` | Same |
-| 3 | ![](images/HfaLCxdC3xfmlQGeH9kcFsXYnk.png) | `HfaLCxdC3xfmlQGeH9kcFsXYnk.png` | Describe what is being compared |
-| 4 | ![](images/xBqVUrTX51Ag560dM2AzeQGhg.png) | `xBqVUrTX51Ag560dM2AzeQGhg.png` | Same |
-| 5 | ![](images/sk3MG8zImcTybJZRLQTHybRcBI.png) | `sk3MG8zImcTybJZRLQTHybRcBI.png` | Same |
-| 6 | ![](images/E28cFQQ3Thz0y0tODm7GpCMNQ4.png) | `E28cFQQ3Thz0y0tODm7GpCMNQ4.png` | Same |
-| 7 | ![](images/YuB06E5QQYPr5l0rr28J7C7Fk.png) | `YuB06E5QQYPr5l0rr28J7C7Fk.png` | Same |
+| 1 | ![](images/6stZUxUReRn72GHdCCPoD4SGskI.png) | `6stZUxUReRn72GHdCCPoD4SGskI.png` | Decorative blue/purple gradient background -- use `alt=""` |
+| 2 | ![](images/uNag2J6pd8UlLeQ9myHyTIvJXIA.png) | `uNag2J6pd8UlLeQ9myHyTIvJXIA.png` | "FloQast logo" |
+| 3 | ![](images/HfaLCxdC3xfmlQGeH9kcFsXYnk.png) | `HfaLCxdC3xfmlQGeH9kcFsXYnk.png` | Comparison graphic (1.4MB -- needs visual ID, skipped for size) |
+| 4 | ![](images/xBqVUrTX51Ag560dM2AzeQGhg.png) | `xBqVUrTX51Ag560dM2AzeQGhg.png` | "White logo on transparent background" (barely visible, hard to identify) |
+| 5 | ![](images/sk3MG8zImcTybJZRLQTHybRcBI.png) | `sk3MG8zImcTybJZRLQTHybRcBI.png` | Comparison graphic (1.4MB -- needs visual ID, skipped for size) |
+| 6 | ![](images/E28cFQQ3Thz0y0tODm7GpCMNQ4.png) | `E28cFQQ3Thz0y0tODm7GpCMNQ4.png` | "SpotOn logo" |
+| 7 | ![](images/YuB06E5QQYPr5l0rr28J7C7Fk.png) | `YuB06E5QQYPr5l0rr28J7C7Fk.png` | "Rippling logo" |
 
 ---
 
@@ -257,17 +260,17 @@ This article reviews 11 platforms (Maxima, BlackLine, FloQast, Tabs, Zuora, Brex
 
 | # | Preview | Framer Filename | Suggested Alt Text |
 |---|---|---|---|
-| 1 | ![](images/R7L9UulqDSwlrgho13ecW7XE.png) | `R7L9UulqDSwlrgho13ecW7XE.png` | "Comparison table of AI accounting tools across categories" |
-| 2 | ![](images/f571vQy8CgopN7b1nHR4VtFig.jpg) | `f571vQy8CgopN7b1nHR4VtFig.jpg` | Identify tool -- describe screenshot |
-| 3 | ![](images/UzC6B82Iksh9N8HPr4klrxBBq8o.png) | `UzC6B82Iksh9N8HPr4klrxBBq8o.png` | Identify tool being reviewed |
-| 4 | ![](images/8Zgyo3gRtYcZF2zZ2WkKQBcNI.png) | `8Zgyo3gRtYcZF2zZ2WkKQBcNI.png` | Identify tool being reviewed |
-| 5 | ![](images/vCQIi9K2toANtomgMZyD42Cr7hk.png) | `vCQIi9K2toANtomgMZyD42Cr7hk.png` | Identify tool being reviewed |
-| 6 | ![](images/iPzE1gzhHfNQrX7oowVeKjxjaOQ.webp) | `iPzE1gzhHfNQrX7oowVeKjxjaOQ.webp` | Identify tool being reviewed |
-| 7 | ![](images/3VEzpWFX1ncDEYQR7fGfW3V5SCQ.png) | `3VEzpWFX1ncDEYQR7fGfW3V5SCQ.png` | Identify tool being reviewed |
-| 8 | ![](images/PbqTwH8d4iNdMkcToFGfB441VPY.webp) | `PbqTwH8d4iNdMkcToFGfB441VPY.webp` | Identify tool being reviewed |
-| 9 | ![](images/4Y3o6CZKEV7aIA2DdmGBZ9X3s.png) | `4Y3o6CZKEV7aIA2DdmGBZ9X3s.png` | Identify tool being reviewed |
-| 10 | ![](images/mkvJdzhs6WyRPJZbGdQoV0GwUo.png) | `mkvJdzhs6WyRPJZbGdQoV0GwUo.png` | Identify tool being reviewed |
-| 11 | ![](images/8NTuUnklud4HHSVdsP9eSecuEQ.png) | `8NTuUnklud4HHSVdsP9eSecuEQ.png` | Identify tool being reviewed |
+| 1 | ![](images/R7L9UulqDSwlrgho13ecW7XE.png) | `R7L9UulqDSwlrgho13ecW7XE.png` | "Maxima platform screenshot showing PTO Accruals journal entry automation with NetSuite integration" |
+| 2 | ![](images/f571vQy8CgopN7b1nHR4VtFig.jpg) | `f571vQy8CgopN7b1nHR4VtFig.jpg` | "BlackLine dashboard showing task certification status, unreconciled balances, and tasks due" |
+| 3 | ![](images/UzC6B82Iksh9N8HPr4klrxBBq8o.png) | `UzC6B82Iksh9N8HPr4klrxBBq8o.png` | "FloQast dashboard showing checklists, reconciliations progress, and folder completion status" |
+| 4 | ![](images/8Zgyo3gRtYcZF2zZ2WkKQBcNI.png) | `8Zgyo3gRtYcZF2zZ2WkKQBcNI.png` | "Tabs AR Automation dashboard showing average days to pay, invoice metrics, and billing overview" |
+| 5 | ![](images/vCQIi9K2toANtomgMZyD42Cr7hk.png) | `vCQIi9K2toANtomgMZyD42Cr7hk.png` | "Zuora consumption dashboard showing seat usage, GB tracking, and overage costs" |
+| 6 | ![](images/iPzE1gzhHfNQrX7oowVeKjxjaOQ.webp) | `iPzE1gzhHfNQrX7oowVeKjxjaOQ.webp` | "Brex reports dashboard showing travel spend, out-of-policy expenses, and monthly spend trends" |
+| 7 | ![](images/3VEzpWFX1ncDEYQR7fGfW3V5SCQ.png) | `3VEzpWFX1ncDEYQR7fGfW3V5SCQ.png` | "Ramp travel insights dashboard showing spend map, trip details, and expense breakdown" |
+| 8 | ![](images/PbqTwH8d4iNdMkcToFGfB441VPY.webp) | `PbqTwH8d4iNdMkcToFGfB441VPY.webp` | "Trullion usage dashboard showing total usage, monthly breakdown by category, and user-level activity" |
+| 9 | ![](images/4Y3o6CZKEV7aIA2DdmGBZ9X3s.png) | `4Y3o6CZKEV7aIA2DdmGBZ9X3s.png` | "Klarity Architect processes view showing risk levels, systems used, and automation percentages" |
+| 10 | ![](images/mkvJdzhs6WyRPJZbGdQoV0GwUo.png) | `mkvJdzhs6WyRPJZbGdQoV0GwUo.png` | "Pigment executive summary showing revenue attainment, cash flow summary, and net profit waterfall chart" |
+| 11 | ![](images/8NTuUnklud4HHSVdsP9eSecuEQ.png) | `8NTuUnklud4HHSVdsP9eSecuEQ.png` | "Abacum management report showing revenue, YoY growth, opex, headcount, and budget scenario planning" |
 
 ---
 
@@ -277,8 +280,8 @@ This article reviews 11 platforms (Maxima, BlackLine, FloQast, Tabs, Zuora, Brex
 
 | # | Preview | Framer Filename | What It Is | Suggested Alt Text |
 |---|---|---|---|---|
-| 1 | ![](images/3UVdFS4uFQpoDZ00KLKs4Br4HAI.png) | `3UVdFS4uFQpoDZ00KLKs4Br4HAI.png` | In-article illustration or diagram | Describe -- e.g. "Diagram showing how errors propagate through accounting workflows" |
-| 2 | ![](images/vADRg9PkaoVtnP3Nbp7G3QTxqeQ.png) | `vADRg9PkaoVtnP3Nbp7G3QTxqeQ.png` | In-article illustration or diagram | Describe what the image shows |
+| 1 | ![](images/3UVdFS4uFQpoDZ00KLKs4Br4HAI.png) | `3UVdFS4uFQpoDZ00KLKs4Br4HAI.png` | Line chart | "Account Balance Accuracy chart comparing AI models (Opus, Sonnet, Grok, Gemini, o3, o4-mini) showing accuracy decline over 13 months" |
+| 2 | ![](images/vADRg9PkaoVtnP3Nbp7G3QTxqeQ.png) | `vADRg9PkaoVtnP3Nbp7G3QTxqeQ.png` | Iceberg comparison diagram | "Iceberg diagram comparing generalized LLM models vs Maxima: LLMs appear accurate on the surface but lack memory, financial data links, accounting understanding, and validation; Maxima delivers audit-ready outputs grounded in GL data with accounting-specific skills and controls" |
 
 ---
 
@@ -288,9 +291,9 @@ This article reviews 11 platforms (Maxima, BlackLine, FloQast, Tabs, Zuora, Brex
 
 | # | Preview | Framer Filename | What It Is | Suggested Alt Text |
 |---|---|---|---|---|
-| 1 | ![](images/VEgoeMjxNcZHyt6gs3u0mnM5du4.png) | `VEgoeMjxNcZHyt6gs3u0mnM5du4.png` | In-article illustration | Describe -- e.g. "Illustration of the future CFO office with AI agent workflows" |
-| 2 | ![](images/eLJiMRSgNORQAVepTBi0336jGk.png) | `eLJiMRSgNORQAVepTBi0336jGk.png` | In-article illustration | Describe content |
-| 3 | ![](images/mpAqItRV41cXj4GeLRmTfUkJY.png) | `mpAqItRV41cXj4GeLRmTfUkJY.png` | In-article illustration | Describe content |
+| 1 | ![](images/VEgoeMjxNcZHyt6gs3u0mnM5du4.png) | `VEgoeMjxNcZHyt6gs3u0mnM5du4.png` | Workflow diagram | "Diagram of traditional CFO office workflow: system of transaction to human system of action (accountants, preparers, reviewers) to human system of intelligence (Director, VP, CAO, CFO) with quarterly audits" |
+| 2 | ![](images/eLJiMRSgNORQAVepTBi0336jGk.png) | `eLJiMRSgNORQAVepTBi0336jGk.png` | Workflow diagram | "Diagram of Maxima-powered workflow: system of transaction to Maxima system of work with 24/7 error detection and AI assistants alongside accountants to system of record" |
+| 3 | ![](images/mpAqItRV41cXj4GeLRmTfUkJY.png) | `mpAqItRV41cXj4GeLRmTfUkJY.png` | Concept illustration | "Two-card illustration comparing Actionable (agents take the action) and Dynamic (AI preps the analysis) capabilities" |
 
 ---
 
@@ -300,7 +303,7 @@ This article reviews 11 platforms (Maxima, BlackLine, FloQast, Tabs, Zuora, Brex
 
 | # | Preview | Framer Filename | What It Is | Suggested Alt Text |
 |---|---|---|---|---|
-| 1 | ![](images/bb7hBnvbLl86twSqj0nYm1cBLLU.jpg) | `bb7hBnvbLl86twSqj0nYm1cBLLU.jpg` | Hero image or funding announcement graphic | "Maxima $41M funding announcement graphic" |
+| 1 | ![](images/bb7hBnvbLl86twSqj0nYm1cBLLU.jpg) | `bb7hBnvbLl86twSqj0nYm1cBLLU.jpg` | Funding announcement graphic | "Maxima $41M Seed and Series A funding announcement, led by Redpoint, Kleiner Perkins, and Audacious, with participation from Datadog, OpenAI, Oracle NetSuite, Ramp, Rippling, and FOG" |
 
 ---
 
