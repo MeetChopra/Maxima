@@ -186,14 +186,16 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 
 ### Blog (`/blog`)
 
-**Total images:** ~15 | **Missing alt:** 7 | **With alt:** ~8
+**Total images:** ~15 | **Missing alt:** 7 (4 blog-specific + 3 site-wide shared) | **With alt:** ~8
+
+> **Note:** Ahrefs reports 7 missing-alt images on this page. 3 of those are site-wide shared images already covered above: `Sfz6mVl5Wq1Zdym07lodksvCE.png` (footer background), `vl8RF4iXhvG4IFYwq1fc6JhmF2c.png` (decorative background), and `oSCs67tz1q007qoOCmTmCOUzLvU.png` (Framer rendering artifact). The 4 blog-specific thumbnails are listed below.
 
 | # | Preview | Framer Filename | What It Is | Suggested Alt Text |
 |---|---|---|---|---|
-| 1 | ![](images/7Megt5YYEEUMfEwmCgM9HZPFI9k.png) | `7Megt5YYEEUMfEwmCgM9HZPFI9k.png` | Abstract decorative blog thumbnail (3D geometric shapes in purple/blue) | Use article title as alt, e.g. "[Article Title] blog post thumbnail" |
-| 2 | ![](images/OMTw88vPFqJzaiaSmbYqndjFGU.png) | `OMTw88vPFqJzaiaSmbYqndjFGU.png` | Abstract decorative blog thumbnail (blue layered rectangles and circles) | Use article title as alt, e.g. "[Article Title] blog post thumbnail" |
-| 3 | ![](images/PTvcVBayFg0cqO5C2sDLc5KD8.png) | `PTvcVBayFg0cqO5C2sDLc5KD8.png` | Abstract decorative blog thumbnail (dark blue rectangles and grid) | Use article title as alt, e.g. "[Article Title] blog post thumbnail" |
-| 4 | ![](images/iee3e1EfvQdYNE5a9EhBmAIfgpo.png) | `iee3e1EfvQdYNE5a9EhBmAIfgpo.png` | Abstract decorative blog thumbnail (blue waves and circles) | Use article title as alt, e.g. "[Article Title] blog post thumbnail" |
+| 1 | ![](images/7Megt5YYEEUMfEwmCgM9HZPFI9k.png) | `7Megt5YYEEUMfEwmCgM9HZPFI9k.png` | Blog thumbnail for "Reconciliations in accounting: the definitive guide" | "Thumbnail for Reconciliations in accounting: the definitive guide" |
+| 2 | ![](images/OMTw88vPFqJzaiaSmbYqndjFGU.png) | `OMTw88vPFqJzaiaSmbYqndjFGU.png` | Blog thumbnail for "7 best financial close software solutions to evaluate in 2026" | "Thumbnail for 7 best financial close software solutions to evaluate in 2026" |
+| 3 | ![](images/PTvcVBayFg0cqO5C2sDLc5KD8.png) | `PTvcVBayFg0cqO5C2sDLc5KD8.png` | Blog thumbnail for "AI tools for accounting: best software, categories, and buyer guide (2026)" | "Thumbnail for AI tools for accounting: best software, categories, and buyer guide" |
+| 4 | ![](images/iee3e1EfvQdYNE5a9EhBmAIfgpo.png) | `iee3e1EfvQdYNE5a9EhBmAIfgpo.png` | Blog thumbnail for "Variance analysis: the definitive guide to explaining the numbers" | "Thumbnail for Variance analysis: the definitive guide to explaining the numbers" |
 
 ---
 
