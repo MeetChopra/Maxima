@@ -285,19 +285,19 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 This article reviews 11 platforms (Maxima, BlackLine, FloQast, Tabs, Zuora, Brex, Ramp, Trullion, Klarity, Pigment, Abacum). The in-article images likely correspond to screenshots or logos of these platforms. **Visually match each image to its platform in Framer.**
 
 
-| #   | Preview | Framer Filename                    | Suggested Alt Text                                                                                        |
+| #   | Preview | Framer Filename                    | Fixed Alt Text                                                                                        |
 | --- | ------- | ---------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | 1   | ![](images/R7L9UulqDSwlrgho13ecW7XE.png) | `R7L9UulqDSwlrgho13ecW7XE.png`     | "Maxima platform screenshot showing PTO Accruals journal entry automation with NetSuite integration"      |
-| 2   | ![](images/f571vQy8CgopN7b1nHR4VtFig.jpg) | `f571vQy8CgopN7b1nHR4VtFig.jpg`    | "BlackLine dashboard showing task certification status, unreconciled balances, and tasks due"             |
-| 3   | ![](images/UzC6B82Iksh9N8HPr4klrxBBq8o.png) | `UzC6B82Iksh9N8HPr4klrxBBq8o.png`  | "FloQast dashboard showing checklists, reconciliations progress, and folder completion status"            |
-| 4   | ![](images/8Zgyo3gRtYcZF2zZ2WkKQBcNI.png) | `8Zgyo3gRtYcZF2zZ2WkKQBcNI.png`    | "Tabs AR Automation dashboard showing average days to pay, invoice metrics, and billing overview"         |
-| 5   | ![](images/vCQIi9K2toANtomgMZyD42Cr7hk.png) | `vCQIi9K2toANtomgMZyD42Cr7hk.png`  | "Zuora consumption dashboard showing seat usage, GB tracking, and overage costs"                          |
-| 6   | ![](images/iPzE1gzhHfNQrX7oowVeKjxjaOQ.webp) | `iPzE1gzhHfNQrX7oowVeKjxjaOQ.webp` | "Brex reports dashboard showing travel spend, out-of-policy expenses, and monthly spend trends"           |
-| 7   | ![](images/3VEzpWFX1ncDEYQR7fGfW3V5SCQ.png) | `3VEzpWFX1ncDEYQR7fGfW3V5SCQ.png`  | "Ramp travel insights dashboard showing spend map, trip details, and expense breakdown"                   |
-| 8   | ![](images/PbqTwH8d4iNdMkcToFGfB441VPY.webp) | `PbqTwH8d4iNdMkcToFGfB441VPY.webp` | "Trullion usage dashboard showing total usage, monthly breakdown by category, and user-level activity"    |
-| 9   | ![](images/4Y3o6CZKEV7aIA2DdmGBZ9X3s.png) | `4Y3o6CZKEV7aIA2DdmGBZ9X3s.png`    | "Klarity Architect processes view showing risk levels, systems used, and automation percentages"          |
-| 10  | ![](images/mkvJdzhs6WyRPJZbGdQoV0GwUo.png) | `mkvJdzhs6WyRPJZbGdQoV0GwUo.png`   | "Pigment executive summary showing revenue attainment, cash flow summary, and net profit waterfall chart" |
-| 11  | ![](images/8NTuUnklud4HHSVdsP9eSecuEQ.png) | `8NTuUnklud4HHSVdsP9eSecuEQ.png`   | "Abacum management report showing revenue, YoY growth, opex, headcount, and budget scenario planning"     |
+| 2   | ![](images/f571vQy8CgopN7b1nHR4VtFig.jpg) | `f571vQy8CgopN7b1nHR4VtFig.jpg`    | "BlackLine dashboard"             |
+| 3   | ![](images/UzC6B82Iksh9N8HPr4klrxBBq8o.png) | `UzC6B82Iksh9N8HPr4klrxBBq8o.png`  | "FloQast dashboard showing checklists"            |
+| 4   | ![](images/8Zgyo3gRtYcZF2zZ2WkKQBcNI.png) | `8Zgyo3gRtYcZF2zZ2WkKQBcNI.png`    | "Tabs AR Automation dashboard"         |
+| 5   | ![](images/vCQIi9K2toANtomgMZyD42Cr7hk.png) | `vCQIi9K2toANtomgMZyD42Cr7hk.png`  | "Zuora consumption dashboard"                          |
+| 6   | ![](images/iPzE1gzhHfNQrX7oowVeKjxjaOQ.webp) | `iPzE1gzhHfNQrX7oowVeKjxjaOQ.webp` | "Brex reports dashboard"           |
+| 7   | ![](images/3VEzpWFX1ncDEYQR7fGfW3V5SCQ.png) | `3VEzpWFX1ncDEYQR7fGfW3V5SCQ.png`  | "Ramp insights dashboard"                   |
+| 8   | ![](images/PbqTwH8d4iNdMkcToFGfB441VPY.webp) | `PbqTwH8d4iNdMkcToFGfB441VPY.webp` | "Trullion dashboard"    |
+| 9   | ![](images/4Y3o6CZKEV7aIA2DdmGBZ9X3s.png) | `4Y3o6CZKEV7aIA2DdmGBZ9X3s.png`    | "Klarity Dashboard"          |
+| 10  | ![](images/mkvJdzhs6WyRPJZbGdQoV0GwUo.png) | `mkvJdzhs6WyRPJZbGdQoV0GwUo.png`   | "Pigment Dashboard" |
+| 11  | ![](images/8NTuUnklud4HHSVdsP9eSecuEQ.png) | `8NTuUnklud4HHSVdsP9eSecuEQ.png`   | "Abacum Dashboard"     |
 
 
 ---
