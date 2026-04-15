@@ -166,8 +166,8 @@ This page has 30 team member headshots, all missing alt text.
 
 | #   | Preview | Framer Filename                   | Fixed Alt Text                                      |
 | --- | ------- | --------------------------------- | ------------------------------------------------------- |
-| 1   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/FFNcjyi8WJ7aW7sXOOL0txwkw.webp) | `FFNcjyi8WJ7aW7sXOOL0txwkw.webp`  | Identify -- e.g. "G2 badge" or "[Company] logo"         |
-| 2   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/jSJTx8xWClKJEVWqUbZZhSkZM.png) | `jSJTx8xWClKJEVWqUbZZhSkZM.png`   | "Customer logo" (too small/faint to identify precisely) |
+| 1   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/FFNcjyi8WJ7aW7sXOOL0txwkw.webp) | `FFNcjyi8WJ7aW7sXOOL0txwkw.webp`  | Decorative Illustration         |
+| 2   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/jSJTx8xWClKJEVWqUbZZhSkZM.png) | `jSJTx8xWClKJEVWqUbZZhSkZM.png`   | Scale AI logo |
 | 3   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/vZUp1eP4XzpEvfPWortIpfeJc.png) | `vZUp1eP4XzpEvfPWortIpfeJc.png`   | "Rippling logo"                                         |
 | 4   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/VRrbQoRqaK06OBmVmnXn3EJgARU.png) | `VRrbQoRqaK06OBmVmnXn3EJgARU.png` | "Gorgias logo"                                          |
 
