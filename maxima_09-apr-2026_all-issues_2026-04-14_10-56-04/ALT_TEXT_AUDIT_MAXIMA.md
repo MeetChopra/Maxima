@@ -105,7 +105,7 @@ For each page below, images are listed in the order they appear. Shared site-wid
 
 ### Homepage (`/`)
 
-**Total images:** 22 unique | **Missing alt:** 5 | **With alt:** 17
+**Total images:** 22 unique | **Missing alt:** 2 (+ 3 shared site-wide) | **With alt:** 17
 
 **Issues to fix on this page:** 2 customer logos missing alt + 2 alt text typos (Ripping -> Rippling, SpotOn.png -> SpotOn)
 
@@ -147,7 +147,7 @@ For each page below, images are listed in the order they appear. Shared site-wid
 
 ### About (`/about`)
 
-**Total images:** 37 unique | **Missing alt:** 34 | **With alt:** 3
+**Total images:** 37 unique | **Missing alt:** 30 (+ 4 shared site-wide) | **With alt:** 3
 
 This page has 30 team member headshots, all missing alt text. The headshots are 832x832 px square images.
 
@@ -217,7 +217,7 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 
 ### Newsroom (`/newsroom`)
 
-**Total images:** ~12 | **Missing alt:** 9 | **With alt:** 3
+**Total images:** ~12 | **Missing alt:** 6 (+ 3 shared site-wide) | **With alt:** 3
 
 
 | #   | Preview | Framer Filename                   | Suggested Alt Text                  |
@@ -234,7 +234,7 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 
 ### Book a Demo (`/book-a-demo`)
 
-**Total images:** ~16 | **Missing alt:** 7 | **With alt:** ~9
+**Total images:** ~16 | **Missing alt:** 4 (+ 3 shared site-wide) | **With alt:** ~9
 
 
 | #   | Preview | Framer Filename                   | Suggested Alt Text                                      |
@@ -249,7 +249,7 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 
 ### Maxima vs FloQast (`/maxima-vs-floqast`)
 
-**Total images:** ~21 | **Missing alt:** 15 | **With alt:** 6
+**Total images:** ~21 | **Missing alt:** 11 (+ 4 shared site-wide) | **With alt:** 6
 
 #### Testimonial headshots (missing alt):
 
@@ -280,7 +280,7 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 
 ### Article: AI Tools for Accounting (`/articles/ai-tools-for-accounting`)
 
-**Total images:** ~18 | **Missing alt:** 15 | **With alt:** 3
+**Total images:** ~18 | **Missing alt:** 11 (+ 4 shared site-wide) | **With alt:** 3
 
 This article reviews 11 platforms (Maxima, BlackLine, FloQast, Tabs, Zuora, Brex, Ramp, Trullion, Klarity, Pigment, Abacum). The in-article images likely correspond to screenshots or logos of these platforms. **Visually match each image to its platform in Framer.**
 
@@ -304,7 +304,7 @@ This article reviews 11 platforms (Maxima, BlackLine, FloQast, Tabs, Zuora, Brex
 
 ### Article: Accuracy in Accounting (`/articles/accuracy-in-accounting-why-ai-needs-more-than-intelligence`)
 
-**Total images:** ~9 | **Missing alt:** 5 | **With alt:** 4
+**Total images:** ~9 | **Missing alt:** 2 (+ 3 shared site-wide) | **With alt:** 4
 
 
 | #   | Preview | Framer Filename                   | Fixed Alt Text                                                                                                                                                                                                                                                                      |
@@ -317,7 +317,7 @@ This article reviews 11 platforms (Maxima, BlackLine, FloQast, Tabs, Zuora, Brex
 
 ### Article: The Office of the CFO in 2030 (`/articles/the-office-of-the-cfo-in-2030-how-ai-agents-change-the-equation`)
 
-**Total images:** ~10 | **Missing alt:** 6 | **With alt:** 4
+**Total images:** ~10 | **Missing alt:** 3 (+ 3 shared site-wide) | **With alt:** 4
 
 
 | #   | Preview | Framer Filename                   | Suggested Alt Text                                                                                                                                                                                               |
@@ -331,7 +331,7 @@ This article reviews 11 platforms (Maxima, BlackLine, FloQast, Tabs, Zuora, Brex
 
 ### Article: Maxima Seed & Series A (`/articles/maxima-seed-series-a-agentic-ai-accounting`)
 
-**Total images:** ~8 | **Missing alt:** 4 | **With alt:** 4
+**Total images:** ~8 | **Missing alt:** 1 (+ 3 shared site-wide) | **With alt:** 4
 
 
 | #   | Preview | Framer Filename                   | Suggested Alt Text                                                                                                                                                                       |
