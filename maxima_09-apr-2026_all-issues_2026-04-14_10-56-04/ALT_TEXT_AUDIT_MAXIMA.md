@@ -59,26 +59,25 @@ JEiyjUqswVbHLA4wnNdJYRZMTFQ.png
 
 ### Images appearing on 6+ core pages:
 
-`**JVFEzfu6Sw8C2ZRuuYT19mjzI0.png`** -- Hero/section background on /how-it-works, /careers, /about, /product-overview, /security
+**`JVFEzfu6Sw8C2ZRuuYT19mjzI0.png`** -- Hero/section background on /how-it-works, /careers, /about, /product-overview, /security
 ![JVFEzfu6Sw8C2ZRuuYT19mjzI0.png](images/JVFEzfu6Sw8C2ZRuuYT19mjzI0.png)
 
 - **Current Alt:** MISSING
-- **Status:** Identified. Not able to find it in Framer.
+- **Fixed Alt:** Decorative Illustration
 
 ---
 
 ### Images appearing on most article pages:
 
-`**w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png`** -- Article template shared image (13 article pages)
+**`w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png`** -- Article template shared image (13 article pages)
 ![w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png](images/w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png)
 
 - **Current Alt:** MISSING
-- **Suggested Alt:** "Maxima logo icon" (blue mountain/M shape)
-- **Status:** Identified
+- **Fixed Alt:** "Maxima logo icon" (blue mountain/M shape)
 
 ---
 
-`**iW3LdIyUUysMh7pga9J8nbZx70.png`** -- Article author headshot or shared illustration (CFO 2030, Accuracy, AI tools articles)
+**`iW3LdIyUUysMh7pga9J8nbZx70.png`** -- Article author headshot or shared illustration (CFO 2030, Accuracy, AI tools articles)
 ![iW3LdIyUUysMh7pga9J8nbZx70.png](images/iW3LdIyUUysMh7pga9J8nbZx70.png)
 
 - **Current Alt:** MISSING
@@ -90,8 +89,8 @@ JEiyjUqswVbHLA4wnNdJYRZMTFQ.png
 
 These already have alt text -- no action needed.
 
-`**s3Y06HhlX7Qf6uWWLCHfLzNo.jpg`** -- OK
-`**uMCRztucVWslYHQ562XjaSiUtc.jpg**` -- OK
+**`s3Y06HhlX7Qf6uWWLCHfLzNo.jpg`** -- OK
+**`uMCRztucVWslYHQ562XjaSiUtc.jpg`** -- OK
 
 **Impact of fixing shared images:** Fixing the 2 confirmed site-wide images (`Sfz6mVl5Wq1Zdym07lodksvCE.png` and `vl8RF4iXhvG4IFYwq1fc6JhmF2c.png`) eliminates ~60 missing-alt instances across the site. The other 2 images Ahrefs flagged as site-wide (`oSCs67tz` and `JEiyjUq`) are Framer responsive artifacts -- not actually visible to users at normal screen sizes.
 
