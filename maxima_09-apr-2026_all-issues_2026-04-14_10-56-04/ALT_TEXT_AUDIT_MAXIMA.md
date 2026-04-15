@@ -26,7 +26,7 @@ These images appear on every page (or nearly every page) via Framer's global hea
 | 1   | ![](images/Sfz6mVl5Wq1Zdym07lodksvCE.png) | `Sfz6mVl5Wq1Zdym07lodksvCE.png` (1920x1080)     | 3D blue cubes illustrating AI-powered accounting accuracy |
 | 2   | ![](images/vl8RF4iXhvG4IFYwq1fc6JhmF2c.png) | `vl8RF4iXhvG4IFYwq1fc6JhmF2c.png` (5118x2879)  | Dark Blue Decorative Illustration |
 | 3   | ![](images/oSCs67tz1q007qoOCmTmCOUzLvU.png) | `oSCs67tz1q007qoOCmTmCOUzLvU.png` | The office of the CFO in 2030: how AI Agents change the equation |
-| 4   | ![](images/JEiyjUqswVbHLA4wnNdJYRZMTFQ.png) | `JEiyjUqswVbHLA4wnNdJYRZMTFQ.png` | Decorative Image |
+| 4   | ![](images/JEiyjUqswVbHLA4wnNdJYRZMTFQ.png) | `JEiyjUqswVbHLA4wnNdJYRZMTFQ.png` | The unified product and deployment model |
 
 ---
 
