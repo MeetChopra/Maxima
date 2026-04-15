@@ -22,7 +22,7 @@ These images appear on every page (or nearly every page) via Framer's global hea
 ### Images confirmed on ALL 30 pages (via header/footer):
 
 `**Sfz6mVl5Wq1Zdym07lodksvCE.png`** (1920x1080) -- Footer background / decorative gradient
-Sfz6mVl5Wq1Zdym07lodksvCE.png
+![Sfz6mVl5Wq1Zdym07lodksvCE.png](images/Sfz6mVl5Wq1Zdym07lodksvCE.png)
 
 - **Current Alt:** MISSING
 - **Suggested Alt:** `""` (empty alt -- decorative)
@@ -31,7 +31,7 @@ Sfz6mVl5Wq1Zdym07lodksvCE.png
 ---
 
 `**vl8RF4iXhvG4IFYwq1fc6JhmF2c.png`** (5118x2879) -- Full-width decorative background (responsive variants)
-vl8RF4iXhvG4IFYwq1fc6JhmF2c.png
+![vl8RF4iXhvG4IFYwq1fc6JhmF2c.png](images/vl8RF4iXhvG4IFYwq1fc6JhmF2c.png)
 
 - **Current Alt:** MISSING
 - **Suggested Alt:** `""` (empty alt -- decorative)
@@ -42,7 +42,7 @@ vl8RF4iXhvG4IFYwq1fc6JhmF2c.png
 ### Ahrefs-flagged images NOT actually visible on site:
 
 `**oSCs67tz1q007qoOCmTmCOUzLvU.png`** -- Ahrefs said all 30 pages, but only exists on `/blog`
-oSCs67tz1q007qoOCmTmCOUzLvU.png
+![oSCs67tz1q007qoOCmTmCOUzLvU.png](images/oSCs67tz1q007qoOCmTmCOUzLvU.png)
 
 - **Reality:** Only exists on `/blog` page in raw HTML. Framer rendering artifact from April 9 crawl.
 - **Action:** Low priority -- only affects 1 page
@@ -60,7 +60,7 @@ JEiyjUqswVbHLA4wnNdJYRZMTFQ.png
 ### Images appearing on 6+ core pages:
 
 `**JVFEzfu6Sw8C2ZRuuYT19mjzI0.png`** -- Hero/section background on /how-it-works, /careers, /about, /product-overview, /security
-JVFEzfu6Sw8C2ZRuuYT19mjzI0.png
+![JVFEzfu6Sw8C2ZRuuYT19mjzI0.png](images/JVFEzfu6Sw8C2ZRuuYT19mjzI0.png)
 
 - **Current Alt:** MISSING
 - **Status:** Identified. Not able to find it in Framer.
@@ -70,7 +70,7 @@ JVFEzfu6Sw8C2ZRuuYT19mjzI0.png
 ### Images appearing on most article pages:
 
 `**w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png`** -- Article template shared image (13 article pages)
-w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png
+![w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png](images/w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png)
 
 - **Current Alt:** MISSING
 - **Suggested Alt:** "Maxima logo icon" (blue mountain/M shape)
@@ -79,7 +79,7 @@ w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png
 ---
 
 `**iW3LdIyUUysMh7pga9J8nbZx70.png`** -- Article author headshot or shared illustration (CFO 2030, Accuracy, AI tools articles)
-iW3LdIyUUysMh7pga9J8nbZx70.png
+![iW3LdIyUUysMh7pga9J8nbZx70.png](images/iW3LdIyUUysMh7pga9J8nbZx70.png)
 
 - **Current Alt:** MISSING
 - **Status:** Identified. Updated the alt tag to "Maxima AI blog post header"
@@ -112,7 +112,7 @@ For each page below, images are listed in the order they appear. Shared site-wid
 #### Missing alt:
 
 `**mI3M74ioo3PzJxjmiwybXMRKg.png`** -- Customer logo (1772x756)
-mI3M74ioo3PzJxjmiwybXMRKg.png
+![mI3M74ioo3PzJxjmiwybXMRKg.png](images/mI3M74ioo3PzJxjmiwybXMRKg.png)
 
 - **Suggested Alt:** "Groupe ADP logo"
 - **Status:** Identified
@@ -120,7 +120,7 @@ mI3M74ioo3PzJxjmiwybXMRKg.png
 ---
 
 `**aNadLCO7oIVRXVvqymeSiWwHrg.png`** -- Customer logo (1392x401)
-aNadLCO7oIVRXVvqymeSiWwHrg.png
+![aNadLCO7oIVRXVvqymeSiWwHrg.png](images/aNadLCO7oIVRXVvqymeSiWwHrg.png)
 
 - **Suggested Alt:** "Owl Labs logo"
 - **Status:** Identified
@@ -130,7 +130,7 @@ aNadLCO7oIVRXVvqymeSiWwHrg.png
 #### Alt text typos to fix:
 
 `**2xO5dPLiVpqVAWReKw5iab9Cl8.png`** -- Testimonial headshot
-2xO5dPLiVpqVAWReKw5iab9Cl8.png
+![2xO5dPLiVpqVAWReKw5iab9Cl8.png](images/2xO5dPLiVpqVAWReKw5iab9Cl8.png)
 
 - **Current Alt:** "Vipin Sethi, Controller at **Ripping**"
 - **Fix to:** "Vipin Sethi, Controller at **Rippling**"
@@ -138,7 +138,7 @@ aNadLCO7oIVRXVvqymeSiWwHrg.png
 ---
 
 `**bueD7XevgiYiqgzab1SBd6kaRsQ.png`** -- Testimonial headshot
-bueD7XevgiYiqgzab1SBd6kaRsQ.png
+![bueD7XevgiYiqgzab1SBd6kaRsQ.png](images/bueD7XevgiYiqgzab1SBd6kaRsQ.png)
 
 - **Current Alt:** "Jack Chalfant, Controller, SpotOn**.png**"
 - **Fix to:** "Jack Chalfant, Controller, SpotOn"
@@ -164,36 +164,36 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 
 | #   | Preview | Framer Filename                   | Suggested Alt Text                            |
 | --- | ------- | --------------------------------- | --------------------------------------------- |
-| 1   |         | `5HtYALpXnnTQ71W59GG0DI5G6g.png`  | "Aaron Ko, Software Engineer at Maxima"       |
-| 2   |         | `gdptJjSKG515QhOiz5DvIBZff3s.png` | "Abby He, Software Engineer at Maxima"        |
-| 3   |         | `tB4YAfEWM1rteItSU5FvHerQLw.png`  | "Akshaya Srivatsa, CPO & Cofounder at Maxima" |
-| 4   |         | `fw8okcjTn9ejWhaCgOLipMSY3kg.png` | "Anna Hsiao, Product Design at Maxima"        |
-| 5   |         | `S5gggwHeKzsJulyeIjRtRvIvg3s.png` | "Darshit Doshi, Software Engineer at Maxima"  |
-| 6   |         | `tkXxpHSLhUcyObJFeCCYKQXxI.png`   | "Jack Liao, CTO & Cofounder at Maxima"        |
-| 7   |         | `BmHUd1EcZsnt6GHFRzjLUgFOKGA.png` | "Jacob Tuffli, Enterprise Sales at Maxima"    |
-| 8   |         | `DZgJAp7BEEQGIj6mtMbGejkPmw.png`  | "Jake Eagle, Enterprise Sales at Maxima"      |
-| 9   |         | `bHr2dpXr7tBuIOECVHRXa8EfUA.png`  | "James Varga, Enterprise Sales at Maxima"     |
-| 10  |         | `sIWUoe0IM2EmroxonmKtie3I0YY.png` | "Justin Gu, Software Engineer at Maxima"      |
-| 11  |         | `f2hWUTOT1fT1Rgwxixbo3np1WE.png`  | "Kayla Kwon, Software Engineer at Maxima"     |
-| 12  |         | `Vz8PqYnHqDGyv7EMzmJPHNjAc.png`   | "Kyle Mook, Enterprise Sales at Maxima"       |
-| 13  |         | `WmybgkQNLrF7IyBoAg1MRtHxRE.png`  | "Laura Hendrix, Enterprise Sales at Maxima"   |
-| 14  |         | `r7lIwtpt82p7V8GH3XPJkaKS8.png`   | "Mark Ma, Software Engineer at Maxima"        |
-| 15  |         | `iDxHlo4RXdVOtJKwtORH6Qtuys.png`  | "Milo Becker, HR at Maxima"                   |
-| 16  |         | `lX0ffBivcB1J4ijb0qb7LBpZ0.png`   | "Olivia Gilmour, Enterprise Sales at Maxima"  |
-| 17  |         | `zzYk78agza2Krm5El7HJ3swNA.png`   | "Parisa Morris, Enterprise Sales at Maxima"   |
-| 18  |         | `Ap378bOOARfP7YErNDCV9RWdkxw.png` | "Pav Kang, Enterprise Sales at Maxima"        |
-| 19  |         | `oGlRVxzTI9bfSkxoso1d06s87zY.png` | "Raniz Bordoloi, Marketing at Maxima"         |
-| 20  |         | `A9XsAuXVtopTadD2YPZJdAkbc0.png`  | "Reed Mitteness, Enterprise Sales at Maxima"  |
-| 21  |         | `0rT9GKetjF82Gqp1ou4EWLSpw0.png`  | "Rundong Lyu, Software Engineer at Maxima"    |
-| 22  |         | `b5eaKCdNdS42bwsgrXt5cjCQCQ.png`  | "Sean Park, Enterprise Sales at Maxima"       |
-| 23  |         | `yKyI2XNMer111tXBc1ywWxMnP8A.png` | "Shawn Bunch, Enterprise Sales at Maxima"     |
-| 24  |         | `eAnZt8ZCt642VcHddUEwF8pK1ZU.png` | "Shawn Shen, Deployment Strategy at Maxima"   |
-| 25  |         | `J5bytvQQtdNJA6kw8nMmNgCiBa8.png` | "Skip Kovar, Enterprise Sales at Maxima"      |
-| 26  |         | `UB6Er6PgtXYWMgFvleEO1fshC8.png`  | "Taylor Bauer, Enterprise Sales at Maxima"    |
-| 27  |         | `POxfJz2aHqtVW2zyJGJaB7VnU9s.png` | "Terence Wong, Software Engineer at Maxima"   |
-| 28  |         | `xNtfJKiiTNTxN4ul5klerhfdA.png`   | "Xiao Xi, Software Engineer at Maxima"        |
-| 29  |         | `aK6NdacTnbw3Y96mpbTe7WuV8.png`   | "Yogi Goel, CEO & Cofounder at Maxima"        |
-| 30  |         | `to9I1IQ7TvCPsbII1kIlXUhVQs.png`  | "Zack Mitkin, Software Development at Maxima" |
+| 1   | ![](images/5HtYALpXnnTQ71W59GG0DI5G6g.png) | `5HtYALpXnnTQ71W59GG0DI5G6g.png`  | "Aaron Ko, Software Engineer at Maxima"       |
+| 2   | ![](images/gdptJjSKG515QhOiz5DvIBZff3s.png) | `gdptJjSKG515QhOiz5DvIBZff3s.png` | "Abby He, Software Engineer at Maxima"        |
+| 3   | ![](images/tB4YAfEWM1rteItSU5FvHerQLw.png) | `tB4YAfEWM1rteItSU5FvHerQLw.png`  | "Akshaya Srivatsa, CPO & Cofounder at Maxima" |
+| 4   | ![](images/fw8okcjTn9ejWhaCgOLipMSY3kg.png) | `fw8okcjTn9ejWhaCgOLipMSY3kg.png` | "Anna Hsiao, Product Design at Maxima"        |
+| 5   | ![](images/S5gggwHeKzsJulyeIjRtRvIvg3s.png) | `S5gggwHeKzsJulyeIjRtRvIvg3s.png` | "Darshit Doshi, Software Engineer at Maxima"  |
+| 6   | ![](images/tkXxpHSLhUcyObJFeCCYKQXxI.png) | `tkXxpHSLhUcyObJFeCCYKQXxI.png`   | "Jack Liao, CTO & Cofounder at Maxima"        |
+| 7   | ![](images/BmHUd1EcZsnt6GHFRzjLUgFOKGA.png) | `BmHUd1EcZsnt6GHFRzjLUgFOKGA.png` | "Jacob Tuffli, Enterprise Sales at Maxima"    |
+| 8   | ![](images/DZgJAp7BEEQGIj6mtMbGejkPmw.png) | `DZgJAp7BEEQGIj6mtMbGejkPmw.png`  | "Jake Eagle, Enterprise Sales at Maxima"      |
+| 9   | ![](images/bHr2dpXr7tBuIOECVHRXa8EfUA.png) | `bHr2dpXr7tBuIOECVHRXa8EfUA.png`  | "James Varga, Enterprise Sales at Maxima"     |
+| 10  | ![](images/sIWUoe0IM2EmroxonmKtie3I0YY.png) | `sIWUoe0IM2EmroxonmKtie3I0YY.png` | "Justin Gu, Software Engineer at Maxima"      |
+| 11  | ![](images/f2hWUTOT1fT1Rgwxixbo3np1WE.png) | `f2hWUTOT1fT1Rgwxixbo3np1WE.png`  | "Kayla Kwon, Software Engineer at Maxima"     |
+| 12  | ![](images/Vz8PqYnHqDGyv7EMzmJPHNjAc.png) | `Vz8PqYnHqDGyv7EMzmJPHNjAc.png`   | "Kyle Mook, Enterprise Sales at Maxima"       |
+| 13  | ![](images/WmybgkQNLrF7IyBoAg1MRtHxRE.png) | `WmybgkQNLrF7IyBoAg1MRtHxRE.png`  | "Laura Hendrix, Enterprise Sales at Maxima"   |
+| 14  | ![](images/r7lIwtpt82p7V8GH3XPJkaKS8.png) | `r7lIwtpt82p7V8GH3XPJkaKS8.png`   | "Mark Ma, Software Engineer at Maxima"        |
+| 15  | ![](images/iDxHlo4RXdVOtJKwtORH6Qtuys.png) | `iDxHlo4RXdVOtJKwtORH6Qtuys.png`  | "Milo Becker, HR at Maxima"                   |
+| 16  | ![](images/lX0ffBivcB1J4ijb0qb7LBpZ0.png) | `lX0ffBivcB1J4ijb0qb7LBpZ0.png`   | "Olivia Gilmour, Enterprise Sales at Maxima"  |
+| 17  | ![](images/zzYk78agza2Krm5El7HJ3swNA.png) | `zzYk78agza2Krm5El7HJ3swNA.png`   | "Parisa Morris, Enterprise Sales at Maxima"   |
+| 18  | ![](images/Ap378bOOARfP7YErNDCV9RWdkxw.png) | `Ap378bOOARfP7YErNDCV9RWdkxw.png` | "Pav Kang, Enterprise Sales at Maxima"        |
+| 19  | ![](images/oGlRVxzTI9bfSkxoso1d06s87zY.png) | `oGlRVxzTI9bfSkxoso1d06s87zY.png` | "Raniz Bordoloi, Marketing at Maxima"         |
+| 20  | ![](images/A9XsAuXVtopTadD2YPZJdAkbc0.png) | `A9XsAuXVtopTadD2YPZJdAkbc0.png`  | "Reed Mitteness, Enterprise Sales at Maxima"  |
+| 21  | ![](images/0rT9GKetjF82Gqp1ou4EWLSpw0.png) | `0rT9GKetjF82Gqp1ou4EWLSpw0.png`  | "Rundong Lyu, Software Engineer at Maxima"    |
+| 22  | ![](images/b5eaKCdNdS42bwsgrXt5cjCQCQ.png) | `b5eaKCdNdS42bwsgrXt5cjCQCQ.png`  | "Sean Park, Enterprise Sales at Maxima"       |
+| 23  | ![](images/yKyI2XNMer111tXBc1ywWxMnP8A.png) | `yKyI2XNMer111tXBc1ywWxMnP8A.png` | "Shawn Bunch, Enterprise Sales at Maxima"     |
+| 24  | ![](images/eAnZt8ZCt642VcHddUEwF8pK1ZU.png) | `eAnZt8ZCt642VcHddUEwF8pK1ZU.png` | "Shawn Shen, Deployment Strategy at Maxima"   |
+| 25  | ![](images/J5bytvQQtdNJA6kw8nMmNgCiBa8.png) | `J5bytvQQtdNJA6kw8nMmNgCiBa8.png` | "Skip Kovar, Enterprise Sales at Maxima"      |
+| 26  | ![](images/UB6Er6PgtXYWMgFvleEO1fshC8.png) | `UB6Er6PgtXYWMgFvleEO1fshC8.png`  | "Taylor Bauer, Enterprise Sales at Maxima"    |
+| 27  | ![](images/POxfJz2aHqtVW2zyJGJaB7VnU9s.png) | `POxfJz2aHqtVW2zyJGJaB7VnU9s.png` | "Terence Wong, Software Engineer at Maxima"   |
+| 28  | ![](images/xNtfJKiiTNTxN4ul5klerhfdA.png) | `xNtfJKiiTNTxN4ul5klerhfdA.png`   | "Xiao Xi, Software Engineer at Maxima"        |
+| 29  | ![](images/aK6NdacTnbw3Y96mpbTe7WuV8.png) | `aK6NdacTnbw3Y96mpbTe7WuV8.png`   | "Yogi Goel, CEO & Cofounder at Maxima"        |
+| 30  | ![](images/to9I1IQ7TvCPsbII1kIlXUhVQs.png) | `to9I1IQ7TvCPsbII1kIlXUhVQs.png`  | "Zack Mitkin, Software Development at Maxima" |
 
 
 ---
@@ -207,10 +207,10 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 
 | #   | Preview | Framer Filename                   | What It Is                                                                                      | Suggested Alt Text                                                                  |
 | --- | ------- | --------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| 1   |         | `7Megt5YYEEUMfEwmCgM9HZPFI9k.png` | Blog thumbnail for "Reconciliations in accounting: the definitive guide"                        | "Thumbnail for Reconciliations in accounting: the definitive guide"                 |
-| 2   |         | `OMTw88vPFqJzaiaSmbYqndjFGU.png`  | Blog thumbnail for "7 best financial close software solutions to evaluate in 2026"              | "Thumbnail for 7 best financial close software solutions to evaluate in 2026"       |
-| 3   |         | `PTvcVBayFg0cqO5C2sDLc5KD8.png`   | Blog thumbnail for "AI tools for accounting: best software, categories, and buyer guide (2026)" | "Thumbnail for AI tools for accounting: best software, categories, and buyer guide" |
-| 4   |         | `iee3e1EfvQdYNE5a9EhBmAIfgpo.png` | Blog thumbnail for "Variance analysis: the definitive guide to explaining the numbers"          | "Thumbnail for Variance analysis: the definitive guide to explaining the numbers"   |
+| 1   | ![](images/7Megt5YYEEUMfEwmCgM9HZPFI9k.png) | `7Megt5YYEEUMfEwmCgM9HZPFI9k.png` | Blog thumbnail for "Reconciliations in accounting: the definitive guide"                        | "Thumbnail for Reconciliations in accounting: the definitive guide"                 |
+| 2   | ![](images/OMTw88vPFqJzaiaSmbYqndjFGU.png) | `OMTw88vPFqJzaiaSmbYqndjFGU.png`  | Blog thumbnail for "7 best financial close software solutions to evaluate in 2026"              | "Thumbnail for 7 best financial close software solutions to evaluate in 2026"       |
+| 3   | ![](images/PTvcVBayFg0cqO5C2sDLc5KD8.png) | `PTvcVBayFg0cqO5C2sDLc5KD8.png`   | Blog thumbnail for "AI tools for accounting: best software, categories, and buyer guide (2026)" | "Thumbnail for AI tools for accounting: best software, categories, and buyer guide" |
+| 4   | ![](images/iee3e1EfvQdYNE5a9EhBmAIfgpo.png) | `iee3e1EfvQdYNE5a9EhBmAIfgpo.png` | Blog thumbnail for "Variance analysis: the definitive guide to explaining the numbers"          | "Thumbnail for Variance analysis: the definitive guide to explaining the numbers"   |
 
 
 ---
@@ -222,12 +222,12 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 
 | #   | Preview | Framer Filename                   | What It Is       | Suggested Alt Text                  |
 | --- | ------- | --------------------------------- | ---------------- | ----------------------------------- |
-| 1   |         | `ED3hsTQ3LEeIySbLRVlbGg0dSd4.png` | Publication logo | "TBPN logo"                         |
-| 2   |         | `9H3yHdrmyxt1xPG0X0L4ZnwChTg.png` | Publication logo | "FintechTV Exponential Voices logo" |
-| 3   |         | `aD3QabVBTs47OgmXph0lxmiKgeg.png` | Publication logo | "Finimize logo"                     |
-| 4   |         | `dbBES67ciKLqTaakFnv4qoBRs2E.png` | Publication logo | "Kleiner Perkins logo"              |
-| 5   |         | `diLXsJ7yohKZoAbDL6JEO5BEbko.png` | Publication logo | "PYMNTS logo"                       |
-| 6   |         | `X7pEzANd3psWwBZE0aPIr2npYjE.png` | Publication logo | "EY (Ernst & Young) logo"           |
+| 1   | ![](images/ED3hsTQ3LEeIySbLRVlbGg0dSd4.png) | `ED3hsTQ3LEeIySbLRVlbGg0dSd4.png` | Publication logo | "TBPN logo"                         |
+| 2   | ![](images/9H3yHdrmyxt1xPG0X0L4ZnwChTg.png) | `9H3yHdrmyxt1xPG0X0L4ZnwChTg.png` | Publication logo | "FintechTV Exponential Voices logo" |
+| 3   | ![](images/aD3QabVBTs47OgmXph0lxmiKgeg.png) | `aD3QabVBTs47OgmXph0lxmiKgeg.png` | Publication logo | "Finimize logo"                     |
+| 4   | ![](images/dbBES67ciKLqTaakFnv4qoBRs2E.png) | `dbBES67ciKLqTaakFnv4qoBRs2E.png` | Publication logo | "Kleiner Perkins logo"              |
+| 5   | ![](images/diLXsJ7yohKZoAbDL6JEO5BEbko.png) | `diLXsJ7yohKZoAbDL6JEO5BEbko.png` | Publication logo | "PYMNTS logo"                       |
+| 6   | ![](images/X7pEzANd3psWwBZE0aPIr2npYjE.png) | `X7pEzANd3psWwBZE0aPIr2npYjE.png` | Publication logo | "EY (Ernst & Young) logo"           |
 
 
 ---
@@ -239,10 +239,10 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 
 | #   | Preview | Framer Filename                   | What It Is                                       | Suggested Alt Text                                      |
 | --- | ------- | --------------------------------- | ------------------------------------------------ | ------------------------------------------------------- |
-| 1   |         | `FFNcjyi8WJ7aW7sXOOL0txwkw.webp`  | Customer logo or trust badge                     | Identify -- e.g. "G2 badge" or "[Company] logo"         |
-| 2   |         | `jSJTx8xWClKJEVWqUbZZhSkZM.png`   | Customer logo (white on transparent, very small) | "Customer logo" (too small/faint to identify precisely) |
-| 3   |         | `vZUp1eP4XzpEvfPWortIpfeJc.png`   | Customer logo                                    | "Rippling logo"                                         |
-| 4   |         | `VRrbQoRqaK06OBmVmnXn3EJgARU.png` | Customer logo                                    | "Gorgias logo"                                          |
+| 1   | ![](images/FFNcjyi8WJ7aW7sXOOL0txwkw.webp) | `FFNcjyi8WJ7aW7sXOOL0txwkw.webp`  | Customer logo or trust badge                     | Identify -- e.g. "G2 badge" or "[Company] logo"         |
+| 2   | ![](images/jSJTx8xWClKJEVWqUbZZhSkZM.png) | `jSJTx8xWClKJEVWqUbZZhSkZM.png`   | Customer logo (white on transparent, very small) | "Customer logo" (too small/faint to identify precisely) |
+| 3   | ![](images/vZUp1eP4XzpEvfPWortIpfeJc.png) | `vZUp1eP4XzpEvfPWortIpfeJc.png`   | Customer logo                                    | "Rippling logo"                                         |
+| 4   | ![](images/VRrbQoRqaK06OBmVmnXn3EJgARU.png) | `VRrbQoRqaK06OBmVmnXn3EJgARU.png` | Customer logo                                    | "Gorgias logo"                                          |
 
 
 ---
@@ -256,10 +256,10 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 
 | #   | Preview | Framer Filename                    | Suggested Alt Text              |
 | --- | ------- | ---------------------------------- | ------------------------------- |
-| 1   |         | `45E0cvGSRszAJnnlVamFD8Gec.jpeg`   | Jason Lai, Financial Controller |
-| 2   |         | `b4SAq6WcvsRoMgWzPYLaFL2CX0.jpeg`  | Mervyn Haw, Senior Accountant   |
-| 3   |         | `9WElAoGejJcGiyHN56SLSXWJ2U.jpeg`  | Jason Lopez, Controller         |
-| 4   |         | `1G7SVddymDiD7MafqecJSKzz4ts.jpeg` | Josh Waldron, CAO               |
+| 1   | ![](images/45E0cvGSRszAJnnlVamFD8Gec.jpeg) | `45E0cvGSRszAJnnlVamFD8Gec.jpeg`   | Jason Lai, Financial Controller |
+| 2   | ![](images/b4SAq6WcvsRoMgWzPYLaFL2CX0.jpeg) | `b4SAq6WcvsRoMgWzPYLaFL2CX0.jpeg`  | Mervyn Haw, Senior Accountant   |
+| 3   | ![](images/9WElAoGejJcGiyHN56SLSXWJ2U.jpeg) | `9WElAoGejJcGiyHN56SLSXWJ2U.jpeg`  | Jason Lopez, Controller         |
+| 4   | ![](images/1G7SVddymDiD7MafqecJSKzz4ts.jpeg) | `1G7SVddymDiD7MafqecJSKzz4ts.jpeg` | Josh Waldron, CAO               |
 
 
 #### Comparison graphics & icons (missing alt):
@@ -267,13 +267,13 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 
 | #   | Preview | Framer Filename                   | Suggested Alt Text                                                        |
 | --- | ------- | --------------------------------- | ------------------------------------------------------------------------- |
-| 1   |         | `6stZUxUReRn72GHdCCPoD4SGskI.png` | Decorative blue/purple gradient background -- use `alt=""`                |
-| 2   |         | `uNag2J6pd8UlLeQ9myHyTIvJXIA.png` | "FloQast logo"                                                            |
-| 3   |         | `HfaLCxdC3xfmlQGeH9kcFsXYnk.png`  | Comparison graphic (1.4MB -- needs visual ID, skipped for size)           |
-| 4   |         | `xBqVUrTX51Ag560dM2AzeQGhg.png`   | "White logo on transparent background" (barely visible, hard to identify) |
-| 5   |         | `sk3MG8zImcTybJZRLQTHybRcBI.png`  | Comparison graphic (1.4MB -- needs visual ID, skipped for size)           |
-| 6   |         | `E28cFQQ3Thz0y0tODm7GpCMNQ4.png`  | "SpotOn logo"                                                             |
-| 7   |         | `YuB06E5QQYPr5l0rr28J7C7Fk.png`   | "Rippling logo"                                                           |
+| 1   | ![](images/6stZUxUReRn72GHdCCPoD4SGskI.png) | `6stZUxUReRn72GHdCCPoD4SGskI.png` | Decorative blue/purple gradient background -- use `alt=""`                |
+| 2   | ![](images/uNag2J6pd8UlLeQ9myHyTIvJXIA.png) | `uNag2J6pd8UlLeQ9myHyTIvJXIA.png` | "FloQast logo"                                                            |
+| 3   | ![](images/HfaLCxdC3xfmlQGeH9kcFsXYnk.png) | `HfaLCxdC3xfmlQGeH9kcFsXYnk.png`  | Comparison graphic (1.4MB -- needs visual ID, skipped for size)           |
+| 4   | ![](images/xBqVUrTX51Ag560dM2AzeQGhg.png) | `xBqVUrTX51Ag560dM2AzeQGhg.png`   | "White logo on transparent background" (barely visible, hard to identify) |
+| 5   | ![](images/sk3MG8zImcTybJZRLQTHybRcBI.png) | `sk3MG8zImcTybJZRLQTHybRcBI.png`  | Comparison graphic (1.4MB -- needs visual ID, skipped for size)           |
+| 6   | ![](images/E28cFQQ3Thz0y0tODm7GpCMNQ4.png) | `E28cFQQ3Thz0y0tODm7GpCMNQ4.png`  | "SpotOn logo"                                                             |
+| 7   | ![](images/YuB06E5QQYPr5l0rr28J7C7Fk.png) | `YuB06E5QQYPr5l0rr28J7C7Fk.png`   | "Rippling logo"                                                           |
 
 
 ---
@@ -287,17 +287,17 @@ This article reviews 11 platforms (Maxima, BlackLine, FloQast, Tabs, Zuora, Brex
 
 | #   | Preview | Framer Filename                    | Suggested Alt Text                                                                                        |
 | --- | ------- | ---------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| 1   |         | `R7L9UulqDSwlrgho13ecW7XE.png`     | "Maxima platform screenshot showing PTO Accruals journal entry automation with NetSuite integration"      |
-| 2   |         | `f571vQy8CgopN7b1nHR4VtFig.jpg`    | "BlackLine dashboard showing task certification status, unreconciled balances, and tasks due"             |
-| 3   |         | `UzC6B82Iksh9N8HPr4klrxBBq8o.png`  | "FloQast dashboard showing checklists, reconciliations progress, and folder completion status"            |
-| 4   |         | `8Zgyo3gRtYcZF2zZ2WkKQBcNI.png`    | "Tabs AR Automation dashboard showing average days to pay, invoice metrics, and billing overview"         |
-| 5   |         | `vCQIi9K2toANtomgMZyD42Cr7hk.png`  | "Zuora consumption dashboard showing seat usage, GB tracking, and overage costs"                          |
-| 6   |         | `iPzE1gzhHfNQrX7oowVeKjxjaOQ.webp` | "Brex reports dashboard showing travel spend, out-of-policy expenses, and monthly spend trends"           |
-| 7   |         | `3VEzpWFX1ncDEYQR7fGfW3V5SCQ.png`  | "Ramp travel insights dashboard showing spend map, trip details, and expense breakdown"                   |
-| 8   |         | `PbqTwH8d4iNdMkcToFGfB441VPY.webp` | "Trullion usage dashboard showing total usage, monthly breakdown by category, and user-level activity"    |
-| 9   |         | `4Y3o6CZKEV7aIA2DdmGBZ9X3s.png`    | "Klarity Architect processes view showing risk levels, systems used, and automation percentages"          |
-| 10  |         | `mkvJdzhs6WyRPJZbGdQoV0GwUo.png`   | "Pigment executive summary showing revenue attainment, cash flow summary, and net profit waterfall chart" |
-| 11  |         | `8NTuUnklud4HHSVdsP9eSecuEQ.png`   | "Abacum management report showing revenue, YoY growth, opex, headcount, and budget scenario planning"     |
+| 1   | ![](images/R7L9UulqDSwlrgho13ecW7XE.png) | `R7L9UulqDSwlrgho13ecW7XE.png`     | "Maxima platform screenshot showing PTO Accruals journal entry automation with NetSuite integration"      |
+| 2   | ![](images/f571vQy8CgopN7b1nHR4VtFig.jpg) | `f571vQy8CgopN7b1nHR4VtFig.jpg`    | "BlackLine dashboard showing task certification status, unreconciled balances, and tasks due"             |
+| 3   | ![](images/UzC6B82Iksh9N8HPr4klrxBBq8o.png) | `UzC6B82Iksh9N8HPr4klrxBBq8o.png`  | "FloQast dashboard showing checklists, reconciliations progress, and folder completion status"            |
+| 4   | ![](images/8Zgyo3gRtYcZF2zZ2WkKQBcNI.png) | `8Zgyo3gRtYcZF2zZ2WkKQBcNI.png`    | "Tabs AR Automation dashboard showing average days to pay, invoice metrics, and billing overview"         |
+| 5   | ![](images/vCQIi9K2toANtomgMZyD42Cr7hk.png) | `vCQIi9K2toANtomgMZyD42Cr7hk.png`  | "Zuora consumption dashboard showing seat usage, GB tracking, and overage costs"                          |
+| 6   | ![](images/iPzE1gzhHfNQrX7oowVeKjxjaOQ.webp) | `iPzE1gzhHfNQrX7oowVeKjxjaOQ.webp` | "Brex reports dashboard showing travel spend, out-of-policy expenses, and monthly spend trends"           |
+| 7   | ![](images/3VEzpWFX1ncDEYQR7fGfW3V5SCQ.png) | `3VEzpWFX1ncDEYQR7fGfW3V5SCQ.png`  | "Ramp travel insights dashboard showing spend map, trip details, and expense breakdown"                   |
+| 8   | ![](images/PbqTwH8d4iNdMkcToFGfB441VPY.webp) | `PbqTwH8d4iNdMkcToFGfB441VPY.webp` | "Trullion usage dashboard showing total usage, monthly breakdown by category, and user-level activity"    |
+| 9   | ![](images/4Y3o6CZKEV7aIA2DdmGBZ9X3s.png) | `4Y3o6CZKEV7aIA2DdmGBZ9X3s.png`    | "Klarity Architect processes view showing risk levels, systems used, and automation percentages"          |
+| 10  | ![](images/mkvJdzhs6WyRPJZbGdQoV0GwUo.png) | `mkvJdzhs6WyRPJZbGdQoV0GwUo.png`   | "Pigment executive summary showing revenue attainment, cash flow summary, and net profit waterfall chart" |
+| 11  | ![](images/8NTuUnklud4HHSVdsP9eSecuEQ.png) | `8NTuUnklud4HHSVdsP9eSecuEQ.png`   | "Abacum management report showing revenue, YoY growth, opex, headcount, and budget scenario planning"     |
 
 
 ---
@@ -309,8 +309,8 @@ This article reviews 11 platforms (Maxima, BlackLine, FloQast, Tabs, Zuora, Brex
 
 | #   | Preview | Framer Filename                   | What It Is                 | Suggested Alt Text                                                                                                                                                                                                                                                                      |
 | --- | ------- | --------------------------------- | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   |         | `3UVdFS4uFQpoDZ00KLKs4Br4HAI.png` | Line chart                 | "Account Balance Accuracy chart comparing AI models (Opus, Sonnet, Grok, Gemini, o3, o4-mini) showing accuracy decline over 13 months"                                                                                                                                                  |
-| 2   |         | `vADRg9PkaoVtnP3Nbp7G3QTxqeQ.png` | Iceberg comparison diagram | "Iceberg diagram comparing generalized LLM models vs Maxima: LLMs appear accurate on the surface but lack memory, financial data links, accounting understanding, and validation; Maxima delivers audit-ready outputs grounded in GL data with accounting-specific skills and controls" |
+| 1   | ![](images/3UVdFS4uFQpoDZ00KLKs4Br4HAI.png) | `3UVdFS4uFQpoDZ00KLKs4Br4HAI.png` | Line chart                 | "Account Balance Accuracy chart comparing AI models (Opus, Sonnet, Grok, Gemini, o3, o4-mini) showing accuracy decline over 13 months"                                                                                                                                                  |
+| 2   | ![](images/vADRg9PkaoVtnP3Nbp7G3QTxqeQ.png) | `vADRg9PkaoVtnP3Nbp7G3QTxqeQ.png` | Iceberg comparison diagram | "Iceberg diagram comparing generalized LLM models vs Maxima: LLMs appear accurate on the surface but lack memory, financial data links, accounting understanding, and validation; Maxima delivers audit-ready outputs grounded in GL data with accounting-specific skills and controls" |
 
 
 ---
@@ -322,9 +322,9 @@ This article reviews 11 platforms (Maxima, BlackLine, FloQast, Tabs, Zuora, Brex
 
 | #   | Preview | Framer Filename                   | What It Is           | Suggested Alt Text                                                                                                                                                                                               |
 | --- | ------- | --------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   |         | `VEgoeMjxNcZHyt6gs3u0mnM5du4.png` | Workflow diagram     | "Diagram of traditional CFO office workflow: system of transaction to human system of action (accountants, preparers, reviewers) to human system of intelligence (Director, VP, CAO, CFO) with quarterly audits" |
-| 2   |         | `eLJiMRSgNORQAVepTBi0336jGk.png`  | Workflow diagram     | "Diagram of Maxima-powered workflow: system of transaction to Maxima system of work with 24/7 error detection and AI assistants alongside accountants to system of record"                                       |
-| 3   |         | `mpAqItRV41cXj4GeLRmTfUkJY.png`   | Concept illustration | "Two-card illustration comparing Actionable (agents take the action) and Dynamic (AI preps the analysis) capabilities"                                                                                           |
+| 1   | ![](images/VEgoeMjxNcZHyt6gs3u0mnM5du4.png) | `VEgoeMjxNcZHyt6gs3u0mnM5du4.png` | Workflow diagram     | "Diagram of traditional CFO office workflow: system of transaction to human system of action (accountants, preparers, reviewers) to human system of intelligence (Director, VP, CAO, CFO) with quarterly audits" |
+| 2   | ![](images/eLJiMRSgNORQAVepTBi0336jGk.png) | `eLJiMRSgNORQAVepTBi0336jGk.png`  | Workflow diagram     | "Diagram of Maxima-powered workflow: system of transaction to Maxima system of work with 24/7 error detection and AI assistants alongside accountants to system of record"                                       |
+| 3   | ![](images/mpAqItRV41cXj4GeLRmTfUkJY.png) | `mpAqItRV41cXj4GeLRmTfUkJY.png`   | Concept illustration | "Two-card illustration comparing Actionable (agents take the action) and Dynamic (AI preps the analysis) capabilities"                                                                                           |
 
 
 ---
@@ -336,7 +336,7 @@ This article reviews 11 platforms (Maxima, BlackLine, FloQast, Tabs, Zuora, Brex
 
 | #   | Preview | Framer Filename                   | What It Is                   | Suggested Alt Text                                                                                                                                                                       |
 | --- | ------- | --------------------------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   |         | `bb7hBnvbLl86twSqj0nYm1cBLLU.jpg` | Funding announcement graphic | "Maxima $41M Seed and Series A funding announcement, led by Redpoint, Kleiner Perkins, and Audacious, with participation from Datadog, OpenAI, Oracle NetSuite, Ramp, Rippling, and FOG" |
+| 1   | ![](images/bb7hBnvbLl86twSqj0nYm1cBLLU.jpg) | `bb7hBnvbLl86twSqj0nYm1cBLLU.jpg` | Funding announcement graphic | "Maxima $41M Seed and Series A funding announcement, led by Redpoint, Kleiner Perkins, and Audacious, with participation from Datadog, OpenAI, Oracle NetSuite, Ramp, Rippling, and FOG" |
 
 
 ---
