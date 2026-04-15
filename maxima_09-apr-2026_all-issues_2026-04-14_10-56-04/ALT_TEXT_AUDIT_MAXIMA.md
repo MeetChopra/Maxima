@@ -205,12 +205,12 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 > **Note:** Ahrefs reports 7 missing-alt images on this page. 3 of those are site-wide shared images already covered above: `Sfz6mVl5Wq1Zdym07lodksvCE.png` (footer background), `vl8RF4iXhvG4IFYwq1fc6JhmF2c.png` (decorative background), and `oSCs67tz1q007qoOCmTmCOUzLvU.png` (Framer rendering artifact). The 4 blog-specific thumbnails are listed below.
 
 
-| #   | Preview | Framer Filename                   | What It Is                                                                                      | Suggested Alt Text                                                                  |
-| --- | ------- | --------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| 1   | ![](images/7Megt5YYEEUMfEwmCgM9HZPFI9k.png) | `7Megt5YYEEUMfEwmCgM9HZPFI9k.png` | Blog thumbnail for "Reconciliations in accounting: the definitive guide"                        | "Thumbnail for Reconciliations in accounting: the definitive guide"                 |
-| 2   | ![](images/OMTw88vPFqJzaiaSmbYqndjFGU.png) | `OMTw88vPFqJzaiaSmbYqndjFGU.png`  | Blog thumbnail for "7 best financial close software solutions to evaluate in 2026"              | "Thumbnail for 7 best financial close software solutions to evaluate in 2026"       |
-| 3   | ![](images/PTvcVBayFg0cqO5C2sDLc5KD8.png) | `PTvcVBayFg0cqO5C2sDLc5KD8.png`   | Blog thumbnail for "AI tools for accounting: best software, categories, and buyer guide (2026)" | "Thumbnail for AI tools for accounting: best software, categories, and buyer guide" |
-| 4   | ![](images/iee3e1EfvQdYNE5a9EhBmAIfgpo.png) | `iee3e1EfvQdYNE5a9EhBmAIfgpo.png` | Blog thumbnail for "Variance analysis: the definitive guide to explaining the numbers"          | "Thumbnail for Variance analysis: the definitive guide to explaining the numbers"   |
+| #   | Preview | Framer Filename                   | Fixed Alt Text                                                                  |
+| --- | ------- | --------------------------------- | ----------------------------------------------------------------------------------- |
+| 1   | ![](images/7Megt5YYEEUMfEwmCgM9HZPFI9k.png) | `7Megt5YYEEUMfEwmCgM9HZPFI9k.png` | "Reconciliations in accounting: the definitive guide"                 |
+| 2   | ![](images/OMTw88vPFqJzaiaSmbYqndjFGU.png) | `OMTw88vPFqJzaiaSmbYqndjFGU.png`  | "7 best financial close software solutions to evaluate in 2026"       |
+| 3   | ![](images/PTvcVBayFg0cqO5C2sDLc5KD8.png) | `PTvcVBayFg0cqO5C2sDLc5KD8.png`   | "AI tools for accounting: best software, categories, and buyer guide" |
+| 4   | ![](images/iee3e1EfvQdYNE5a9EhBmAIfgpo.png) | `iee3e1EfvQdYNE5a9EhBmAIfgpo.png` | "Variance analysis: the definitive guide to explaining the numbers"   |
 
 
 ---
