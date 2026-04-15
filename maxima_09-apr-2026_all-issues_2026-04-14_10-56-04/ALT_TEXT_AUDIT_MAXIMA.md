@@ -220,14 +220,14 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 **Total images:** ~12 | **Missing alt:** 9 | **With alt:** 3
 
 
-| #   | Preview | Framer Filename                   | What It Is       | Suggested Alt Text                  |
-| --- | ------- | --------------------------------- | ---------------- | ----------------------------------- |
-| 1   | ![](images/ED3hsTQ3LEeIySbLRVlbGg0dSd4.png) | `ED3hsTQ3LEeIySbLRVlbGg0dSd4.png` | Publication logo | "TBPN logo"                         |
-| 2   | ![](images/9H3yHdrmyxt1xPG0X0L4ZnwChTg.png) | `9H3yHdrmyxt1xPG0X0L4ZnwChTg.png` | Publication logo | "FintechTV Exponential Voices logo" |
-| 3   | ![](images/aD3QabVBTs47OgmXph0lxmiKgeg.png) | `aD3QabVBTs47OgmXph0lxmiKgeg.png` | Publication logo | "Finimize logo"                     |
-| 4   | ![](images/dbBES67ciKLqTaakFnv4qoBRs2E.png) | `dbBES67ciKLqTaakFnv4qoBRs2E.png` | Publication logo | "Kleiner Perkins logo"              |
-| 5   | ![](images/diLXsJ7yohKZoAbDL6JEO5BEbko.png) | `diLXsJ7yohKZoAbDL6JEO5BEbko.png` | Publication logo | "PYMNTS logo"                       |
-| 6   | ![](images/X7pEzANd3psWwBZE0aPIr2npYjE.png) | `X7pEzANd3psWwBZE0aPIr2npYjE.png` | Publication logo | "EY (Ernst & Young) logo"           |
+| #   | Preview | Framer Filename                   | Suggested Alt Text                  |
+| --- | ------- | --------------------------------- | ----------------------------------- |
+| 1   | ![](images/ED3hsTQ3LEeIySbLRVlbGg0dSd4.png) | `ED3hsTQ3LEeIySbLRVlbGg0dSd4.png` | "TBPN logo"                         |
+| 2   | ![](images/9H3yHdrmyxt1xPG0X0L4ZnwChTg.png) | `9H3yHdrmyxt1xPG0X0L4ZnwChTg.png` | "FintechTV Exponential Voices logo" |
+| 3   | ![](images/aD3QabVBTs47OgmXph0lxmiKgeg.png) | `aD3QabVBTs47OgmXph0lxmiKgeg.png` | "Finimize logo"                     |
+| 4   | ![](images/dbBES67ciKLqTaakFnv4qoBRs2E.png) | `dbBES67ciKLqTaakFnv4qoBRs2E.png` | "Kleiner Perkins logo"              |
+| 5   | ![](images/diLXsJ7yohKZoAbDL6JEO5BEbko.png) | `diLXsJ7yohKZoAbDL6JEO5BEbko.png` | "PYMNTS logo"                       |
+| 6   | ![](images/X7pEzANd3psWwBZE0aPIr2npYjE.png) | `X7pEzANd3psWwBZE0aPIr2npYjE.png` | "EY (Ernst & Young) logo"           |
 
 
 ---
@@ -237,12 +237,12 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 **Total images:** ~16 | **Missing alt:** 7 | **With alt:** ~9
 
 
-| #   | Preview | Framer Filename                   | What It Is                                       | Suggested Alt Text                                      |
-| --- | ------- | --------------------------------- | ------------------------------------------------ | ------------------------------------------------------- |
-| 1   | ![](images/FFNcjyi8WJ7aW7sXOOL0txwkw.webp) | `FFNcjyi8WJ7aW7sXOOL0txwkw.webp`  | Customer logo or trust badge                     | Identify -- e.g. "G2 badge" or "[Company] logo"         |
-| 2   | ![](images/jSJTx8xWClKJEVWqUbZZhSkZM.png) | `jSJTx8xWClKJEVWqUbZZhSkZM.png`   | Customer logo (white on transparent, very small) | "Customer logo" (too small/faint to identify precisely) |
-| 3   | ![](images/vZUp1eP4XzpEvfPWortIpfeJc.png) | `vZUp1eP4XzpEvfPWortIpfeJc.png`   | Customer logo                                    | "Rippling logo"                                         |
-| 4   | ![](images/VRrbQoRqaK06OBmVmnXn3EJgARU.png) | `VRrbQoRqaK06OBmVmnXn3EJgARU.png` | Customer logo                                    | "Gorgias logo"                                          |
+| #   | Preview | Framer Filename                   | Suggested Alt Text                                      |
+| --- | ------- | --------------------------------- | ------------------------------------------------------- |
+| 1   | ![](images/FFNcjyi8WJ7aW7sXOOL0txwkw.webp) | `FFNcjyi8WJ7aW7sXOOL0txwkw.webp`  | Identify -- e.g. "G2 badge" or "[Company] logo"         |
+| 2   | ![](images/jSJTx8xWClKJEVWqUbZZhSkZM.png) | `jSJTx8xWClKJEVWqUbZZhSkZM.png`   | "Customer logo" (too small/faint to identify precisely) |
+| 3   | ![](images/vZUp1eP4XzpEvfPWortIpfeJc.png) | `vZUp1eP4XzpEvfPWortIpfeJc.png`   | "Rippling logo"                                         |
+| 4   | ![](images/VRrbQoRqaK06OBmVmnXn3EJgARU.png) | `VRrbQoRqaK06OBmVmnXn3EJgARU.png` | "Gorgias logo"                                          |
 
 
 ---
@@ -307,10 +307,10 @@ This article reviews 11 platforms (Maxima, BlackLine, FloQast, Tabs, Zuora, Brex
 **Total images:** ~9 | **Missing alt:** 5 | **With alt:** 4
 
 
-| #   | Preview | Framer Filename                   | What It Is                 | Suggested Alt Text                                                                                                                                                                                                                                                                      |
-| --- | ------- | --------------------------------- | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | ![](images/3UVdFS4uFQpoDZ00KLKs4Br4HAI.png) | `3UVdFS4uFQpoDZ00KLKs4Br4HAI.png` | Line chart                 | "Account Balance Accuracy chart comparing AI models (Opus, Sonnet, Grok, Gemini, o3, o4-mini) showing accuracy decline over 13 months"                                                                                                                                                  |
-| 2   | ![](images/vADRg9PkaoVtnP3Nbp7G3QTxqeQ.png) | `vADRg9PkaoVtnP3Nbp7G3QTxqeQ.png` | Iceberg comparison diagram | "Iceberg diagram comparing generalized LLM models vs Maxima: LLMs appear accurate on the surface but lack memory, financial data links, accounting understanding, and validation; Maxima delivers audit-ready outputs grounded in GL data with accounting-specific skills and controls" |
+| #   | Preview | Framer Filename                   | Suggested Alt Text                                                                                                                                                                                                                                                                      |
+| --- | ------- | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | ![](images/3UVdFS4uFQpoDZ00KLKs4Br4HAI.png) | `3UVdFS4uFQpoDZ00KLKs4Br4HAI.png` | "Account Balance Accuracy chart comparing AI models (Opus, Sonnet, Grok, Gemini, o3, o4-mini) showing accuracy decline over 13 months"                                                                                                                                                  |
+| 2   | ![](images/vADRg9PkaoVtnP3Nbp7G3QTxqeQ.png) | `vADRg9PkaoVtnP3Nbp7G3QTxqeQ.png` | "Iceberg diagram comparing generalized LLM models vs Maxima: LLMs appear accurate on the surface but lack memory, financial data links, accounting understanding, and validation; Maxima delivers audit-ready outputs grounded in GL data with accounting-specific skills and controls" |
 
 
 ---
@@ -320,11 +320,11 @@ This article reviews 11 platforms (Maxima, BlackLine, FloQast, Tabs, Zuora, Brex
 **Total images:** ~10 | **Missing alt:** 6 | **With alt:** 4
 
 
-| #   | Preview | Framer Filename                   | What It Is           | Suggested Alt Text                                                                                                                                                                                               |
-| --- | ------- | --------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | ![](images/VEgoeMjxNcZHyt6gs3u0mnM5du4.png) | `VEgoeMjxNcZHyt6gs3u0mnM5du4.png` | Workflow diagram     | "Diagram of traditional CFO office workflow: system of transaction to human system of action (accountants, preparers, reviewers) to human system of intelligence (Director, VP, CAO, CFO) with quarterly audits" |
-| 2   | ![](images/eLJiMRSgNORQAVepTBi0336jGk.png) | `eLJiMRSgNORQAVepTBi0336jGk.png`  | Workflow diagram     | "Diagram of Maxima-powered workflow: system of transaction to Maxima system of work with 24/7 error detection and AI assistants alongside accountants to system of record"                                       |
-| 3   | ![](images/mpAqItRV41cXj4GeLRmTfUkJY.png) | `mpAqItRV41cXj4GeLRmTfUkJY.png`   | Concept illustration | "Two-card illustration comparing Actionable (agents take the action) and Dynamic (AI preps the analysis) capabilities"                                                                                           |
+| #   | Preview | Framer Filename                   | Suggested Alt Text                                                                                                                                                                                               |
+| --- | ------- | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | ![](images/VEgoeMjxNcZHyt6gs3u0mnM5du4.png) | `VEgoeMjxNcZHyt6gs3u0mnM5du4.png` | "Diagram of traditional CFO office workflow: system of transaction to human system of action (accountants, preparers, reviewers) to human system of intelligence (Director, VP, CAO, CFO) with quarterly audits" |
+| 2   | ![](images/eLJiMRSgNORQAVepTBi0336jGk.png) | `eLJiMRSgNORQAVepTBi0336jGk.png`  | "Diagram of Maxima-powered workflow: system of transaction to Maxima system of work with 24/7 error detection and AI assistants alongside accountants to system of record"                                       |
+| 3   | ![](images/mpAqItRV41cXj4GeLRmTfUkJY.png) | `mpAqItRV41cXj4GeLRmTfUkJY.png`   | "Two-card illustration comparing Actionable (agents take the action) and Dynamic (AI preps the analysis) capabilities"                                                                                           |
 
 
 ---
@@ -334,9 +334,9 @@ This article reviews 11 platforms (Maxima, BlackLine, FloQast, Tabs, Zuora, Brex
 **Total images:** ~8 | **Missing alt:** 4 | **With alt:** 4
 
 
-| #   | Preview | Framer Filename                   | What It Is                   | Suggested Alt Text                                                                                                                                                                       |
-| --- | ------- | --------------------------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | ![](images/bb7hBnvbLl86twSqj0nYm1cBLLU.jpg) | `bb7hBnvbLl86twSqj0nYm1cBLLU.jpg` | Funding announcement graphic | "Maxima $41M Seed and Series A funding announcement, led by Redpoint, Kleiner Perkins, and Audacious, with participation from Datadog, OpenAI, Oracle NetSuite, Ramp, Rippling, and FOG" |
+| #   | Preview | Framer Filename                   | Suggested Alt Text                                                                                                                                                                       |
+| --- | ------- | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | ![](images/bb7hBnvbLl86twSqj0nYm1cBLLU.jpg) | `bb7hBnvbLl86twSqj0nYm1cBLLU.jpg` | "Maxima $41M Seed and Series A funding announcement, led by Redpoint, Kleiner Perkins, and Audacious, with participation from Datadog, OpenAI, Oracle NetSuite, Ramp, Rippling, and FOG" |
 
 
 ---
