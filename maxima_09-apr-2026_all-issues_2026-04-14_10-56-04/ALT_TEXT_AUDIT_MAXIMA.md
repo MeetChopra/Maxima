@@ -307,10 +307,10 @@ This article reviews 11 platforms (Maxima, BlackLine, FloQast, Tabs, Zuora, Brex
 **Total images:** ~9 | **Missing alt:** 5 | **With alt:** 4
 
 
-| #   | Preview | Framer Filename                   | Suggested Alt Text                                                                                                                                                                                                                                                                      |
+| #   | Preview | Framer Filename                   | Fixed Alt Text                                                                                                                                                                                                                                                                      |
 | --- | ------- | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | ![](images/3UVdFS4uFQpoDZ00KLKs4Br4HAI.png) | `3UVdFS4uFQpoDZ00KLKs4Br4HAI.png` | "Account Balance Accuracy chart comparing AI models (Opus, Sonnet, Grok, Gemini, o3, o4-mini) showing accuracy decline over 13 months"                                                                                                                                                  |
-| 2   | ![](images/vADRg9PkaoVtnP3Nbp7G3QTxqeQ.png) | `vADRg9PkaoVtnP3Nbp7G3QTxqeQ.png` | "Iceberg diagram comparing generalized LLM models vs Maxima: LLMs appear accurate on the surface but lack memory, financial data links, accounting understanding, and validation; Maxima delivers audit-ready outputs grounded in GL data with accounting-specific skills and controls" |
+| 1   | ![](images/3UVdFS4uFQpoDZ00KLKs4Br4HAI.png) | `3UVdFS4uFQpoDZ00KLKs4Br4HAI.png` | "Account Balance Accuracy chart comparing AI models"                                                                                                                                                  |
+| 2   | ![](images/vADRg9PkaoVtnP3Nbp7G3QTxqeQ.png) | `vADRg9PkaoVtnP3Nbp7G3QTxqeQ.png` | "Iceberg diagram comparing generalized LLM models vs Maxima" |
 
 
 ---
@@ -322,9 +322,9 @@ This article reviews 11 platforms (Maxima, BlackLine, FloQast, Tabs, Zuora, Brex
 
 | #   | Preview | Framer Filename                   | Suggested Alt Text                                                                                                                                                                                               |
 | --- | ------- | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | ![](images/VEgoeMjxNcZHyt6gs3u0mnM5du4.png) | `VEgoeMjxNcZHyt6gs3u0mnM5du4.png` | "Diagram of traditional CFO office workflow: system of transaction to human system of action (accountants, preparers, reviewers) to human system of intelligence (Director, VP, CAO, CFO) with quarterly audits" |
-| 2   | ![](images/eLJiMRSgNORQAVepTBi0336jGk.png) | `eLJiMRSgNORQAVepTBi0336jGk.png`  | "Diagram of Maxima-powered workflow: system of transaction to Maxima system of work with 24/7 error detection and AI assistants alongside accountants to system of record"                                       |
-| 3   | ![](images/mpAqItRV41cXj4GeLRmTfUkJY.png) | `mpAqItRV41cXj4GeLRmTfUkJY.png`   | "Two-card illustration comparing Actionable (agents take the action) and Dynamic (AI preps the analysis) capabilities"                                                                                           |
+| 1   | ![](images/VEgoeMjxNcZHyt6gs3u0mnM5du4.png) | `VEgoeMjxNcZHyt6gs3u0mnM5du4.png` | "Diagram of traditional CFO office workflow" |
+| 2   | ![](images/eLJiMRSgNORQAVepTBi0336jGk.png) | `eLJiMRSgNORQAVepTBi0336jGk.png`  | "Diagram of Maxima-powered workflow"                                       |
+| 3   | ![](images/mpAqItRV41cXj4GeLRmTfUkJY.png) | `mpAqItRV41cXj4GeLRmTfUkJY.png`   | "Actionable vs Dynamic AI comparison illustration"                                                                                           |
 
 
 ---
@@ -336,7 +336,7 @@ This article reviews 11 platforms (Maxima, BlackLine, FloQast, Tabs, Zuora, Brex
 
 | #   | Preview | Framer Filename                   | Suggested Alt Text                                                                                                                                                                       |
 | --- | ------- | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | ![](images/bb7hBnvbLl86twSqj0nYm1cBLLU.jpg) | `bb7hBnvbLl86twSqj0nYm1cBLLU.jpg` | "Maxima $41M Seed and Series A funding announcement, led by Redpoint, Kleiner Perkins, and Audacious, with participation from Datadog, OpenAI, Oracle NetSuite, Ramp, Rippling, and FOG" |
+| 1   | ![](images/bb7hBnvbLl86twSqj0nYm1cBLLU.jpg) | `bb7hBnvbLl86twSqj0nYm1cBLLU.jpg` | "Maxima $41M Seed and Series A funding announcement" |
 
 
 ---
@@ -362,48 +362,6 @@ Same pattern as case studies -- only shared template images are missing alt.
 ### Legal Pages (/legal, /legal/privacy-policy, /legal/terms-of-service, /legal/cookie-policy)
 
 Only shared site-wide decorative images. No unique images.
-
----
-
-## 3. Summary & Priority
-
-### By fix effort vs. impact
-
-
-| Priority     | What to fix                                           | Unique images | Pages affected               | Impact                                                     |
-| ------------ | ----------------------------------------------------- | ------------- | ---------------------------- | ---------------------------------------------------------- |
-| 1 - Critical | 2 site-wide decorative images (add `alt=""`)          | 2             | ALL 30 pages (~60 instances) | Fixes largest batch in one Framer change                   |
-| 2 - High     | 30 team headshots on /about page                      | 30            | 1 page                       | Accessibility compliance for team representation           |
-| 3 - High     | 11 platform screenshots on AI Tools article           | 11            | 1 page                       | Key buyer guide page -- images are content, not decoration |
-| 4 - Medium   | Comparison page images (testimonials, feature icons)  | 12            | 1 page                       | High-traffic comparison page                               |
-| 5 - Medium   | Newsroom article thumbnails                           | 6             | 1 page                       | Press coverage visibility                                  |
-| 6 - Medium   | Book-a-demo trust badges/logos                        | 4             | 1 page                       | Conversion page                                            |
-| 7 - Medium   | Blog listing thumbnails                               | 4             | 1 page                       | Content discovery                                          |
-| 8 - Low      | Article in-content illustrations (Accuracy, CFO 2030) | 5             | 2 pages                      | Thought leadership articles                                |
-| 9 - Low      | Homepage customer logos                               | 2             | 1 page                       | Customer trust signals                                     |
-| 10 - Low     | Fix alt text typos on homepage                        | 2             | 1 page                       | "Ripping" -> "Rippling", remove ".png" from SpotOn alt     |
-
-
-### Alt text errors on images that DO have alt text
-
-
-| Page         | Image                             | Current Alt                             | Issue                                | Fix                                   |
-| ------------ | --------------------------------- | --------------------------------------- | ------------------------------------ | ------------------------------------- |
-| / (homepage) | `2xO5dPLiVpqVAWReKw5iab9Cl8.png`  | "Vipin Sethi, Controller at Ripping"    | Typo: "Ripping" should be "Rippling" | "Vipin Sethi, Controller at Rippling" |
-| / (homepage) | `bueD7XevgiYiqgzab1SBd6kaRsQ.png` | "Jack Chalfant, Controller, SpotOn.png" | ".png" file extension in alt text    | "Jack Chalfant, Controller, SpotOn"   |
-
-
-### Total count
-
-
-| Category                                     | Count |
-| -------------------------------------------- | ----- |
-| Unique images needing alt text               | 83    |
-| Images that should get `alt=""` (decorative) | ~8    |
-| Images that need descriptive alt text        | ~75   |
-| Images with alt text errors (typos)          | 2     |
-| Total instances across all pages             | ~170  |
-
 
 ---
 
