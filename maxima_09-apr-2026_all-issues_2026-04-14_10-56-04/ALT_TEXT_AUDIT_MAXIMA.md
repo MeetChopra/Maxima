@@ -19,69 +19,38 @@
 
 These images appear on every page (or nearly every page) via Framer's global header/footer/nav components. **Fixing these in Framer will resolve the issue across all 30 pages at once.**
 
-### Images confirmed on ALL 30 pages (via header/footer):
+### Images confirmed on ALL 31 pages (via header/footer):
 
-`**Sfz6mVl5Wq1Zdym07lodksvCE.png`** (1920x1080) -- Footer background / decorative gradient
-![Sfz6mVl5Wq1Zdym07lodksvCE.png](images/Sfz6mVl5Wq1Zdym07lodksvCE.png)
-
-- **Current Alt:** MISSING
-- **Suggested Alt:** `""` (empty alt -- decorative)
-- **Status:** Updated alt tag to "3D blue cubes illustrating AI-powered accounting accuracy"
-
----
-
-`**vl8RF4iXhvG4IFYwq1fc6JhmF2c.png`** (5118x2879) -- Full-width decorative background (responsive variants)
-![vl8RF4iXhvG4IFYwq1fc6JhmF2c.png](images/vl8RF4iXhvG4IFYwq1fc6JhmF2c.png)
-
-- **Current Alt:** MISSING
-- **Suggested Alt:** `""` (empty alt -- decorative)
-- **Status:** Identified. Not able to find it in Framer.
+| #   | Preview | Framer Filename                      | Description                                      | Suggested Alt Text                                              | Status                                   |
+| --- | ------- | ------------------------------------ | ------------------------------------------------ | --------------------------------------------------------------- | ---------------------------------------- |
+| 1   | ![](images/Sfz6mVl5Wq1Zdym07lodksvCE.png) | `Sfz6mVl5Wq1Zdym07lodksvCE.png` (1920x1080) | Footer background / decorative gradient          | `""` (empty alt -- decorative)                                  | Updated alt tag to "3D blue cubes illustrating AI-powered accounting accuracy" |
+| 2   | ![](images/vl8RF4iXhvG4IFYwq1fc6JhmF2c.png) | `vl8RF4iXhvG4IFYwq1fc6JhmF2c.png` (5118x2879) | Full-width decorative background (responsive variants) | `""` (empty alt -- decorative)                                  | Identified. Not able to find it in Framer. |
 
 ---
 
 ### Ahrefs-flagged images NOT actually visible on site:
 
-`**oSCs67tz1q007qoOCmTmCOUzLvU.png`** -- Ahrefs said all 30 pages, but only exists on `/blog`
-![oSCs67tz1q007qoOCmTmCOUzLvU.png](images/oSCs67tz1q007qoOCmTmCOUzLvU.png)
-
-- **Reality:** Only exists on `/blog` page in raw HTML. Framer rendering artifact from April 9 crawl.
-- **Action:** Low priority -- only affects 1 page
-
----
-
-`**JEiyjUqswVbHLA4wnNdJYRZMTFQ.png`** -- Only renders at viewport 1906-2486px (ultra-wide)
-JEiyjUqswVbHLA4wnNdJYRZMTFQ.png
-
-- **Reality:** Present in HTML on all pages but only for ultra-wide monitors. Framer responsive variant.
-- **Action:** Low priority -- not visible to most users
+| #   | Preview | Framer Filename                      | Reality                                                                          | Action                               |
+| --- | ------- | ------------------------------------ | -------------------------------------------------------------------------------- | ------------------------------------ |
+| 1   | ![](images/oSCs67tz1q007qoOCmTmCOUzLvU.png) | `oSCs67tz1q007qoOCmTmCOUzLvU.png` | Only exists on `/blog` page in raw HTML. Framer rendering artifact from April 9 crawl. | Low priority -- only affects 1 page  |
+| 2   | ![](images/JEiyjUqswVbHLA4wnNdJYRZMTFQ.png) | `JEiyjUqswVbHLA4wnNdJYRZMTFQ.png` | Present in HTML on all pages but only for ultra-wide monitors (1906-2486px). Framer responsive variant. | Low priority -- not visible to most users |
 
 ---
 
 ### Images appearing on 6+ core pages:
 
-**`JVFEzfu6Sw8C2ZRuuYT19mjzI0.png`** -- Hero/section background on /how-it-works, /careers, /about, /product-overview, /security
-![JVFEzfu6Sw8C2ZRuuYT19mjzI0.png](images/JVFEzfu6Sw8C2ZRuuYT19mjzI0.png)
-
-- **Current Alt:** MISSING
-- **Fixed Alt:** Decorative Illustration
+| #   | Preview | Framer Filename                      | Description                                                              | Suggested Alt Text       | Status                                   |
+| --- | ------- | ------------------------------------ | ------------------------------------------------------------------------ | ------------------------ | ---------------------------------------- |
+| 1   | ![](images/JVFEzfu6Sw8C2ZRuuYT19mjzI0.png) | `JVFEzfu6Sw8C2ZRuuYT19mjzI0.png` | Hero/section background on /how-it-works, /careers, /about, /product-overview, /security | Decorative Illustration  | Identified. Not able to find it in Framer. |
 
 ---
 
 ### Images appearing on most article pages:
 
-**`w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png`** -- Article template shared image (13 article pages)
-![w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png](images/w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png)
-
-- **Current Alt:** MISSING
-- **Fixed Alt:** "Maxima logo icon" (blue mountain/M shape)
-
----
-
-**`iW3LdIyUUysMh7pga9J8nbZx70.png`** -- Article author headshot or shared illustration (CFO 2030, Accuracy, AI tools articles)
-![iW3LdIyUUysMh7pga9J8nbZx70.png](images/iW3LdIyUUysMh7pga9J8nbZx70.png)
-
-- **Current Alt:** MISSING
-- **Status:** Identified. Updated the alt tag to "Maxima AI blog post header"
+| #   | Preview | Framer Filename                      | Description                                                              | Suggested Alt Text              | Status                                                |
+| --- | ------- | ------------------------------------ | ------------------------------------------------------------------------ | ------------------------------- | ----------------------------------------------------- |
+| 1   | ![](images/w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png) | `w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png` | Article template shared image (13 article pages)                         | "Maxima logo icon"              | Fixed                                                 |
+| 2   | ![](images/iW3LdIyUUysMh7pga9J8nbZx70.png) | `iW3LdIyUUysMh7pga9J8nbZx70.png` | Article author headshot or shared illustration (CFO 2030, Accuracy, AI tools articles) | "Maxima AI blog post header"    | Updated the alt tag to "Maxima AI blog post header"   |
 
 ---
 
@@ -89,8 +58,10 @@ JEiyjUqswVbHLA4wnNdJYRZMTFQ.png
 
 These already have alt text -- no action needed.
 
-**`s3Y06HhlX7Qf6uWWLCHfLzNo.jpg`** -- OK
-**`uMCRztucVWslYHQ562XjaSiUtc.jpg`** -- OK
+| #   | Preview | Framer Filename                      | Status |
+| --- | ------- | ------------------------------------ | ------ |
+| 1   |         | `s3Y06HhlX7Qf6uWWLCHfLzNo.jpg`     | OK     |
+| 2   |         | `uMCRztucVWslYHQ562XjaSiUtc.jpg`    | OK     |
 
 **Impact of fixing shared images:** Fixing the 2 confirmed site-wide images (`Sfz6mVl5Wq1Zdym07lodksvCE.png` and `vl8RF4iXhvG4IFYwq1fc6JhmF2c.png`) eliminates ~60 missing-alt instances across the site. The other 2 images Ahrefs flagged as site-wide (`oSCs67tz` and `JEiyjUq`) are Framer responsive artifacts -- not actually visible to users at normal screen sizes.
 
@@ -110,37 +81,17 @@ For each page below, images are listed in the order they appear. Shared site-wid
 
 #### Missing alt:
 
-`**mI3M74ioo3PzJxjmiwybXMRKg.png`** -- Customer logo (1772x756)
-![mI3M74ioo3PzJxjmiwybXMRKg.png](images/mI3M74ioo3PzJxjmiwybXMRKg.png)
-
-- **Suggested Alt:** "Groupe ADP logo"
-- **Status:** Identified
-
----
-
-`**aNadLCO7oIVRXVvqymeSiWwHrg.png`** -- Customer logo (1392x401)
-![aNadLCO7oIVRXVvqymeSiWwHrg.png](images/aNadLCO7oIVRXVvqymeSiWwHrg.png)
-
-- **Suggested Alt:** "Owl Labs logo"
-- **Status:** Identified
-
----
+| #   | Preview | Framer Filename                      | Description              | Suggested Alt Text  |
+| --- | ------- | ------------------------------------ | ------------------------ | ------------------- |
+| 1   | ![](images/mI3M74ioo3PzJxjmiwybXMRKg.png) | `mI3M74ioo3PzJxjmiwybXMRKg.png` (1772x756) | Customer logo            | "Groupe ADP logo"   |
+| 2   | ![](images/aNadLCO7oIVRXVvqymeSiWwHrg.png) | `aNadLCO7oIVRXVvqymeSiWwHrg.png` (1392x401) | Customer logo            | "Owl Labs logo"     |
 
 #### Alt text typos to fix:
 
-`**2xO5dPLiVpqVAWReKw5iab9Cl8.png`** -- Testimonial headshot
-![2xO5dPLiVpqVAWReKw5iab9Cl8.png](images/2xO5dPLiVpqVAWReKw5iab9Cl8.png)
-
-- **Current Alt:** "Vipin Sethi, Controller at **Ripping**"
-- **Fix to:** "Vipin Sethi, Controller at **Rippling**"
-
----
-
-`**bueD7XevgiYiqgzab1SBd6kaRsQ.png`** -- Testimonial headshot
-![bueD7XevgiYiqgzab1SBd6kaRsQ.png](images/bueD7XevgiYiqgzab1SBd6kaRsQ.png)
-
-- **Current Alt:** "Jack Chalfant, Controller, SpotOn**.png**"
-- **Fix to:** "Jack Chalfant, Controller, SpotOn"
+| #   | Preview | Framer Filename                      | Current Alt                                    | Fix to                                  |
+| --- | ------- | ------------------------------------ | ---------------------------------------------- | --------------------------------------- |
+| 1   | ![](images/2xO5dPLiVpqVAWReKw5iab9Cl8.png) | `2xO5dPLiVpqVAWReKw5iab9Cl8.png` | "Vipin Sethi, Controller at **Ripping**"       | "Vipin Sethi, Controller at **Rippling**" |
+| 2   | ![](images/bueD7XevgiYiqgzab1SBd6kaRsQ.png) | `bueD7XevgiYiqgzab1SBd6kaRsQ.png` | "Jack Chalfant, Controller, SpotOn**.png**"    | "Jack Chalfant, Controller, SpotOn"     |
 
 ---
 
@@ -154,9 +105,9 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 
 #### Co-founders group photo (has alt -- OK):
 
-`**Hyy4c91Au1c49qKCKhJjUMbBnu4.png`** -- Co-founders group photo
-
-- **Current Alt:** "Maxima co-founders Yogi Goel (CEO), Akshaya Srivatsa (CPO), and Jack Liao (CTO)." -- OK
+| #   | Framer Filename                      | Current Alt                                                                        | Status |
+| --- | ------------------------------------ | ---------------------------------------------------------------------------------- | ------ |
+| 1   | `Hyy4c91Au1c49qKCKhJjUMbBnu4.png`   | "Maxima co-founders Yogi Goel (CEO), Akshaya Srivatsa (CPO), and Jack Liao (CTO)." | OK     |
 
 #### Team headshots (all missing alt):
 
