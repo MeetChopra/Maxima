@@ -21,27 +21,20 @@ These images appear on every page (or nearly every page) via Framer's global hea
 
 ### Images confirmed on ALL 31 pages (via header/footer):
 
-| #   | Preview | Framer Filename                      | Description                                      | Suggested Alt Text                                              | Status                                   |
-| --- | ------- | ------------------------------------ | ------------------------------------------------ | --------------------------------------------------------------- | ---------------------------------------- |
-| 1   | ![](images/Sfz6mVl5Wq1Zdym07lodksvCE.png) | `Sfz6mVl5Wq1Zdym07lodksvCE.png` (1920x1080) | Footer background / decorative gradient          | `""` (empty alt -- decorative)                                  | Updated alt tag to "3D blue cubes illustrating AI-powered accounting accuracy" |
-| 2   | ![](images/vl8RF4iXhvG4IFYwq1fc6JhmF2c.png) | `vl8RF4iXhvG4IFYwq1fc6JhmF2c.png` (5118x2879) | Full-width decorative background (responsive variants) | `""` (empty alt -- decorative)                                  | Identified. Not able to find it in Framer. |
-
----
-
-### Ahrefs-flagged images NOT actually visible on site:
-
-| #   | Preview | Framer Filename                      | Reality                                                                          | Action                               |
-| --- | ------- | ------------------------------------ | -------------------------------------------------------------------------------- | ------------------------------------ |
-| 1   | ![](images/oSCs67tz1q007qoOCmTmCOUzLvU.png) | `oSCs67tz1q007qoOCmTmCOUzLvU.png` | Only exists on `/blog` page in raw HTML. Framer rendering artifact from April 9 crawl. | Low priority -- only affects 1 page  |
-| 2   | ![](images/JEiyjUqswVbHLA4wnNdJYRZMTFQ.png) | `JEiyjUqswVbHLA4wnNdJYRZMTFQ.png` | Present in HTML on all pages but only for ultra-wide monitors (1906-2486px). Framer responsive variant. | Low priority -- not visible to most users |
+| #   | Preview | Framer Filename                      |  Fixed Alt Text                                              |
+| --- | ------- | ------------------------------------ | --------------------------------------------------------------- 
+| 1   | ![](images/Sfz6mVl5Wq1Zdym07lodksvCE.png) | `Sfz6mVl5Wq1Zdym07lodksvCE.png` (1920x1080)     | 3D blue cubes illustrating AI-powered accounting accuracy |
+| 2   | ![](images/vl8RF4iXhvG4IFYwq1fc6JhmF2c.png) | `vl8RF4iXhvG4IFYwq1fc6JhmF2c.png` (5118x2879)  | Dark Blue Decorative Illustration |
+| 3   | ![](images/oSCs67tz1q007qoOCmTmCOUzLvU.png) | `oSCs67tz1q007qoOCmTmCOUzLvU.png` | The office of the CFO in 2030: how AI Agents change the equation |
+| 4   | ![](images/JEiyjUqswVbHLA4wnNdJYRZMTFQ.png) | `JEiyjUqswVbHLA4wnNdJYRZMTFQ.png` | Decorative Image |
 
 ---
 
 ### Images appearing on 6+ core pages:
 
-| #   | Preview | Framer Filename                      | Description                                                              | Suggested Alt Text       | Status                                   |
-| --- | ------- | ------------------------------------ | ------------------------------------------------------------------------ | ------------------------ | ---------------------------------------- |
-| 1   | ![](images/JVFEzfu6Sw8C2ZRuuYT19mjzI0.png) | `JVFEzfu6Sw8C2ZRuuYT19mjzI0.png` | Hero/section background on /how-it-works, /careers, /about, /product-overview, /security | Decorative Illustration  | Identified. Not able to find it in Framer. |
+| #   | Preview | Framer Filename                      | Description                                                              | Fixed Alt Text       |
+| --- | ------- | ------------------------------------ | ------------------------------------------------------------------------ | ------------------------ |
+| 1   | ![](images/JVFEzfu6Sw8C2ZRuuYT19mjzI0.png) | `JVFEzfu6Sw8C2ZRuuYT19mjzI0.png` | Hero/section background on /how-it-works, /careers, /about, /product-overview, /security | Decorative Illustration  | 
 
 ---
 
@@ -54,24 +47,9 @@ These images appear on every page (or nearly every page) via Framer's global hea
 
 ---
 
-### Blog preview images appearing on most pages (via "The Latest" section):
-
-These already have alt text -- no action needed.
-
-| #   | Preview | Framer Filename                      | Status |
-| --- | ------- | ------------------------------------ | ------ |
-| 1   |         | `s3Y06HhlX7Qf6uWWLCHfLzNo.jpg`     | OK     |
-| 2   |         | `uMCRztucVWslYHQ562XjaSiUtc.jpg`    | OK     |
-
-**Impact of fixing shared images:** Fixing the 2 confirmed site-wide images (`Sfz6mVl5Wq1Zdym07lodksvCE.png` and `vl8RF4iXhvG4IFYwq1fc6JhmF2c.png`) eliminates ~60 missing-alt instances across the site. The other 2 images Ahrefs flagged as site-wide (`oSCs67tz` and `JEiyjUq`) are Framer responsive artifacts -- not actually visible to users at normal screen sizes.
-
----
-
 ## 2. Page-by-Page Image Audit
 
 For each page below, images are listed in the order they appear. Shared site-wide images (covered in Section 1) are noted but not repeated in detail.
-
----
 
 ### Homepage (`/`)
 
