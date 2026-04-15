@@ -1,4 +1,4 @@
-# Maxima.ai - Image Alt Text Audit (Detailed)
+# Maxima.ai - Image Alt Text Audit
 
 **Date:** April 14, 2026
 **Site:** [https://www.maxima.ai](https://www.maxima.ai)
@@ -17,16 +17,15 @@
 
 ## 1. Shared Site-Wide Images
 
-These images appear on every page (or nearly every page) via Framer's global header/footer/nav components. **Fixing these in Framer will resolve the issue across all 30 pages at once.**
+These images appear on every page (or nearly every page) via Framer's global header/footer/nav components.
 
-### Images confirmed on ALL 31 pages (via header/footer):
+### Images on ALL 31 pages (via header/footer):
 
 | #   | Preview | Framer Filename                      |  Fixed Alt Text                                              |
 | --- | ------- | ------------------------------------ | --------------------------------------------------------------- 
 | 1   | ![](images/Sfz6mVl5Wq1Zdym07lodksvCE.png) | `Sfz6mVl5Wq1Zdym07lodksvCE.png` (1920x1080)     | 3D blue cubes illustrating AI-powered accounting accuracy |
 | 2   | ![](images/vl8RF4iXhvG4IFYwq1fc6JhmF2c.png) | `vl8RF4iXhvG4IFYwq1fc6JhmF2c.png` (5118x2879)  | Dark Blue Decorative Illustration |
-| 3   | ![](images/oSCs67tz1q007qoOCmTmCOUzLvU.png) | `oSCs67tz1q007qoOCmTmCOUzLvU.png` | The office of the CFO in 2030: how AI Agents change the equation |
-| 4   | ![](images/JEiyjUqswVbHLA4wnNdJYRZMTFQ.png) | `JEiyjUqswVbHLA4wnNdJYRZMTFQ.png` | The unified product and deployment model |
+| 3   | ![](images/JEiyjUqswVbHLA4wnNdJYRZMTFQ.png) | `JEiyjUqswVbHLA4wnNdJYRZMTFQ.png` (1920x1080) | Abstract geometric illustration with translucent cubes on light blue-purple gradient |
 
 ---
 
@@ -49,7 +48,7 @@ These images appear on every page (or nearly every page) via Framer's global hea
 
 ## 2. Page-by-Page Image Audit
 
-For each page below, images are listed in the order they appear. Shared site-wide images (covered in Section 1) are noted but not repeated in detail.
+Shared site-wide images (covered in Section 1) are noted but not repeated in detail.
 
 ### Homepage (`/`)
 
@@ -59,14 +58,14 @@ For each page below, images are listed in the order they appear. Shared site-wid
 
 #### Missing alt:
 
-| #   | Preview | Framer Filename                      | Description              | Suggested Alt Text  |
-| --- | ------- | ------------------------------------ | ------------------------ | ------------------- |
-| 1   | ![](images/mI3M74ioo3PzJxjmiwybXMRKg.png) | `mI3M74ioo3PzJxjmiwybXMRKg.png` (1772x756) | Customer logo            | "Groupe ADP logo"   |
-| 2   | ![](images/aNadLCO7oIVRXVvqymeSiWwHrg.png) | `aNadLCO7oIVRXVvqymeSiWwHrg.png` (1392x401) | Customer logo            | "Owl Labs logo"     |
+| #   | Preview | Framer Filename               | Fixed Alt Text  |
+| --- | ------- | ------------------------ | ------------------- |
+| 1   | ![](images/mI3M74ioo3PzJxjmiwybXMRKg.png) | `mI3M74ioo3PzJxjmiwybXMRKg.png` (1772x756) | "Groupe ADP logo"   |
+| 2   | ![](images/aNadLCO7oIVRXVvqymeSiWwHrg.png) | `aNadLCO7oIVRXVvqymeSiWwHrg.png` (1392x401) | "Owl Labs logo"     |
 
 #### Alt text typos to fix:
 
-| #   | Preview | Framer Filename                      | Current Alt                                    | Fix to                                  |
+| #   | Preview | Framer Filename                      | Current Alt                                    | Fixed to                                  |
 | --- | ------- | ------------------------------------ | ---------------------------------------------- | --------------------------------------- |
 | 1   | ![](images/2xO5dPLiVpqVAWReKw5iab9Cl8.png) | `2xO5dPLiVpqVAWReKw5iab9Cl8.png` | "Vipin Sethi, Controller at **Ripping**"       | "Vipin Sethi, Controller at **Rippling**" |
 | 2   | ![](images/bueD7XevgiYiqgzab1SBd6kaRsQ.png) | `bueD7XevgiYiqgzab1SBd6kaRsQ.png` | "Jack Chalfant, Controller, SpotOn**.png**"    | "Jack Chalfant, Controller, SpotOn"     |
@@ -77,9 +76,7 @@ For each page below, images are listed in the order they appear. Shared site-wid
 
 **Total images:** 37 unique | **Missing alt:** 30 (+ 4 shared site-wide) | **With alt:** 3
 
-This page has 30 team member headshots, all missing alt text. The headshots are 832x832 px square images.
-
-**Note:** The headshot-to-name mapping below is based on alphabetical order of team members shown on the page. **Verify each mapping visually in Framer** before applying, as the rendering order may differ.
+This page has 30 team member headshots, all missing alt text.
 
 #### Co-founders group photo (has alt -- OK):
 
@@ -90,7 +87,7 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 #### Team headshots (all missing alt):
 
 
-| #   | Preview | Framer Filename                   | Suggested Alt Text                            |
+| #   | Preview | Framer Filename                   | Fixed Alt Text                            |
 | --- | ------- | --------------------------------- | --------------------------------------------- |
 | 1   | ![](images/5HtYALpXnnTQ71W59GG0DI5G6g.png) | `5HtYALpXnnTQ71W59GG0DI5G6g.png`  | "Aaron Ko, Software Engineer at Maxima"       |
 | 2   | ![](images/gdptJjSKG515QhOiz5DvIBZff3s.png) | `gdptJjSKG515QhOiz5DvIBZff3s.png` | "Abby He, Software Engineer at Maxima"        |
@@ -128,17 +125,18 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 
 ### Blog (`/blog`)
 
-**Total images:** ~15 | **Missing alt:** 7 (4 blog-specific + 3 site-wide shared) | **With alt:** ~8
+**Total images:** ~15 | **Missing alt:** 8 (5 blog-specific + 3 site-wide shared) | **With alt:** ~8
 
-> **Note:** Ahrefs reports 7 missing-alt images on this page. 3 of those are site-wide shared images already covered above: `Sfz6mVl5Wq1Zdym07lodksvCE.png` (footer background), `vl8RF4iXhvG4IFYwq1fc6JhmF2c.png` (decorative background), and `oSCs67tz1q007qoOCmTmCOUzLvU.png` (Framer rendering artifact). The 4 blog-specific thumbnails are listed below.
+> **Note:** 3 of the missing-alt images are site-wide shared images already covered above: `Sfz6mVl5Wq1Zdym07lodksvCE.png` (footer background), `vl8RF4iXhvG4IFYwq1fc6JhmF2c.png` (decorative background), and `JEiyjUqswVbHLA4wnNdJYRZMTFQ.png` (sitewide decorative). The 5 blog-specific images are listed below.
 
 
 | #   | Preview | Framer Filename                   | Fixed Alt Text                                                                  |
 | --- | ------- | --------------------------------- | ----------------------------------------------------------------------------------- |
-| 1   | ![](images/7Megt5YYEEUMfEwmCgM9HZPFI9k.png) | `7Megt5YYEEUMfEwmCgM9HZPFI9k.png` | "Reconciliations in accounting: the definitive guide"                 |
-| 2   | ![](images/OMTw88vPFqJzaiaSmbYqndjFGU.png) | `OMTw88vPFqJzaiaSmbYqndjFGU.png`  | "7 best financial close software solutions to evaluate in 2026"       |
-| 3   | ![](images/PTvcVBayFg0cqO5C2sDLc5KD8.png) | `PTvcVBayFg0cqO5C2sDLc5KD8.png`   | "AI tools for accounting: best software, categories, and buyer guide" |
-| 4   | ![](images/iee3e1EfvQdYNE5a9EhBmAIfgpo.png) | `iee3e1EfvQdYNE5a9EhBmAIfgpo.png` | "Variance analysis: the definitive guide to explaining the numbers"   |
+| 1   | ![](images/oSCs67tz1q007qoOCmTmCOUzLvU.png) | `oSCs67tz1q007qoOCmTmCOUzLvU.png` | "The office of the CFO in 2030: how AI Agents change the equation" (article thumbnail) |
+| 2   | ![](images/7Megt5YYEEUMfEwmCgM9HZPFI9k.png) | `7Megt5YYEEUMfEwmCgM9HZPFI9k.png` | "Reconciliations in accounting: the definitive guide"                 |
+| 3   | ![](images/OMTw88vPFqJzaiaSmbYqndjFGU.png) | `OMTw88vPFqJzaiaSmbYqndjFGU.png`  | "7 best financial close software solutions to evaluate in 2026"       |
+| 4   | ![](images/PTvcVBayFg0cqO5C2sDLc5KD8.png) | `PTvcVBayFg0cqO5C2sDLc5KD8.png`   | "AI tools for accounting: best software, categories, and buyer guide" |
+| 5   | ![](images/iee3e1EfvQdYNE5a9EhBmAIfgpo.png) | `iee3e1EfvQdYNE5a9EhBmAIfgpo.png` | "Variance analysis: the definitive guide to explaining the numbers"   |
 
 
 ---
@@ -148,7 +146,7 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 **Total images:** ~12 | **Missing alt:** 6 (+ 3 shared site-wide) | **With alt:** 3
 
 
-| #   | Preview | Framer Filename                   | Suggested Alt Text                  |
+| #   | Preview | Framer Filename                   | Fixed Alt Text                  |
 | --- | ------- | --------------------------------- | ----------------------------------- |
 | 1   | ![](images/ED3hsTQ3LEeIySbLRVlbGg0dSd4.png) | `ED3hsTQ3LEeIySbLRVlbGg0dSd4.png` | "TBPN logo"                         |
 | 2   | ![](images/9H3yHdrmyxt1xPG0X0L4ZnwChTg.png) | `9H3yHdrmyxt1xPG0X0L4ZnwChTg.png` | "FintechTV Exponential Voices logo" |
@@ -166,7 +164,7 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 **Total images:** ~16 | **Missing alt:** 4 (+ 3 shared site-wide) | **With alt:** ~9
 
 
-| #   | Preview | Framer Filename                   | Suggested Alt Text                                      |
+| #   | Preview | Framer Filename                   | Fixed Alt Text                                      |
 | --- | ------- | --------------------------------- | ------------------------------------------------------- |
 | 1   | ![](images/FFNcjyi8WJ7aW7sXOOL0txwkw.webp) | `FFNcjyi8WJ7aW7sXOOL0txwkw.webp`  | Identify -- e.g. "G2 badge" or "[Company] logo"         |
 | 2   | ![](images/jSJTx8xWClKJEVWqUbZZhSkZM.png) | `jSJTx8xWClKJEVWqUbZZhSkZM.png`   | "Customer logo" (too small/faint to identify precisely) |
@@ -183,7 +181,7 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 #### Testimonial headshots (missing alt):
 
 
-| #   | Preview | Framer Filename                    | Suggested Alt Text              |
+| #   | Preview | Framer Filename                    | Fixed Alt Text              |
 | --- | ------- | ---------------------------------- | ------------------------------- |
 | 1   | ![](images/45E0cvGSRszAJnnlVamFD8Gec.jpeg) | `45E0cvGSRszAJnnlVamFD8Gec.jpeg`   | Jason Lai, Financial Controller |
 | 2   | ![](images/b4SAq6WcvsRoMgWzPYLaFL2CX0.jpeg) | `b4SAq6WcvsRoMgWzPYLaFL2CX0.jpeg`  | Mervyn Haw, Senior Accountant   |
@@ -194,13 +192,13 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 #### Comparison graphics & icons (missing alt):
 
 
-| #   | Preview | Framer Filename                   | Suggested Alt Text                                                        |
+| #   | Preview | Framer Filename                   | Fixed Alt Text                                                        |
 | --- | ------- | --------------------------------- | ------------------------------------------------------------------------- |
-| 1   | ![](images/6stZUxUReRn72GHdCCPoD4SGskI.png) | `6stZUxUReRn72GHdCCPoD4SGskI.png` | Decorative blue/purple gradient background -- use `alt=""`                |
+| 1   | ![](images/6stZUxUReRn72GHdCCPoD4SGskI.png) | `6stZUxUReRn72GHdCCPoD4SGskI.png` | Decorative illustration                |
 | 2   | ![](images/uNag2J6pd8UlLeQ9myHyTIvJXIA.png) | `uNag2J6pd8UlLeQ9myHyTIvJXIA.png` | "FloQast logo"                                                            |
-| 3   | ![](images/HfaLCxdC3xfmlQGeH9kcFsXYnk.png) | `HfaLCxdC3xfmlQGeH9kcFsXYnk.png`  | Comparison graphic (1.4MB -- needs visual ID, skipped for size)           |
-| 4   | ![](images/xBqVUrTX51Ag560dM2AzeQGhg.png) | `xBqVUrTX51Ag560dM2AzeQGhg.png`   | "White logo on transparent background" (barely visible, hard to identify) |
-| 5   | ![](images/sk3MG8zImcTybJZRLQTHybRcBI.png) | `sk3MG8zImcTybJZRLQTHybRcBI.png`  | Comparison graphic (1.4MB -- needs visual ID, skipped for size)           |
+| 3   | ![](images/HfaLCxdC3xfmlQGeH9kcFsXYnk.png) | `HfaLCxdC3xfmlQGeH9kcFsXYnk.png`  | Josh Waldron, SVP Finance & Accounting, Scale AI          |
+| 4   | ![](images/xBqVUrTX51Ag560dM2AzeQGhg.png) | `xBqVUrTX51Ag560dM2AzeQGhg.png`   | Scale AI Logo |
+| 5   | ![](images/sk3MG8zImcTybJZRLQTHybRcBI.png) | `sk3MG8zImcTybJZRLQTHybRcBI.png`  | Jack Chalfant, Controller, SpotOn    |
 | 6   | ![](images/E28cFQQ3Thz0y0tODm7GpCMNQ4.png) | `E28cFQQ3Thz0y0tODm7GpCMNQ4.png`  | "SpotOn logo"                                                             |
 | 7   | ![](images/YuB06E5QQYPr5l0rr28J7C7Fk.png) | `YuB06E5QQYPr5l0rr28J7C7Fk.png`   | "Rippling logo"                                                           |
 
@@ -210,8 +208,6 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 ### Article: AI Tools for Accounting (`/articles/ai-tools-for-accounting`)
 
 **Total images:** ~18 | **Missing alt:** 11 (+ 4 shared site-wide) | **With alt:** 3
-
-This article reviews 11 platforms (Maxima, BlackLine, FloQast, Tabs, Zuora, Brex, Ramp, Trullion, Klarity, Pigment, Abacum). The in-article images likely correspond to screenshots or logos of these platforms. **Visually match each image to its platform in Framer.**
 
 
 | #   | Preview | Framer Filename                    | Fixed Alt Text                                                                                        |
@@ -246,14 +242,15 @@ This article reviews 11 platforms (Maxima, BlackLine, FloQast, Tabs, Zuora, Brex
 
 ### Article: The Office of the CFO in 2030 (`/articles/the-office-of-the-cfo-in-2030-how-ai-agents-change-the-equation`)
 
-**Total images:** ~10 | **Missing alt:** 3 (+ 3 shared site-wide) | **With alt:** 4
+**Total images:** ~10 | **Missing alt:** 4 (+ 3 shared site-wide) | **With alt:** 4
 
 
-| #   | Preview | Framer Filename                   | Suggested Alt Text                                                                                                                                                                                               |
+| #   | Preview | Framer Filename                   | Fixed Alt Text                                                                                                                                                                                               |
 | --- | ------- | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | ![](images/VEgoeMjxNcZHyt6gs3u0mnM5du4.png) | `VEgoeMjxNcZHyt6gs3u0mnM5du4.png` | "Diagram of traditional CFO office workflow" |
-| 2   | ![](images/eLJiMRSgNORQAVepTBi0336jGk.png) | `eLJiMRSgNORQAVepTBi0336jGk.png`  | "Diagram of Maxima-powered workflow"                                       |
-| 3   | ![](images/mpAqItRV41cXj4GeLRmTfUkJY.png) | `mpAqItRV41cXj4GeLRmTfUkJY.png`   | "Actionable vs Dynamic AI comparison illustration"                                                                                           |
+| 1   | ![](images/oSCs67tz1q007qoOCmTmCOUzLvU.png) | `oSCs67tz1q007qoOCmTmCOUzLvU.png` | "The office of the CFO in 2030: how AI Agents change the equation" (article hero image) |
+| 2   | ![](images/VEgoeMjxNcZHyt6gs3u0mnM5du4.png) | `VEgoeMjxNcZHyt6gs3u0mnM5du4.png` | "Diagram of traditional CFO office workflow" |
+| 3   | ![](images/eLJiMRSgNORQAVepTBi0336jGk.png) | `eLJiMRSgNORQAVepTBi0336jGk.png`  | "Diagram of Maxima-powered workflow"                                       |
+| 4   | ![](images/mpAqItRV41cXj4GeLRmTfUkJY.png) | `mpAqItRV41cXj4GeLRmTfUkJY.png`   | "Actionable vs Dynamic AI comparison illustration"                                                                                           |
 
 
 ---
@@ -263,7 +260,7 @@ This article reviews 11 platforms (Maxima, BlackLine, FloQast, Tabs, Zuora, Brex
 **Total images:** ~8 | **Missing alt:** 1 (+ 3 shared site-wide) | **With alt:** 4
 
 
-| #   | Preview | Framer Filename                   | Suggested Alt Text                                                                                                                                                                       |
+| #   | Preview | Framer Filename                   | Fixed Alt Text                                                                                                                                                                       |
 | --- | ------- | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1   | ![](images/bb7hBnvbLl86twSqj0nYm1cBLLU.jpg) | `bb7hBnvbLl86twSqj0nYm1cBLLU.jpg` | "Maxima $41M Seed and Series A funding announcement" |
 
@@ -272,19 +269,19 @@ This article reviews 11 platforms (Maxima, BlackLine, FloQast, Tabs, Zuora, Brex
 
 ### Case Studies (SpotOn, Rewst, Rippling, Gorgias, Scale AI)
 
-All 5 case study articles share the same missing images -- only the shared site-wide template elements. No unique in-article images are missing alt text beyond what's covered in Section 1.
+All 5 case study articles share the same missing images. Only the shared site-wide template elements. No unique in-article images are missing alt text beyond what's covered in Section 1.
 
 ---
 
 ### Press/Investor Articles (Reuters, Kleiner Perkins, EY Alumni, BlackLine CMO)
 
-Same pattern as case studies -- only shared template images are missing alt.
+Same pattern as case studies, only shared template images are missing alt.
 
 ---
 
 ### Editorial Guides (Variance Analysis, Reconciliations, Financial Close Software)
 
-Same pattern as case studies -- only shared template images are missing alt.
+Same pattern as case studies, only shared template images are missing alt.
 
 ---
 
