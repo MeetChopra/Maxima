@@ -227,6 +227,7 @@ This page has 30 team member headshots, all missing alt text. The headshots are 
 | 4   | ![](images/dbBES67ciKLqTaakFnv4qoBRs2E.png) | `dbBES67ciKLqTaakFnv4qoBRs2E.png` | "Kleiner Perkins logo"              |
 | 5   | ![](images/diLXsJ7yohKZoAbDL6JEO5BEbko.png) | `diLXsJ7yohKZoAbDL6JEO5BEbko.png` | "PYMNTS logo"                       |
 | 6   | ![](images/X7pEzANd3psWwBZE0aPIr2npYjE.png) | `X7pEzANd3psWwBZE0aPIr2npYjE.png` | "EY (Ernst & Young) logo"           |
+| 7   | ![](images/OsrleOMaq3qRD5WRSnuTVIm9yUU.png) | `OsrleOMaq3qRD5WRSnuTVIm9yUU.png` | "CPA Practice Advisor logo"         |
 
 
 ---
