@@ -1,4 +1,4 @@
-# Schema Markup Implementation Guide — maxima.ai
+# Schema Markup Implementation Guide — [maxima.ai](http://maxima.ai)
 
 **Prepared for:** Maxima Marketing Team
 **Date:** April 16, 2026
@@ -70,7 +70,7 @@ This schema tells Google who Maxima is - company name, contact info, founders, a
   "name": "Maxima",
   "legalName": "Indus AI Technologies, Inc.",
   "url": "https://www.maxima.ai",
-  "logo": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png",
+  "logo": "https://framerusercontent.com/images/w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png",
   "description": "Maxima is an AI-native accounting platform that automates journal entries, reconciliations, flux analysis, and financial close with audit-ready accuracy.",
   "address": {
     "@type": "PostalAddress",
@@ -122,6 +122,101 @@ This schema tells Google who Maxima is - company name, contact info, founders, a
 ## Step 2: Remove the Site-Wide FAQ Snippet
 
 This is the snippet that currently injects the same 5 FAQ questions on all 32 pages. Removing it is the most important step - keeping it risks a Google manual action for spammy structured data.
+
+---
+
+## Scaling FAQ Schema with a Framer Code Component
+
+The page-by-page FAQ schemas below work well for a small number of pages. But as the site grows, manually adding FAQ schema to each page doesn't scale. One way to solve this is with a **custom Framer code component** that automatically generates FAQ schema from the page content.
+
+This is one approach to implementing schema at scale — there are other ways to achieve the same result depending on your setup.
+
+### How it works
+
+1. **Add a custom CMS field** (e.g., "FAQ Schema") to the Blog / Posts collection in Framer
+2. **Create a FAQ component** on the page with the FAQ content (questions as headings, answers as paragraphs)
+3. **Set the component to 0 opacity** — it's invisible to visitors but the code reads the DOM content
+4. **Apply the code override below** to that component — it extracts Q&A pairs and injects FAQPage schema into the page `<head>` automatically
+
+### Framer Code Override
+
+Create this as a **Code Override** in Framer (Assets → Code → New Override):
+
+```tsx
+import { forwardRef, type ComponentType } from "react"
+import * as React from "react"
+
+export function withFAQSchema(Component): ComponentType {
+    return forwardRef((props: any, ref) => {
+        const localRef = React.useRef<HTMLElement | null>(null)
+        const combinedRef = (node) => {
+            if (typeof ref === "function") ref(node)
+            else if (ref) ref.current = node
+            localRef.current = node
+        }
+
+        React.useEffect(() => {
+            const root = localRef.current
+            if (!root) return
+
+            const faqs: { question: string; answer: string }[] = []
+
+            // Look for any heading (h1–h6) followed by a <p>
+            const headingTags = root.querySelectorAll("h1, h2, h3, h4, h5, h6")
+
+            headingTags.forEach((heading) => {
+                const question = heading.textContent?.trim()
+                const next = heading.nextElementSibling
+                const isParagraph = next?.tagName.toLowerCase() === "p"
+                const answer = isParagraph ? next.innerHTML?.trim() : null
+
+                if (question && answer) {
+                    faqs.push({
+                        question,
+                        answer: answer.replace(/\n/g, "").replace(/\s+/g, " "),
+                    })
+                }
+            })
+
+            if (faqs.length === 0) {
+                console.warn("FAQSchema: No FAQ content found.")
+                return
+            }
+
+            const faqSchema = {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                mainEntity: faqs.map((faq) => ({
+                    "@type": "Question",
+                    name: faq.question,
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: faq.answer,
+                    },
+                })),
+            }
+
+            const script = document.createElement("script")
+            script.type = "application/ld+json"
+            script.innerHTML = JSON.stringify(faqSchema)
+            document.head.appendChild(script)
+
+            return () => {
+                document.head.removeChild(script)
+            }
+        }, [])
+
+        return <Component ref={combinedRef} {...props} />
+    })
+}
+```
+
+> **Dev notes:**
+>
+> - The component scans for heading + paragraph pairs inside itself and builds the FAQ schema from them
+> - The Article schema pulls the page title and meta description automatically
+> - The script tag is injected into `<head>` at runtime and cleaned up when the component unmounts
+> - Apply this override to the FAQ component on any page that has FAQ content — it handles the rest
 
 ---
 
@@ -784,7 +879,7 @@ Each article page gets an `Article` schema (for article rich results in Google) 
         "name": "Maxima",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
+          "url": "https://framerusercontent.com/images/w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png"
         }
       },
       "datePublished": {{Published | json}},
@@ -846,7 +941,7 @@ Each article page gets an `Article` schema (for article rich results in Google) 
         "name": "Maxima",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
+          "url": "https://framerusercontent.com/images/w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png"
         }
       },
       "datePublished": {{Published | json}},
@@ -907,7 +1002,7 @@ Each article page gets an `Article` schema (for article rich results in Google) 
         "name": "Maxima",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
+          "url": "https://framerusercontent.com/images/w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png"
         }
       },
       "datePublished": {{Published | json}},
@@ -969,7 +1064,7 @@ Each article page gets an `Article` schema (for article rich results in Google) 
         "name": "Maxima",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
+          "url": "https://framerusercontent.com/images/w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png"
         }
       },
       "datePublished": {{Published | json}},
@@ -1031,7 +1126,7 @@ Each article page gets an `Article` schema (for article rich results in Google) 
         "name": "Maxima",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
+          "url": "https://framerusercontent.com/images/w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png"
         }
       },
       "datePublished": {{Published | json}},
@@ -1092,7 +1187,7 @@ Each article page gets an `Article` schema (for article rich results in Google) 
         "name": "Maxima",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
+          "url": "https://framerusercontent.com/images/w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png"
         }
       },
       "datePublished": {{Published | json}},
@@ -1153,7 +1248,7 @@ Each article page gets an `Article` schema (for article rich results in Google) 
         "name": "Maxima",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
+          "url": "https://framerusercontent.com/images/w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png"
         }
       },
       "datePublished": {{Published | json}},
@@ -1214,7 +1309,7 @@ Each article page gets an `Article` schema (for article rich results in Google) 
         "name": "Maxima",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
+          "url": "https://framerusercontent.com/images/w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png"
         }
       },
       "datePublished": {{Published | json}},
@@ -1275,7 +1370,7 @@ Each article page gets an `Article` schema (for article rich results in Google) 
         "name": "Maxima",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
+          "url": "https://framerusercontent.com/images/w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png"
         }
       },
       "datePublished": {{Published | json}},
@@ -1336,7 +1431,7 @@ Each article page gets an `Article` schema (for article rich results in Google) 
         "name": "Maxima",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
+          "url": "https://framerusercontent.com/images/w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png"
         }
       },
       "datePublished": {{Published | json}},
@@ -1397,7 +1492,7 @@ Each article page gets an `Article` schema (for article rich results in Google) 
         "name": "Maxima",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
+          "url": "https://framerusercontent.com/images/w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png"
         }
       },
       "datePublished": {{Published | json}},
@@ -1458,7 +1553,7 @@ Each article page gets an `Article` schema (for article rich results in Google) 
         "name": "Maxima",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
+          "url": "https://framerusercontent.com/images/w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png"
         }
       },
       "datePublished": {{Published | json}},
@@ -1519,7 +1614,7 @@ Each article page gets an `Article` schema (for article rich results in Google) 
         "name": "Maxima",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
+          "url": "https://framerusercontent.com/images/w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png"
         }
       },
       "datePublished": {{Published | json}},
@@ -1582,7 +1677,7 @@ Each article page gets an `Article` schema (for article rich results in Google) 
         "name": "Maxima",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
+          "url": "https://framerusercontent.com/images/w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png"
         }
       },
       "datePublished": {{Published | json}},
@@ -1688,7 +1783,7 @@ Each article page gets an `Article` schema (for article rich results in Google) 
         "name": "Maxima",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
+          "url": "https://framerusercontent.com/images/w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png"
         }
       },
       "datePublished": {{Published | json}},
@@ -1724,19 +1819,19 @@ If redirects are removed in the future and these pages serve their own content, 
 Before implementing, fill in these values across the document:
 
 
-| Placeholder                         | Used in             | How to find it                            |
-| ----------------------------------- | ------------------- | ----------------------------------------- |
-| `{{YOGI_LINKEDIN_URL}}`             | Organization schema | Yogi Goel's LinkedIn profile URL          |
-| `{{AKSHAYA_LINKEDIN_URL}}`          | Organization schema | Akshaya Srivatsa's LinkedIn profile URL   |
-| `{{JACK_LINKEDIN_URL}}`             | Organization schema | Jack Liao's LinkedIn profile URL          |
-| `{{LINKEDIN_COMPANY_URL}}`          | Organization schema | Maxima's LinkedIn company page URL        |
-| `{{TWITTER_URL}}`                   | Organization schema | Maxima's Twitter/X profile URL            |
-| `{{YYYY}}`                          | Organization schema | Year the company was founded              |
-| `{{NUMBER}}`                        | Organization schema | Current number of employees               |
-| `{{MIN_SALARY}}` / `{{MAX_SALARY}}` | JobPosting schemas  | Salary range for each role (optional)     |
+| Placeholder                         | Used in             | How to find it                          |
+| ----------------------------------- | ------------------- | --------------------------------------- |
+| `{{YOGI_LINKEDIN_URL}}`             | Organization schema | Yogi Goel's LinkedIn profile URL        |
+| `{{AKSHAYA_LINKEDIN_URL}}`          | Organization schema | Akshaya Srivatsa's LinkedIn profile URL |
+| `{{JACK_LINKEDIN_URL}}`             | Organization schema | Jack Liao's LinkedIn profile URL        |
+| `{{LINKEDIN_COMPANY_URL}}`          | Organization schema | Maxima's LinkedIn company page URL      |
+| `{{TWITTER_URL}}`                   | Organization schema | Maxima's Twitter/X profile URL          |
+| `{{YYYY}}`                          | Organization schema | Year the company was founded            |
+| `{{NUMBER}}`                        | Organization schema | Current number of employees             |
+| `{{MIN_SALARY}}` / `{{MAX_SALARY}}` | JobPosting schemas  | Salary range for each role (optional)   |
+
 
 > **Note:** `{{Published | json}}` and `{{Modified | json}}` in Article schemas are Framer CMS variables — they pull automatically from each article's CMS entry. No manual input needed.
-
 
 ---
 

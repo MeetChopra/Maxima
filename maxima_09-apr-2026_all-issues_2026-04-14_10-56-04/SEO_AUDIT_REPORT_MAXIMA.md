@@ -82,17 +82,17 @@ Framer automatically creates copies of the H1 heading for different screen sizes
 **Footer pipe separators tagged as `<h1>`:**
 The `|` pipe characters used as visual separators between footer links (e.g., Privacy Policy **|** Terms of Service **|** Cookie Policy) are wrapped in `<h1>` tags. Every page has 6-8 of these pipe H1s in the footer.
 
-**Fix in Framer:** Change the text element containing `|` from H1 to a `<span>` or `<p>` tag in the Framer layer properties.
+**Fixed in Framer:** Changed the text element containing | from H1 to a `<p>` tag in the Framer layer properties.
 
 **Subheadings incorrectly tagged as `<h1>` (select pages):**
 On some pages, subtitles and section descriptions are tagged as H1 instead of the appropriate semantic tag:
 
 
-| Page          | Text incorrectly tagged as H1                                                                   | Should be |
-| ------------- | ----------------------------------------------------------------------------------------------- | --------- |
-| /how-it-works | "From journal entries through flux, Maxima eliminates errors..." (subtitle)                     | `<p>`     |
-| /how-it-works | "One transaction-level view for all your record-to-report data..." (section heading)            | `<p>`     |
-| /security     | "Designed from the ground up to protect the most sensitive financial data..." (intro paragraph) | `<p>`     |
+| Page          | Text incorrectly tagged as H1                                                                   | **Fixed Tag** |
+| ------------- | ----------------------------------------------------------------------------------------------- | ------------- |
+| /how-it-works | "From journal entries through flux, Maxima eliminates errors..." (subtitle)                     | `<p>`         |
+| /how-it-works | "One transaction-level view for all your record-to-report data..." (section heading)            | `<p>`         |
+| /security     | "Designed from the ground up to protect the most sensitive financial data..." (intro paragraph) | `<p>`         |
 
 
 **Fix in Framer:** In the layer panel for these text elements, change the tag from H1 to the appropriate semantic tag (`<p>` for paragraphs, `<h2>` for section headings).
