@@ -14,57 +14,53 @@ Schema markup is a small piece of code (JSON-LD) added to your website's `<head>
 ## Current Issues
 
 1. **Same FAQ schema on all 32 pages.** The site currently has one FAQ snippet (about AI accounting tools) injected on every page — including legal pages, careers, and the homepage. Google may flag this as spammy structured data since the FAQ content doesn't match what's visible on most pages.
-
 2. **No Article schema on any blog post.** The 18 articles/case studies have no structured data, which means they're not eligible for article rich results in Google.
-
 3. **No breadcrumb schema.** Google can't display breadcrumb navigation in search results for any page.
-
 4. **No job posting schema.** The 20 open roles on /careers aren't visible in Google Jobs.
 
 ---
 
 ## How to Implement in Framer
 
-| What | Where in Framer |
-|---|---|
-| **Organization schema** (site-wide) | Site Settings → Custom Code → End of `<body>` — *replace* the existing Organization snippet |
-| **Remove current FAQ snippet** | Site Settings → Custom Code → `<head>` — *delete* the snippet labeled `ZhCoGA1DF` that contains the site-wide FAQPage |
-| **Per-page schemas** (FAQ, Article, Breadcrumb, etc.) | Open the specific page → Page Settings → Custom Code → `<head>` — *paste* the code block for that page |
+
+| What                                                  | Where in Framer                                                                                                       |
+| ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| **Organization schema** (site-wide)                   | Site Settings → Custom Code → End of `<body>` — *replace* the existing Organization snippet                           |
+| **Remove current FAQ snippet**                        | Site Settings → Custom Code → `<head>` — *delete* the snippet labeled `ZhCoGA1DF` that contains the site-wide FAQPage |
+| **Per-page schemas** (FAQ, Article, Breadcrumb, etc.) | Open the specific page → Page Settings → Custom Code → `<head>` — *paste* the code block for that page                |
+
 
 ---
 
 ## Summary — What Each Page Needs
 
-| # | Page | Schema Types | Rich Result |
-|---|---|---|---|
-| 1 | `/` (Homepage) | WebSite | Sitelinks in search |
-| 2 | `/product-overview` | FAQPage + BreadcrumbList | FAQ dropdowns + breadcrumbs |
-| 3 | `/how-it-works` | BreadcrumbList | Breadcrumbs |
-| 4 | `/security` | FAQPage + BreadcrumbList | FAQ dropdowns + breadcrumbs |
-| 5 | `/about` | BreadcrumbList | Breadcrumbs |
-| 6 | `/careers` | JobPosting + BreadcrumbList | Google Jobs listings + breadcrumbs |
-| 7 | `/book-a-demo` | BreadcrumbList | Breadcrumbs |
-| 8 | `/blog` | BreadcrumbList | Breadcrumbs |
-| 9 | `/newsroom` | BreadcrumbList | Breadcrumbs |
-| 10 | `/maxima-vs-floqast` | FAQPage + BreadcrumbList | FAQ dropdowns + breadcrumbs |
-| 11 | `/legal` | BreadcrumbList | Breadcrumbs |
-| 12 | `/legal/privacy-policy` | BreadcrumbList | Breadcrumbs |
-| 13 | `/legal/terms-of-service` | BreadcrumbList | Breadcrumbs |
-| 14 | `/legal/cookie-policy` | BreadcrumbList | Breadcrumbs |
-| 15–29 | 15 articles | Article + BreadcrumbList | Article rich results + breadcrumbs |
-| 30 | `/articles/ai-tools-for-accounting` | Article + FAQPage + BreadcrumbList | Article + FAQ dropdowns + breadcrumbs |
-| 31–32 | 3 redirected articles | None needed | Pages redirect to external sites |
 
-**Site-wide (global snippet):** Organization schema — applied once, appears on all pages.
+| #     | Page                                | Schema Types                       | Rich Result                           |
+| ----- | ----------------------------------- | ---------------------------------- | ------------------------------------- |
+| 1     | `/` (Homepage)                      | WebSite                            | Sitelinks in search                   |
+| 2     | `/product-overview`                 | FAQPage + BreadcrumbList           | FAQ dropdowns + breadcrumbs           |
+| 3     | `/how-it-works`                     | BreadcrumbList                     | Breadcrumbs                           |
+| 4     | `/security`                         | FAQPage + BreadcrumbList           | FAQ dropdowns + breadcrumbs           |
+| 5     | `/about`                            | BreadcrumbList                     | Breadcrumbs                           |
+| 6     | `/careers`                          | BreadcrumbList                     | Breadcrumbs                           |
+| 7     | `/book-a-demo`                      | BreadcrumbList                     | Breadcrumbs                           |
+| 8     | `/blog`                             | BreadcrumbList                     | Breadcrumbs                           |
+| 9     | `/newsroom`                         | BreadcrumbList                     | Breadcrumbs                           |
+| 10    | `/maxima-vs-floqast`                | FAQPage + BreadcrumbList           | FAQ dropdowns + breadcrumbs           |
+| 11    | `/legal`                            | BreadcrumbList                     | Breadcrumbs                           |
+| 12    | `/legal/privacy-policy`             | BreadcrumbList                     | Breadcrumbs                           |
+| 13    | `/legal/terms-of-service`           | BreadcrumbList                     | Breadcrumbs                           |
+| 14    | `/legal/cookie-policy`              | BreadcrumbList                     | Breadcrumbs                           |
+| 15–29 | 15 articles                         | Article + BreadcrumbList           | Article rich results + breadcrumbs    |
+| 30    | `/articles/ai-tools-for-accounting` | Article + FAQPage + BreadcrumbList | Article + FAQ dropdowns + breadcrumbs |
+| 31–32 | 3 redirected articles               | None needed                        | Pages redirect to external sites      |
+
 
 ---
 
 ## Step 1: Update Site-Wide Organization Schema
 
-> **Where:** Site Settings → Custom Code → End of `<body>`
-> **Action:** Replace the existing Organization snippet with the updated version below.
-
-This schema tells Google who Maxima is — company name, contact info, founders, and social profiles. It appears on all pages automatically.
+This schema tells Google who Maxima is - company name, contact info, founders, and social profiles. It appears on all pages automatically.
 
 ```html
 <script type="application/ld+json">
@@ -95,51 +91,37 @@ This schema tells Google who Maxima is — company name, contact info, founders,
       "@type": "Person",
       "name": "Yogi Goel",
       "jobTitle": "CEO & Co-founder",
-      "sameAs": "{{YOGI_LINKEDIN_URL}}"
+      "sameAs": "https://www.linkedin.com/in/yogi-goel"
     },
     {
       "@type": "Person",
       "name": "Akshaya Srivatsa",
       "jobTitle": "CPO & Co-founder",
-      "sameAs": "{{AKSHAYA_LINKEDIN_URL}}"
+      "sameAs": "https://www.linkedin.com/in/akshayasrivatsa"
     },
     {
       "@type": "Person",
       "name": "Jack Liao",
       "jobTitle": "CTO & Co-founder",
-      "sameAs": "{{JACK_LINKEDIN_URL}}"
+      "sameAs": "https://www.linkedin.com/in/jackliao07"
     }
   ],
   "sameAs": [
-    "{{LINKEDIN_COMPANY_URL}}",
-    "{{TWITTER_URL}}"
+    "https://www.linkedin.com/company/maximaai/",
+    "https://www.crunchbase.com/organization/maxima-ai",
+    "https://www.g2.com/products/maxima/",
+    "https://www.youtube.com/@Maximaaiofficial"
   ],
-  "foundingDate": "{{YYYY}}",
-  "numberOfEmployees": {
-    "@type": "QuantitativeValue",
-    "value": "{{NUMBER}}"
-  }
+  "foundingDate": "2024",
 }
 </script>
 ```
-
-> **Placeholders to fill in:**
-> - `{{YOGI_LINKEDIN_URL}}` — Yogi Goel's LinkedIn profile URL
-> - `{{AKSHAYA_LINKEDIN_URL}}` — Akshaya Srivatsa's LinkedIn profile URL
-> - `{{JACK_LINKEDIN_URL}}` — Jack Liao's LinkedIn profile URL
-> - `{{LINKEDIN_COMPANY_URL}}` — Maxima's LinkedIn company page URL
-> - `{{TWITTER_URL}}` — Maxima's Twitter/X profile URL
-> - `{{YYYY}}` — Year the company was founded
-> - `{{NUMBER}}` — Current number of employees
 
 ---
 
 ## Step 2: Remove the Site-Wide FAQ Snippet
 
-> **Where:** Site Settings → Custom Code → `<head>`
-> **Action:** Delete the entire snippet labeled `ZhCoGA1DF` that contains the FAQPage schema.
-
-This is the snippet that currently injects the same 5 FAQ questions on all 32 pages. Removing it is the most important step — keeping it risks a Google manual action for spammy structured data.
+This is the snippet that currently injects the same 5 FAQ questions on all 32 pages. Removing it is the most important step - keeping it risks a Google manual action for spammy structured data.
 
 ---
 
@@ -169,8 +151,6 @@ Below is the exact code to paste into each page's Custom Code → `<head>` secti
 }
 </script>
 ```
-
-No placeholders needed.
 
 ---
 
@@ -274,8 +254,6 @@ No placeholders needed.
 </script>
 ```
 
-No placeholders needed.
-
 ---
 
 ### Page 3: How It Works (`/how-it-works`)
@@ -304,8 +282,6 @@ No placeholders needed.
 }
 </script>
 ```
-
-No placeholders needed.
 
 ---
 
@@ -393,8 +369,6 @@ No placeholders needed.
 </script>
 ```
 
-No placeholders needed.
-
 ---
 
 ### Page 5: About (`/about`)
@@ -424,16 +398,11 @@ No placeholders needed.
 </script>
 ```
 
-No placeholders needed.
-
 ---
 
 ### Page 6: Careers (`/careers`)
 
-**Schema types:** JobPosting (template) + BreadcrumbList
-**Rich result:** Job listings appear in Google Jobs + breadcrumb navigation.
-
-> **Important:** Job postings need to stay current. When a role is filled or a new one is added, update this schema accordingly. Google requires `datePosted` and `validThrough` — expired listings can result in a penalty.
+**Schema types:** BreadcrumbList
 
 **Breadcrumb (always include):**
 
@@ -458,106 +427,6 @@ No placeholders needed.
 }
 </script>
 ```
-
-**Job Postings — add one `<script>` block per role. Below are templates for two example roles. Repeat the pattern for each open position:**
-
-**Example 1 — Engineering role (San Mateo):**
-
-```html
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "JobPosting",
-  "title": "Software Engineer",
-  "description": "Join Maxima's engineering team to build the AI-native accounting platform powering enterprise financial close automation.",
-  "datePosted": "{{YYYY-MM-DD}}",
-  "validThrough": "{{YYYY-MM-DD}}",
-  "employmentType": "FULL_TIME",
-  "hiringOrganization": {
-    "@type": "Organization",
-    "name": "Maxima",
-    "sameAs": "https://www.maxima.ai",
-    "logo": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
-  },
-  "jobLocation": {
-    "@type": "Place",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "San Mateo",
-      "addressRegion": "CA",
-      "addressCountry": "US"
-    }
-  },
-  "baseSalary": {
-    "@type": "MonetaryAmount",
-    "currency": "USD",
-    "value": {
-      "@type": "QuantitativeValue",
-      "minValue": "{{MIN_SALARY}}",
-      "maxValue": "{{MAX_SALARY}}",
-      "unitText": "YEAR"
-    }
-  }
-}
-</script>
-```
-
-**Example 2 — GTM role (multiple locations / remote):**
-
-```html
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "JobPosting",
-  "title": "Account Executive",
-  "description": "Drive enterprise sales for Maxima's AI accounting platform, working with finance and accounting leaders to transform their month-end close process.",
-  "datePosted": "{{YYYY-MM-DD}}",
-  "validThrough": "{{YYYY-MM-DD}}",
-  "employmentType": "FULL_TIME",
-  "hiringOrganization": {
-    "@type": "Organization",
-    "name": "Maxima",
-    "sameAs": "https://www.maxima.ai",
-    "logo": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
-  },
-  "jobLocation": {
-    "@type": "Place",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "New York",
-      "addressRegion": "NY",
-      "addressCountry": "US"
-    }
-  },
-  "jobLocationType": "TELECOMMUTE"
-}
-</script>
-```
-
-> **Placeholders to fill in for each role:**
-> - `{{YYYY-MM-DD}}` for `datePosted` — the date the job was first listed
-> - `{{YYYY-MM-DD}}` for `validThrough` — when the listing expires (set ~90 days out, update as needed)
-> - `{{MIN_SALARY}}` / `{{MAX_SALARY}}` — salary range (optional but recommended; Google prefers it)
-> - Update `title`, `description`, `jobLocation` for each role
-> - For remote roles, add `"jobLocationType": "TELECOMMUTE"`
-
-**Current open roles to create JobPosting schemas for:**
-
-| Role | Location |
-|---|---|
-| Software Engineer | Toronto, San Mateo |
-| Frontend Engineer | San Mateo |
-| AI Engineer | San Mateo |
-| Data Infrastructure Engineer | San Mateo |
-| Staff Engineer | San Mateo |
-| Engineering Intern | San Mateo |
-| Forward Deployment Strategist | San Mateo |
-| Growth Marketing Lead | San Mateo |
-| Content Marketing Manager | San Mateo |
-| GTM Engineer | San Mateo |
-| Solutions Engineer | San Mateo |
-| Business Development Representative (3 positions) | San Mateo |
-| Account Executive (5 positions) | New York, Texas, Los Angeles, Remote, San Mateo |
 
 ---
 
@@ -588,8 +457,6 @@ No placeholders needed.
 </script>
 ```
 
-No placeholders needed.
-
 ---
 
 ### Page 8: Blog (`/blog`)
@@ -619,8 +486,6 @@ No placeholders needed.
 </script>
 ```
 
-No placeholders needed.
-
 ---
 
 ### Page 9: Newsroom (`/newsroom`)
@@ -649,8 +514,6 @@ No placeholders needed.
 }
 </script>
 ```
-
-No placeholders needed.
 
 ---
 
@@ -730,8 +593,6 @@ No placeholders needed.
 </script>
 ```
 
-No placeholders needed.
-
 ---
 
 ### Page 11: Legal / Cookie Policy (`/legal`)
@@ -760,8 +621,6 @@ No placeholders needed.
 }
 </script>
 ```
-
-No placeholders needed.
 
 ---
 
@@ -798,8 +657,6 @@ No placeholders needed.
 </script>
 ```
 
-No placeholders needed.
-
 ---
 
 ### Page 13: Terms of Service (`/legal/terms-of-service`)
@@ -834,8 +691,6 @@ No placeholders needed.
 }
 </script>
 ```
-
-No placeholders needed.
 
 ---
 
@@ -872,15 +727,13 @@ No placeholders needed.
 </script>
 ```
 
-No placeholders needed.
-
 ---
 
 ## Article Schemas
 
 Each article page gets an `Article` schema (for article rich results in Google) plus a `BreadcrumbList`. These are the 15 articles that have content on maxima.ai.
 
-> **Note on dates:** Framer does not display publish dates on these articles. You'll need to fill in `datePublished` and `dateModified` for each article. Use the date the article was first published. If you're unsure, use the date it was added to the Framer CMS.
+> **Note on dates:** The `datePublished` and `dateModified` fields use Framer CMS variables (`{{Published | json}}` and `{{Modified | json}}`), which automatically pull from each article's CMS entry. No manual input needed.
 
 ---
 
@@ -934,8 +787,8 @@ Each article page gets an `Article` schema (for article rich results in Google) 
           "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
         }
       },
-      "datePublished": "{{YYYY-MM-DD}}",
-      "dateModified": "{{YYYY-MM-DD}}",
+      "datePublished": {{Published | json}},
+      "dateModified": {{Modified | json}},
       "mainEntityOfPage": "https://www.maxima.ai/articles/accuracy-in-accounting-why-ai-needs-more-than-intelligence",
       "articleSection": "Agentic AI"
     }
@@ -996,8 +849,8 @@ Each article page gets an `Article` schema (for article rich results in Google) 
           "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
         }
       },
-      "datePublished": "{{YYYY-MM-DD}}",
-      "dateModified": "{{YYYY-MM-DD}}",
+      "datePublished": {{Published | json}},
+      "dateModified": {{Modified | json}},
       "mainEntityOfPage": "https://www.maxima.ai/articles/maxima-seed-series-a-agentic-ai-accounting",
       "articleSection": "Company"
     }
@@ -1057,8 +910,8 @@ Each article page gets an `Article` schema (for article rich results in Google) 
           "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
         }
       },
-      "datePublished": "{{YYYY-MM-DD}}",
-      "dateModified": "{{YYYY-MM-DD}}",
+      "datePublished": {{Published | json}},
+      "dateModified": {{Modified | json}},
       "mainEntityOfPage": "https://www.maxima.ai/articles/maxima-named-to-ai64-s-top-enterprise-ai-companies",
       "articleSection": "News"
     }
@@ -1119,8 +972,8 @@ Each article page gets an `Article` schema (for article rich results in Google) 
           "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
         }
       },
-      "datePublished": "{{YYYY-MM-DD}}",
-      "dateModified": "{{YYYY-MM-DD}}",
+      "datePublished": {{Published | json}},
+      "dateModified": {{Modified | json}},
       "mainEntityOfPage": "https://www.maxima.ai/articles/product-success-one-team",
       "articleSection": "Company"
     }
@@ -1181,8 +1034,8 @@ Each article page gets an `Article` schema (for article rich results in Google) 
           "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
         }
       },
-      "datePublished": "{{YYYY-MM-DD}}",
-      "dateModified": "{{YYYY-MM-DD}}",
+      "datePublished": {{Published | json}},
+      "dateModified": {{Modified | json}},
       "mainEntityOfPage": "https://www.maxima.ai/articles/the-office-of-the-cfo-in-2030-how-ai-agents-change-the-equation",
       "articleSection": "Agentic AI"
     }
@@ -1242,8 +1095,8 @@ Each article page gets an `Article` schema (for article rich results in Google) 
           "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
         }
       },
-      "datePublished": "{{YYYY-MM-DD}}",
-      "dateModified": "{{YYYY-MM-DD}}",
+      "datePublished": {{Published | json}},
+      "dateModified": {{Modified | json}},
       "mainEntityOfPage": "https://www.maxima.ai/articles/the-definitive-guide-to-reconciliations-in-accounting",
       "articleSection": "Accounting"
     }
@@ -1303,8 +1156,8 @@ Each article page gets an `Article` schema (for article rich results in Google) 
           "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
         }
       },
-      "datePublished": "{{YYYY-MM-DD}}",
-      "dateModified": "{{YYYY-MM-DD}}",
+      "datePublished": {{Published | json}},
+      "dateModified": {{Modified | json}},
       "mainEntityOfPage": "https://www.maxima.ai/articles/what-is-variance-analysis-a-complete-guide",
       "articleSection": "Accounting"
     }
@@ -1364,8 +1217,8 @@ Each article page gets an `Article` schema (for article rich results in Google) 
           "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
         }
       },
-      "datePublished": "{{YYYY-MM-DD}}",
-      "dateModified": "{{YYYY-MM-DD}}",
+      "datePublished": {{Published | json}},
+      "dateModified": {{Modified | json}},
       "mainEntityOfPage": "https://www.maxima.ai/articles/scale-ai-staying-ahead-of-the-gl-curve-with-maxima",
       "articleSection": "Case Study"
     }
@@ -1425,8 +1278,8 @@ Each article page gets an `Article` schema (for article rich results in Google) 
           "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
         }
       },
-      "datePublished": "{{YYYY-MM-DD}}",
-      "dateModified": "{{YYYY-MM-DD}}",
+      "datePublished": {{Published | json}},
+      "dateModified": {{Modified | json}},
       "mainEntityOfPage": "https://www.maxima.ai/articles/how-rippling-built-sox-ready-cash-accounting-with-maxima",
       "articleSection": "Case Study"
     }
@@ -1486,8 +1339,8 @@ Each article page gets an `Article` schema (for article rich results in Google) 
           "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
         }
       },
-      "datePublished": "{{YYYY-MM-DD}}",
-      "dateModified": "{{YYYY-MM-DD}}",
+      "datePublished": {{Published | json}},
+      "dateModified": {{Modified | json}},
       "mainEntityOfPage": "https://www.maxima.ai/articles/gorgias-on-the-forefront-of-accounting-automation-with-maxima",
       "articleSection": "Case Study"
     }
@@ -1547,8 +1400,8 @@ Each article page gets an `Article` schema (for article rich results in Google) 
           "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
         }
       },
-      "datePublished": "{{YYYY-MM-DD}}",
-      "dateModified": "{{YYYY-MM-DD}}",
+      "datePublished": {{Published | json}},
+      "dateModified": {{Modified | json}},
       "mainEntityOfPage": "https://www.maxima.ai/articles/spoton-mastering-high-volume-cash-complexity-with-maxima",
       "articleSection": "Case Study"
     }
@@ -1608,8 +1461,8 @@ Each article page gets an `Article` schema (for article rich results in Google) 
           "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
         }
       },
-      "datePublished": "{{YYYY-MM-DD}}",
-      "dateModified": "{{YYYY-MM-DD}}",
+      "datePublished": {{Published | json}},
+      "dateModified": {{Modified | json}},
       "mainEntityOfPage": "https://www.maxima.ai/articles/how-rewst-automated-revenue-recognition-and-prepaids-with-maxima",
       "articleSection": "Case Study"
     }
@@ -1669,8 +1522,8 @@ Each article page gets an `Article` schema (for article rich results in Google) 
           "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
         }
       },
-      "datePublished": "{{YYYY-MM-DD}}",
-      "dateModified": "{{YYYY-MM-DD}}",
+      "datePublished": {{Published | json}},
+      "dateModified": {{Modified | json}},
       "mainEntityOfPage": "https://www.maxima.ai/articles/why-blackline-s-former-cmo-is-investing-in-maxima",
       "articleSection": "News"
     }
@@ -1732,8 +1585,8 @@ Each article page gets an `Article` schema (for article rich results in Google) 
           "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
         }
       },
-      "datePublished": "{{YYYY-MM-DD}}",
-      "dateModified": "{{YYYY-MM-DD}}",
+      "datePublished": {{Published | json}},
+      "dateModified": {{Modified | json}},
       "mainEntityOfPage": "https://www.maxima.ai/articles/ai-tools-for-accounting",
       "articleSection": "Accounting"
     },
@@ -1838,8 +1691,8 @@ Each article page gets an `Article` schema (for article rich results in Google) 
           "url": "https://framerusercontent.com/images/oFlvKtgOLiTcfjIBAY9mVH7lXo.png"
         }
       },
-      "datePublished": "{{YYYY-MM-DD}}",
-      "dateModified": "{{YYYY-MM-DD}}",
+      "datePublished": {{Published | json}},
+      "dateModified": {{Modified | json}},
       "mainEntityOfPage": "https://www.maxima.ai/articles/7-best-financial-close-software-solutions-to-evaluate-in-2026",
       "articleSection": "Accounting"
     }
@@ -1854,11 +1707,13 @@ Each article page gets an `Article` schema (for article rich results in Google) 
 
 The following 3 article pages redirect to external websites. Since visitors and search engines are sent to the external URL, no schema markup is needed on these pages.
 
-| Article | Redirects to |
-|---|---|
-| `/articles/reuters-exclusive-maxima` | Reuters — AI accounting startup Maxima raises $41 million |
-| `/articles/kleiner-perkins-investment-perspective` | Kleiner Perkins — Maxima: Bringing AI agents to the heart of enterprise accounting |
-| `/articles/ey-alumni-spotlight-maxima-ceo-yogi-goel` | EY — Alumni spotlight: Maxima CEO, Yogi Goel |
+
+| Article                                              | Redirects to                                                                       |
+| ---------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `/articles/reuters-exclusive-maxima`                 | Reuters — AI accounting startup Maxima raises $41 million                          |
+| `/articles/kleiner-perkins-investment-perspective`   | Kleiner Perkins — Maxima: Bringing AI agents to the heart of enterprise accounting |
+| `/articles/ey-alumni-spotlight-maxima-ceo-yogi-goel` | EY — Alumni spotlight: Maxima CEO, Yogi Goel                                       |
+
 
 If redirects are removed in the future and these pages serve their own content, add Article + BreadcrumbList schema following the same pattern as the other articles above.
 
@@ -1868,35 +1723,39 @@ If redirects are removed in the future and these pages serve their own content, 
 
 Before implementing, fill in these values across the document:
 
-| Placeholder | Used in | How to find it |
-|---|---|---|
-| `{{YOGI_LINKEDIN_URL}}` | Organization schema | Yogi Goel's LinkedIn profile URL |
-| `{{AKSHAYA_LINKEDIN_URL}}` | Organization schema | Akshaya Srivatsa's LinkedIn profile URL |
-| `{{JACK_LINKEDIN_URL}}` | Organization schema | Jack Liao's LinkedIn profile URL |
-| `{{LINKEDIN_COMPANY_URL}}` | Organization schema | Maxima's LinkedIn company page URL |
-| `{{TWITTER_URL}}` | Organization schema | Maxima's Twitter/X profile URL |
-| `{{YYYY}}` | Organization schema | Year the company was founded |
-| `{{NUMBER}}` | Organization schema | Current number of employees |
-| `{{YYYY-MM-DD}}` | All Article schemas | The date each article was first published |
-| `{{MIN_SALARY}}` / `{{MAX_SALARY}}` | JobPosting schemas | Salary range for each role (optional) |
+
+| Placeholder                         | Used in             | How to find it                            |
+| ----------------------------------- | ------------------- | ----------------------------------------- |
+| `{{YOGI_LINKEDIN_URL}}`             | Organization schema | Yogi Goel's LinkedIn profile URL          |
+| `{{AKSHAYA_LINKEDIN_URL}}`          | Organization schema | Akshaya Srivatsa's LinkedIn profile URL   |
+| `{{JACK_LINKEDIN_URL}}`             | Organization schema | Jack Liao's LinkedIn profile URL          |
+| `{{LINKEDIN_COMPANY_URL}}`          | Organization schema | Maxima's LinkedIn company page URL        |
+| `{{TWITTER_URL}}`                   | Organization schema | Maxima's Twitter/X profile URL            |
+| `{{YYYY}}`                          | Organization schema | Year the company was founded              |
+| `{{NUMBER}}`                        | Organization schema | Current number of employees               |
+| `{{MIN_SALARY}}` / `{{MAX_SALARY}}` | JobPosting schemas  | Salary range for each role (optional)     |
+
+> **Note:** `{{Published | json}}` and `{{Modified | json}}` in Article schemas are Framer CMS variables — they pull automatically from each article's CMS entry. No manual input needed.
+
 
 ---
 
 ## Implementation Checklist
 
-- [ ] **Step 1:** Replace the site-wide Organization schema with the updated version (Site Settings → Custom Code → End of `<body>`)
-- [ ] **Step 2:** Remove the site-wide FAQ snippet `ZhCoGA1DF` (Site Settings → Custom Code → `<head>`)
-- [ ] **Step 3:** Add Homepage schema (WebSite)
-- [ ] **Step 4:** Add Product Overview schema (FAQPage + BreadcrumbList)
-- [ ] **Step 5:** Add How It Works schema (BreadcrumbList)
-- [ ] **Step 6:** Add Security schema (FAQPage + BreadcrumbList)
-- [ ] **Step 7:** Add About schema (BreadcrumbList)
-- [ ] **Step 8:** Add Careers schema (JobPosting + BreadcrumbList)
-- [ ] **Step 9:** Add Book a Demo schema (BreadcrumbList)
-- [ ] **Step 10:** Add Blog schema (BreadcrumbList)
-- [ ] **Step 11:** Add Newsroom schema (BreadcrumbList)
-- [ ] **Step 12:** Add Maxima vs FloQast schema (FAQPage + BreadcrumbList)
-- [ ] **Step 13:** Add Legal page schemas (BreadcrumbList × 3)
-- [ ] **Step 14:** Add Article schemas for all 15 articles (Article + BreadcrumbList, plus FAQPage on ai-tools-for-accounting)
-- [ ] **Step 15:** Validate all schemas using [Google's Rich Results Test](https://search.google.com/test/rich-results) — paste each page URL after publishing
-- [ ] **Step 16:** Monitor in Google Search Console → Enhancements for any schema errors after indexing
+- **Step 1:** Replace the site-wide Organization schema with the updated version (Site Settings → Custom Code → End of `<body>`)
+- **Step 2:** Remove the site-wide FAQ snippet `ZhCoGA1DF` (Site Settings → Custom Code → `<head>`)
+- **Step 3:** Add Homepage schema (WebSite)
+- **Step 4:** Add Product Overview schema (FAQPage + BreadcrumbList)
+- **Step 5:** Add How It Works schema (BreadcrumbList)
+- **Step 6:** Add Security schema (FAQPage + BreadcrumbList)
+- **Step 7:** Add About schema (BreadcrumbList)
+- **Step 8:** Add Careers schema (JobPosting + BreadcrumbList)
+- **Step 9:** Add Book a Demo schema (BreadcrumbList)
+- **Step 10:** Add Blog schema (BreadcrumbList)
+- **Step 11:** Add Newsroom schema (BreadcrumbList)
+- **Step 12:** Add Maxima vs FloQast schema (FAQPage + BreadcrumbList)
+- **Step 13:** Add Legal page schemas (BreadcrumbList × 3)
+- **Step 14:** Add Article schemas for all 15 articles (Article + BreadcrumbList, plus FAQPage on ai-tools-for-accounting)
+- **Step 15:** Validate all schemas using [Google's Rich Results Test](https://search.google.com/test/rich-results) — paste each page URL after publishing
+- **Step 16:** Monitor in Google Search Console → Enhancements for any schema errors after indexing
+
