@@ -65,6 +65,38 @@ This appears to be a **Framer template issue** where navigation and footer compo
 
 **Solution:** Fixed the Framer template to use proper semantic HTML. Switched to h4, h5 for navigation items in footer
 
+**Duplicate H1 tags (Framer platform behavior):**  
+Framer automatically creates copies of the H1 heading for different screen sizes (desktop, tablet, mobile). Ahref flag these as duplicates, but Google ignores the hidden copies - so this does not affect rankings. See [Framer's explanation](https://www.framer.com/help/articles/are-multiple-h1-tags-in-framer-a-problem/).
+
+
+| Page              | Duplicate H1 count | H1 Text                                                  |
+| ----------------- | ------------------ | -------------------------------------------------------- |
+| /                 | 4x                 | "Agentic accounting automation, from record to report"   |
+| /product-overview | 2x                 | "Close the books without the sprawl"                     |
+| /how-it-works     | 2x                 | "Put your record to report on autopilot"                 |
+| /security         | 2x                 | "Uncompromising security & trust for agentic accounting" |
+
+
+**Status:** No fix needed — this is expected Framer behavior and does not impact SEO.
+
+**Footer pipe separators tagged as `<h1>`:**
+The `|` pipe characters used as visual separators between footer links (e.g., Privacy Policy **|** Terms of Service **|** Cookie Policy) are wrapped in `<h1>` tags. Every page has 6-8 of these pipe H1s in the footer.
+
+**Fix in Framer:** Change the text element containing `|` from H1 to a `<span>` or `<p>` tag in the Framer layer properties.
+
+**Subheadings incorrectly tagged as `<h1>` (select pages):**
+On some pages, subtitles and section descriptions are tagged as H1 instead of the appropriate semantic tag:
+
+
+| Page          | Text incorrectly tagged as H1                                                                   | Should be |
+| ------------- | ----------------------------------------------------------------------------------------------- | --------- |
+| /how-it-works | "From journal entries through flux, Maxima eliminates errors..." (subtitle)                     | `<p>`     |
+| /how-it-works | "One transaction-level view for all your record-to-report data..." (section heading)            | `<p>`     |
+| /security     | "Designed from the ground up to protect the most sensitive financial data..." (intro paragraph) | `<p>`     |
+
+
+**Fix in Framer:** In the layer panel for these text elements, change the tag from H1 to the appropriate semantic tag (`<p>` for paragraphs, `<h2>` for section headings).
+
 ---
 
 ## 2. Indexation Audit
@@ -79,15 +111,6 @@ The Ahrefs audit flagged **all 32 pages** in the sitemap as candidates for Index
 | Page                                                                    | Status                       |
 | ----------------------------------------------------------------------- | ---------------------------- |
 | /articles/7-best-financial-close-software-solutions-to-evaluate-in-2026 | Organic traffic dropped to 0 |
-
-
-### Pages Dropped from Top 10:
-
-
-| Page                                                                    | Previous Ranking    | Top Keyword           | Position |
-| ----------------------------------------------------------------------- | ------------------- | --------------------- | -------- |
-| / (Homepage)                                                            | Had Top 10 rankings | "maxima company" (IN) | 5        |
-| /articles/7-best-financial-close-software-solutions-to-evaluate-in-2026 | Had Top 10 rankings | -                     | -        |
 
 
 ### Referring Domain Drops:
@@ -108,16 +131,20 @@ The Ahrefs audit flagged **all 32 pages** in the sitemap as candidates for Index
 
 ### Orphan Pages (No Incoming Internal Links) - 4 pages:
 
+3 article pages are entries in the Framer CMS blog collection that link to external articles. 
 
-| Page                                               | Title                                                            | Next Steps                                                                                                                                          |
-| -------------------------------------------------- | ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| /articles/reuters-exclusive-maxima                 | AI accounting startup Maxima raises $41 million                  | Empty. To be removed                                                                                                                                |
-| /articles/kleiner-perkins-investment-perspective   | Maxima: Bringing AI agents to the heart of enterprise accounting | Empty. To be removed                                                                                                                                |
-| /legal                                             | Maxima.ai - Agentic AI Accounting for Modern Finance Teams       | To be removed. Duplicate for this page (linkedin in footer): [https://www.maxima.ai/legal/cookie-policy](https://www.maxima.ai/legal/cookie-policy) |
-| /articles/ey-alumni-spotlight-maxima-ceo-yogi-goel | EY Alumni spotlight: Maxima CEO, Yogi Goel                       | Empty. To be removed                                                                                                                                |
+On the /blog page, they correctly open the external URL. However, Framer still generates an empty article page for each, which then appears in the sitemap and gets flagged as an orphan. 
+
+Framer does not currently support customizing the sitemap - see [Framer community discussion](https://www.framer.community/c/support/customize-sitemap-xml-file). The redirect ensures anyone landing on these pages reaches the intended external article.
 
 
-These pages are in the sitemap but have **zero incoming internal links** from any page on the site. They are only discoverable via the sitemap, not via site navigation or content links.
+| Page                                               | Title                                                            | Next Steps                                                                                                                                                                                                                                                                                                   |
+| -------------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| /articles/reuters-exclusive-maxima                 | AI accounting startup Maxima raises $41 million                  | External press link. **Fix implemented:** Redirected to [https://www.reuters.com/business/ai-accounting-startup-maxima-raises-41-million-kleiner-perkins-backed-round-2025-11-18/](https://www.reuters.com/business/ai-accounting-startup-maxima-raises-41-million-kleiner-perkins-backed-round-2025-11-18/) |
+| /articles/kleiner-perkins-investment-perspective   | Maxima: Bringing AI agents to the heart of enterprise accounting | External press link. Original link ([https://www.kleinerperkins.com/perspectives/maxima-seed-and-series-a/](https://www.kleinerperkins.com/perspectives/maxima-seed-and-series-a/)) is returning a 404. **Fix to be implemented:** Correct the link and redirected to the updated URL.                       |
+| /legal                                             | Maxima.ai - Agentic AI Accounting for Modern Finance Teams       | To be removed. Duplicate for this page (linked in footer): [https://www.maxima.ai/legal/cookie-policy](https://www.maxima.ai/legal/cookie-policy)                                                                                                                                                            |
+| /articles/ey-alumni-spotlight-maxima-ceo-yogi-goel | EY Alumni spotlight: Maxima CEO, Yogi Goel                       | External press link. **Fix implemented:** Redirected to [https://www.ey.com/en_us/alumni/yogi-goel-tech-teamwork-and-triumphs](https://www.ey.com/en_us/alumni/yogi-goel-tech-teamwork-and-triumphs)                                                                                                         |
+
 
 ### Pages with Only 1 Incoming Internal Link - 6 pages:
 
@@ -142,27 +169,17 @@ All 6 pages are blog articles that only receive a link from the /blog listing pa
 
 ### Summary
 
+All 32 pages have correct self-referencing canonical tags (e.g., `<link rel="canonical" href="https://www.maxima.ai/about">`).
+
 
 | Status                               | Count |
 | ------------------------------------ | ----- |
-| Self-referencing canonical (correct) | 30    |
-| Missing canonical                    | 2     |
+| Self-referencing canonical (correct) | 32    |
 
 
-### Pages Missing Canonical Tags:
+Framer auto-generates canonical tags for all CMS collection pages and static pages. No manual intervention is needed — Framer handles this correctly out of the box.
 
-
-| Page                                               | Impact                           |
-| -------------------------------------------------- | -------------------------------- |
-| /articles/ey-alumni-spotlight-maxima-ceo-yogi-goel | Risk of duplicate content issues |
-| /articles/kleiner-perkins-investment-perspective   | Risk of duplicate content issues |
-
-
-Both missing pages are also orphan pages (no internal links). 
-
-**All other pages** have correct self-referencing canonical tags (e.g., `<link rel="canonical" href="https://www.maxima.ai/about">`).
-
-**Fix:** Removing these 2 pages since they are empty will resolve this issue
+**Status: Clean - No action needed.**
 
 ---
 
@@ -189,7 +206,7 @@ Every page on the site has **two JSON-LD blocks:**
 }
 ```
 
-1. **FAQPage schema** (injected via Framer head snippet `ZhCoGA1DF` on every page) - **CRITICAL ISSUE: identical on ALL 32 pages:**
+1. **FAQPage schema** (injected via Framer head snippet `ZhCoGA1DF` on every page) - **CRITICAL ISSUE: Same on ALL 32 pages:**
 
 ```json
 {
@@ -338,42 +355,52 @@ Google may flag this as spammy structured data if the same FAQ appears on 32 dif
 
 #### Generic/Wrong — Legal Pages (replace "Maxima automates accounting with agentic AI...")
 
-| Page | Recommended Meta Description | Length |
-|---|---|---|
-| /legal | Maxima's cookie policy: how we use strictly necessary, functional, performance, targeting, and social media cookies on maxima.ai. | 129 |
-| /legal/privacy-policy | How Maxima collects, uses, and protects your personal data — covering account info, device logs, third-party disclosures, and your privacy rights. | 146 |
-| /legal/terms-of-service | Terms governing access to Maxima's AI accounting platform and websites, including usage rights, IP, liability limits, and California jurisdiction. | 145 |
-| /legal/cookie-policy | Maxima's cookie policy: how we use strictly necessary, functional, performance, targeting, and social media cookies on maxima.ai. | 129 |
+
+| Page                    | Recommended Meta Description                                                                                                                       | Length |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| /legal                  | Maxima's cookie policy: how we use strictly necessary, functional, performance, targeting, and social media cookies on maxima.ai.                  | 129    |
+| /legal/privacy-policy   | How Maxima collects, uses, and protects your personal data — covering account info, device logs, third-party disclosures, and your privacy rights. | 146    |
+| /legal/terms-of-service | Terms governing access to Maxima's AI accounting platform and websites, including usage rights, IP, liability limits, and California jurisdiction. | 145    |
+| /legal/cookie-policy    | Maxima's cookie policy: how we use strictly necessary, functional, performance, targeting, and social media cookies on maxima.ai.                  | 129    |
+
 
 **Note:** The /legal page currently renders the cookie policy content. If /legal is intended as a landing page for all legal docs, use instead: "Access Maxima's legal documents — privacy policy, terms of service, and cookie policy for our AI accounting platform." (130 chars)
 
 #### Generic/Wrong — Articles (replace "Maxima automates accounting with agentic AI...")
 
-| Page | Recommended Meta Description | Length |
-|---|---|---|
-| /articles/ey-alumni-spotlight-maxima-ceo-yogi-goel | EY alumni spotlight: CEO Yogi Goel on how Maxima's agentic AI automates journals, reconciliations, and flux for multi-entity accounting teams. | 143 |
-| /articles/kleiner-perkins-investment-perspective | How Maxima's agentic AI platform automates record-to-report workflows with audit-ready agents for high-volume enterprise accounting. | 131 |
-| /articles/why-blackline-s-former-cmo... | BlackLine's former CSO Andres Botero on why he's investing in Maxima and how AI agents are moving accounting beyond legacy close software. | 138 |
-| /articles/reuters-exclusive-maxima | AI accounting startup Maxima raises $41M to build agentic automation for enterprise journals, reconciliations, and financial close. | 130 |
+
+| Page                                               | Recommended Meta Description                                                                                                                   | Length |
+| -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| /articles/ey-alumni-spotlight-maxima-ceo-yogi-goel | EY alumni spotlight: CEO Yogi Goel on how Maxima's agentic AI automates journals, reconciliations, and flux for multi-entity accounting teams. | 143    |
+| /articles/kleiner-perkins-investment-perspective   | How Maxima's agentic AI platform automates record-to-report workflows with audit-ready agents for high-volume enterprise accounting.           | 131    |
+| /articles/why-blackline-s-former-cmo...            | BlackLine's former CSO Andres Botero on why he's investing in Maxima and how AI agents are moving accounting beyond legacy close software.     | 138    |
+| /articles/reuters-exclusive-maxima                 | AI accounting startup Maxima raises $41M to build agentic automation for enterprise journals, reconciliations, and financial close.            | 130    |
+
 
 #### Too Long — Shortened Versions (under 160 chars)
 
-| Page | Current Length | Recommended Meta Description | New Length |
-|---|---|---|---|
-| /security | 171 | Maxima security: SOC 1 & SOC 2 Type II, ISO 42001 certified. AES-256 encryption, US-only hosting, zero model training on customer data. | 137 |
-| /maxima-vs-floqast | 194 | Maxima vs FloQast: native integrations with 100+ systems, continuous daily automation, and AI agents that draft entries for accountant review. | 143 |
+
+| Page               | Current Length | Recommended Meta Description                                                                                                                   | New Length |
+| ------------------ | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| /security          | 171            | Maxima security: SOC 1 & SOC 2 Type II, ISO 42001 certified. AES-256 encryption, US-only hosting, zero model training on customer data.        | 137        |
+| /maxima-vs-floqast | 194            | Maxima vs FloQast: native integrations with 100+ systems, continuous daily automation, and AI agents that draft entries for accountant review. | 143        |
+
 
 #### Too Short/Vague — Rewritten
 
-| Page | Current | Recommended Meta Description | Length |
-|---|---|---|---|
-| /articles/product-success-one-team | Learn why product and deployment or success teams need to be unified | Why Maxima merged product and deployment into one team — how unified incentives cut resolution times from months to days in accounting software. | 143 |
+
+| Page                               | Current                                                              | Recommended Meta Description                                                                                                                     | Length |
+| ---------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
+| /articles/product-success-one-team | Learn why product and deployment or success teams need to be unified | Why Maxima merged product and deployment into one team — how unified incentives cut resolution times from months to days in accounting software. | 143    |
+
 
 #### Potentially Duplicated — Unique Version
 
-| Page | Current (duplicated from seed-series-a) | Recommended Meta Description | Length |
-|---|---|---|---|
-| /articles/maxima-named-to-ai64... | Maxima announces $41M in funding to build an agentic AI platform for enterprise accounting... | Maxima named to Redpoint's AI64 list of top enterprise AI apps — delivering up to 80% faster close cycles and 95% task automation. | 129 |
+
+| Page                              | Current (duplicated from seed-series-a)                                                       | Recommended Meta Description                                                                                                       | Length |
+| --------------------------------- | --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| /articles/maxima-named-to-ai64... | Maxima announces $41M in funding to build an agentic AI platform for enterprise accounting... | Maxima named to Redpoint's AI64 list of top enterprise AI apps — delivering up to 80% faster close cycles and 95% task automation. | 129    |
+
 
 ---
 
@@ -383,12 +410,14 @@ Google may flag this as spammy structured data if the same FAQ appears on 32 dif
 
 The site has **zero article-to-article body content links**. Every article's only unique body link is `/book-a-demo`. The auto-generated "Related Articles" section shows the same 3 articles on nearly every page.
 
-| Metric | Value |
-|---|---|
-| Total article-to-article body links | **0** |
-| Pages completely orphaned (zero inbound links) | 4 |
-| Pages with only 1 inbound link (from /blog only) | 6 |
-| Link equity distribution | 95%+ concentrated in nav/footer pages |
+
+| Metric                                           | Value                                 |
+| ------------------------------------------------ | ------------------------------------- |
+| Total article-to-article body links              | **0**                                 |
+| Pages completely orphaned (zero inbound links)   | 4                                     |
+| Pages with only 1 inbound link (from /blog only) | 6                                     |
+| Link equity distribution                         | 95%+ concentrated in nav/footer pages |
+
 
 ### Key Findings
 
@@ -400,6 +429,7 @@ The site has **zero article-to-article body content links**. Every article's onl
 ### Recommendations
 
 ~72 new internal links are needed across the site. See `INTERNAL_LINKING_STRATEGY_MAXIMA.md` for the full breakdown including:
+
 - 4-cluster pillar page architecture with visual cluster map
 - Per-article linking tables (all 18 articles) with exact anchor text and section placement
 - 5-phase implementation checklist prioritized by impact
@@ -416,12 +446,20 @@ The site has **zero article-to-article body content links**. Every article's onl
 | [http://www.maxima.ai/](http://www.maxima.ai/) | 308    | [https://www.maxima.ai/](https://www.maxima.ai/) | HTTP->HTTPS (correct) |
 
 
-- **No broken links (4xx errors)** found in the Ahrefs crawl
+- **No broken internal links (4xx errors)** found in the Ahrefs crawl
 - **No redirect chains** detected
 - **No redirect loops** detected
 - The HTTP to HTTPS redirect is properly implemented as a 308 (Permanent Redirect)
 
-**Status: Clean - No action needed.**
+### Broken External Links
+
+
+| Page (source)                | Broken External URL                                                                                                                            | Status | Fix                                              |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ------------------------------------------------ |
+| /blog (Kleiner Perkins card) | [https://www.kleinerperkins.com/perspectives/maxima-seed-and-series-a/](https://www.kleinerperkins.com/perspectives/maxima-seed-and-series-a/) | 404    | **Fixed:** Corrected the link to the updated URL |
+
+
+**Note:** The Ahrefs crawl only checks internal links. External outbound links were verified manually.
 
 ---
 
@@ -524,41 +562,49 @@ Sitemap: https://www.maxima.ai/sitemap.xml
 
 ### Summary
 
-| Metric | Value |
-|---|---|
-| Total unique images missing alt text | **83** |
-| Total missing-alt instances across all pages | **~170** |
-| Pages affected | 30 (every page on the site) |
-| Images with alt text typos | 2 (homepage) |
+
+| Metric                                       | Value                       |
+| -------------------------------------------- | --------------------------- |
+| Total unique images missing alt text         | **83**                      |
+| Total missing-alt instances across all pages | **~170**                    |
+| Pages affected                               | 30 (every page on the site) |
+| Images with alt text typos                   | 2 (homepage)                |
+
 
 ### Biggest wins (fix once, fix everywhere)
 
 2 decorative/background images are shared across **every page** via Framer's global header/footer. Adding `alt=""` to these in Framer resolves the issue across all pages at once:
 
-| Image | Appears On | Action |
-|---|---|---|
-| `Sfz6mVl5Wq1Zdym07lodksvCE.png` | All 30 pages | Add `alt=""` (decorative) |
+
+| Image                             | Appears On   | Action                    |
+| --------------------------------- | ------------ | ------------------------- |
+| `Sfz6mVl5Wq1Zdym07lodksvCE.png`   | All 30 pages | Add `alt=""` (decorative) |
 | `vl8RF4iXhvG4IFYwq1fc6JhmF2c.png` | All 30 pages | Add `alt=""` (decorative) |
+
 
 **Note:** Ahrefs also flagged `oSCs67tz...png` and `JEiyjUqswVbHLA4wnNdJYRZMTFQ.png` as site-wide issues. On verification: `oSCs67tz` only exists on `/blog` (not site-wide), and `JEiyjUq` only renders at viewport widths 1906-2486px (ultra-wide screens). Both are Framer responsive variant artifacts that Ahrefs' headless browser captured during its April 9 crawl but are not visible at normal screen sizes.
 
 ### Pages with most missing alt text
 
-| Page | Missing Alt | What's missing |
-|---|---|---|
-| /about | 34 | 30 team headshots (832x832) + 4 shared site-wide |
-| /maxima-vs-floqast | 15 | 4 testimonial headshots, 5 comparison icons, 1 FloQast logo, customer logos, trust badges |
-| /articles/ai-tools-for-accounting | 15 | 11 platform screenshots (Maxima, BlackLine, FloQast, Tabs, Zuora, Brex, Ramp, Trullion, Klarity, Pigment, Abacum) + shared images |
-| /newsroom | 9 | 6 press outlet logos/thumbnails + shared |
-| /book-a-demo | 7 | Trust badges, customer logos, product screenshot |
-| /blog | 7 | 4 article thumbnails + shared |
+
+| Page                              | Missing Alt | What's missing                                                                                                                    |
+| --------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| /about                            | 34          | 30 team headshots (832x832) + 4 shared site-wide                                                                                  |
+| /maxima-vs-floqast                | 15          | 4 testimonial headshots, 5 comparison icons, 1 FloQast logo, customer logos, trust badges                                         |
+| /articles/ai-tools-for-accounting | 15          | 11 platform screenshots (Maxima, BlackLine, FloQast, Tabs, Zuora, Brex, Ramp, Trullion, Klarity, Pigment, Abacum) + shared images |
+| /newsroom                         | 9           | 6 press outlet logos/thumbnails + shared                                                                                          |
+| /book-a-demo                      | 7           | Trust badges, customer logos, product screenshot                                                                                  |
+| /blog                             | 7           | 4 article thumbnails + shared                                                                                                     |
+
 
 ### Alt text errors on existing images
 
-| Page | Image | Current Alt | Fix |
-|---|---|---|---|
-| / (homepage) | Vipin Sethi headshot | "Vipin Sethi, Controller at **Ripping**" | Change to "**Rippling**" |
-| / (homepage) | Jack Chalfant headshot | "Jack Chalfant, Controller, SpotOn**.png**" | Remove ".png" |
+
+| Page         | Image                  | Current Alt                                 | Fix                      |
+| ------------ | ---------------------- | ------------------------------------------- | ------------------------ |
+| / (homepage) | Vipin Sethi headshot   | "Vipin Sethi, Controller at **Ripping**"    | Change to "**Rippling**" |
+| / (homepage) | Jack Chalfant headshot | "Jack Chalfant, Controller, SpotOn**.png**" | Remove ".png"            |
+
 
 ### Image Filename Issue
 
@@ -567,6 +613,7 @@ All images use Framer-generated hash filenames (e.g., `Sfz6mVl5Wq1Zdym07lodksvCE
 ### Full Details
 
 See `ALT_TEXT_AUDIT_MAXIMA.md` for the complete page-by-page audit with:
+
 - Every image listed by Framer filename with its context/purpose identified
 - Suggested alt text for each image (including all 30 team headshots mapped to names/titles)
 - Prioritized fix list (10 tiers from critical to low)
@@ -623,23 +670,23 @@ See `ALT_TEXT_AUDIT_MAXIMA.md` for the complete page-by-page audit with:
 ### High Priority
 
 
-| #   | Issue                                     | Impact                                                | Pages Affected             |
-| --- | ----------------------------------------- | ----------------------------------------------------- | -------------------------- |
-| 4   | **Fix orphan pages** - add internal links | High - 4 pages invisible to crawlers via links        | 4 pages                    |
-| 5   | **Fix generic meta descriptions**         | Medium-High - 8 pages with wrong/generic descriptions | 8 pages                    |
-| 6   | **Add canonical tags** to 2 articles      | Medium - duplicate content risk                       | 2 pages                    |
-| 7   | **Add alt text** to all images (see `ALT_TEXT_AUDIT_MAXIMA.md`) | Medium - accessibility and image SEO | 83 unique images across 30 pages |
+| #   | Issue                                                           | Impact                                                | Pages Affected                   |
+| --- | --------------------------------------------------------------- | ----------------------------------------------------- | -------------------------------- |
+| 4   | **Fix orphan pages** - add internal links                       | High - 4 pages invisible to crawlers via links        | 4 pages                          |
+| 5   | **Fix generic meta descriptions**                               | Medium-High - 8 pages with wrong/generic descriptions | 8 pages                          |
+| 6   | **Add canonical tags** to 2 articles                            | Medium - duplicate content risk                       | 2 pages                          |
+| 7   | **Add alt text** to all images (see `ALT_TEXT_AUDIT_MAXIMA.md`) | Medium - accessibility and image SEO                  | 83 unique images across 30 pages |
 
 
 ### Medium Priority
 
 
-| #   | Issue                                                           | Impact                                      | Pages Affected |
-| --- | --------------------------------------------------------------- | ------------------------------------------- | -------------- |
+| #   | Issue                                                                                           | Impact                                      | Pages Affected  |
+| --- | ----------------------------------------------------------------------------------------------- | ------------------------------------------- | --------------- |
 | 8   | **Improve internal linking** - ~72 new links needed (see `INTERNAL_LINKING_STRATEGY_MAXIMA.md`) | Medium - link equity not flowing to content | All 18 articles |
-| 9   | **Shorten long titles**                                         | Low-Medium - truncation in SERPs            | 3 pages        |
-| 10  | **Shorten long meta descriptions**                              | Low - truncation in SERPs                   | 2 pages        |
-| 11  | **Add lastmod to sitemap**                                      | Low-Medium - crawl efficiency               | All 32 pages   |
+| 9   | **Shorten long titles**                                                                         | Low-Medium - truncation in SERPs            | 3 pages         |
+| 10  | **Shorten long meta descriptions**                                                              | Low - truncation in SERPs                   | 2 pages         |
+| 11  | **Add lastmod to sitemap**                                                                      | Low-Medium - crawl efficiency               | All 32 pages    |
 
 
 ### Low Priority / Long-term
