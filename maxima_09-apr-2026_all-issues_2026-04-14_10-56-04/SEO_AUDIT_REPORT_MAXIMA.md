@@ -181,110 +181,20 @@ Framer auto-generates canonical tags for all CMS collection pages and static pag
 
 ## 5. Structured Data (JSON-LD) Audit
 
-### Current Implementation
+### What was done
 
-Every page on the site has **two JSON-LD blocks:**
+- **Removed** the site-wide FAQ snippet that was duplicating the same 5 FAQ questions on all 32 pages (risk of Google manual action)
+- **Updated** the Organization schema with founder details, company address, and social links
+- **Added BreadcrumbList** schema to all core pages and legal sub-pages
+- **Added FAQPage** schema to the 4 pages with visible FAQ sections: `/product-overview`, `/security`, `/maxima-vs-floqast`, `/articles/ai-tools-for-accounting`
+- **Added Article** schema to all blog articles via a single CMS template (pulls title, author, date, image, category automatically)
+- **Added WebSite** schema to the homepage
 
-1. **Organization schema** (correct, on all pages):
+### Developer handoff
 
-```json
-{
-  "@type": "Organization",
-  "name": "Maxima AI",
-  "url": "https://www.maxima.ai",
-  "logo": "https://www.maxima.ai/logo.png",
-  "sameAs": [
-    "https://www.linkedin.com/company/maximaai/",
-    "https://www.crunchbase.com/organization/maxima-ai",
-    "https://www.g2.com/products/maxima/",
-    "https://www.youtube.com/@Maximaaiofficial"
-  ]
-}
-```
+**FAQ schema at scale:** A Framer code override component is ready for dynamically generating FAQ schema from page content. Needs a dev to create a 0-opacity FAQ component in the CMS and apply the override. Details in `SCHEMA_MARKUP_GUIDE_MAXIMA.md`.
 
-1. **FAQPage schema** (injected via Framer head snippet `ZhCoGA1DF` on every page) - **CRITICAL ISSUE: Same on ALL 32 pages:**
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the difference between AI-assisted and agentic AI accounting tools?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most AI tools in accounting still play an assistive role. They help surface anomalies, suggest matches, or draft explanations, but a human is still responsible for doing the work. Agentic AI changes that model. Instead of assisting, it prepares the work..."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much do AI accounting tools cost?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Pricing varies widely depending on category and complexity. Spend management tools often offer free or low-cost entry points, while close management and compliance platforms are typically priced based on transaction volume..."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can AI tools replace accountants?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No, but they will change how accounting teams operate. Much of the work in accounting today is preparation: collecting data, matching transactions, drafting entries, and building reconciliations..."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What are the best AI tools for the monthly close?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Maxima, BlackLine, and FloQast represent three different approaches to the monthly close..."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do AI tools improve SOX compliance?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most SOX compliance challenges come from how work is performed, not just how it is documented. Traditional processes often rely on manual preparation followed by after-the-fact evidence collection..."
-      }
-    }
-  ]
-}
-```
-
-**Note:** The Organization schema is injected via a separate Framer snippet (`legacy-bodyEnd`) before `</body>`. The FAQPage schema is injected via snippet `ZhCoGA1DF` in the `<head>`. Both are site-wide global snippets.
-
-### Issues Found
-
-**CRITICAL - Same FAQ on every page:**
-The FAQ schema contains 5 questions about "AI accounting tools" (pricing, types, SOX compliance, etc.). While these questions are relevant to the /articles/ai-tools-for-accounting page, they are **irrelevant** to pages like:
-
-- /legal, /legal/privacy-policy, /legal/terms-of-service
-- /careers
-- /book-a-demo
-- /about
-- Customer case study pages
-
-Google may flag this as spammy structured data if the same FAQ appears on 32 different pages. At minimum, it dilutes the FAQ schema's value and risks a manual action.
-
-**MISSING schema types:**
-
-- Blog articles: No `Article` or `BlogPosting` schema
-- Case studies: No `Article` or `CaseStudy` schema
-- Comparison page (/maxima-vs-floqast): No `Product` or comparison schema
-- Homepage: No `WebSite` schema with `SearchAction`
-- No `BreadcrumbList` schema on any page
-
-### Recommendations
-
-1. **IMMEDIATE:** Remove the site-wide FAQPage snippet from Framer's global head settings
-2. **Per-page FAQ schemas:** Add FAQPage schema only to pages that actually have visible FAQ content (e.g., /how-it-works, /product-overview, /articles/ai-tools-for-accounting)
-3. **Add Article/BlogPosting schema** to all blog articles in the Frame Blog collection. This should include:
-  - `headline`, `author`, `datePublished`, `dateModified`, `image`, `publisher`
-  - This requires creating a new component in the Framer Blog collection as noted in the checklist
-4. **Add BreadcrumbList schema** to article and sub-pages
-5. Keep the Organization schema as-is (correctly implemented site-wide)
+Full implementation details and copy-paste code blocks: `**SCHEMA_MARKUP_GUIDE_MAXIMA.md`**
 
 ---
 
@@ -433,7 +343,7 @@ The site has **zero article-to-article body content links**. Every article's onl
 
 ### Recommendations
 
-- For **future** articles, use shorter slugs (target 3-5 words). Don't change existing URLs as this would require redirects and could lose any existing link equity.
+- For **future** articles, use shorter slugs. Don't change existing URLs as this would require redirects and could lose any existing link equity.
 - If adding more comparison pages, create a `/compare/` or `/vs/` subfolder
 - The `/blog` vs `/articles/` inconsistency is a **minor** issue - not worth creating redirects to fix, but keep naming consistent going forward.
 
@@ -464,15 +374,7 @@ All 18 articles under /articles/ are listed.
 
 ### Issues Found
 
-1. **No** `<lastmod>` **dates** on any URL. This is a Framer limitation.
-2. **All pages in a single sitemap.** With 32 URLs this is fine, but if content grows, consider splitting into separate sitemaps (pages, articles, legal).
-3. **No image sitemap.** Given the number of images across the site, an image sitemap could help with image indexation.
-
-### Recommendations
-
-- Add `<lastmod>` dates if Framer supports it (or via a custom sitemap solution)
-- Monitor sitemap as content grows; split into sub-sitemaps when exceeding 100 URLs
-- Consider an image sitemap for key product screenshots and diagrams
+**No** `<lastmod>` **dates** on any URL. This is a Framer limitation.
 
 ---
 
@@ -489,77 +391,23 @@ Sitemap: https://www.maxima.ai/sitemap.xml
 
 ### Analysis
 
-- Allows all crawlers full access to the entire site
-- Correctly references the sitemap
-- No disallowed paths
-
-### Recommendations
-
-- **Consider blocking** Framer internal paths if any exist (e.g., preview/draft URLs)
-- The current setup is otherwise clean and correct
+- The current setup is clean and correct
 - No issues detected
 
 ---
 
 ## 12. Alt Text & Image Filename Audit
 
-### Summary
+### **Missing alt text on images**
 
+We went through every page, identified all 83 unique images with missing or incorrect alt text, and wrote the corrected copy for each one. The fixes are already updated in Framer. Highlights: 
 
-| Metric                                       | Value                       |
-| -------------------------------------------- | --------------------------- |
-| Total unique images missing alt text         | **83**                      |
-| Total missing-alt instances across all pages | **~170**                    |
-| Pages affected                               | 30 (every page on the site) |
-| Images with alt text typos                   | 2 (homepage)                |
+- Fixed the 3 site-wide images in the header/footer/the latest section that were responsible for ~93 of the flagged instances.
+- Wrote alt text for all 30 team headshots on the /about page — none of them had any.
+- Added alt text to logos, article thumbnails, product screenshots, and testimonial photos across blog, newsroom, comparison, and case study pages.
+- Corrected 2 typos on the homepage — "Ripping" was fixed to "Rippling," and a leaked file extension ("SpotOn.png") was cleaned up to just "SpotOn." in alt text
 
-
-### Biggest wins (fix once, fix everywhere)
-
-2 decorative/background images are shared across **every page** via Framer's global header/footer. Adding `alt=""` to these in Framer resolves the issue across all pages at once:
-
-
-| Image                             | Appears On   | Action                    |
-| --------------------------------- | ------------ | ------------------------- |
-| `Sfz6mVl5Wq1Zdym07lodksvCE.png`   | All 30 pages | Add `alt=""` (decorative) |
-| `vl8RF4iXhvG4IFYwq1fc6JhmF2c.png` | All 30 pages | Add `alt=""` (decorative) |
-
-
-**Note:** Ahrefs also flagged `oSCs67tz...png` and `JEiyjUqswVbHLA4wnNdJYRZMTFQ.png` as site-wide issues. On verification: `oSCs67tz` only exists on `/blog` (not site-wide), and `JEiyjUq` only renders at viewport widths 1906-2486px (ultra-wide screens). Both are Framer responsive variant artifacts that Ahrefs' headless browser captured during its April 9 crawl but are not visible at normal screen sizes.
-
-### Pages with most missing alt text
-
-
-| Page                              | Missing Alt | What's missing                                                                                                                    |
-| --------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| /about                            | 34          | 30 team headshots (832x832) + 4 shared site-wide                                                                                  |
-| /maxima-vs-floqast                | 15          | 4 testimonial headshots, 5 comparison icons, 1 FloQast logo, customer logos, trust badges                                         |
-| /articles/ai-tools-for-accounting | 15          | 11 platform screenshots (Maxima, BlackLine, FloQast, Tabs, Zuora, Brex, Ramp, Trullion, Klarity, Pigment, Abacum) + shared images |
-| /newsroom                         | 9           | 6 press outlet logos/thumbnails + shared                                                                                          |
-| /book-a-demo                      | 7           | Trust badges, customer logos, product screenshot                                                                                  |
-| /blog                             | 7           | 4 article thumbnails + shared                                                                                                     |
-
-
-### Alt text errors on existing images
-
-
-| Page         | Image                  | Current Alt                                 | Fix                      |
-| ------------ | ---------------------- | ------------------------------------------- | ------------------------ |
-| / (homepage) | Vipin Sethi headshot   | "Vipin Sethi, Controller at **Ripping**"    | Change to "**Rippling**" |
-| / (homepage) | Jack Chalfant headshot | "Jack Chalfant, Controller, SpotOn**.png**" | Remove ".png"            |
-
-
-### Image Filename Issue
-
-All images use Framer-generated hash filenames (e.g., `Sfz6mVl5Wq1Zdym07lodksvCE.png`). This is a Framer platform limitation. For future uploads, name files descriptively before uploading.
-
-### Full Details
-
-See `ALT_TEXT_AUDIT_MAXIMA.md` for the complete page-by-page audit with:
-
-- Every image listed by Framer filename with its context/purpose identified
-- Suggested alt text for each image (including all 30 team headshots mapped to names/titles)
-- Prioritized fix list (10 tiers from critical to low)
+More detailed document on this:
 
 ---
 
