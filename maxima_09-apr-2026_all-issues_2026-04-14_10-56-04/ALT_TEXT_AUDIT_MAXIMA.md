@@ -23,9 +23,9 @@ These images appear on every page (or nearly every page) via Framer's global hea
 
 | #   | Preview | Framer Filename                      |  Fixed Alt Text                                              |
 | --- | ------- | ------------------------------------ | --------------------------------------------------------------- 
-| 1   | ![](images/Sfz6mVl5Wq1Zdym07lodksvCE.png) | `Sfz6mVl5Wq1Zdym07lodksvCE.png` (1920x1080)     | 3D blue cubes illustrating AI-powered accounting accuracy |
-| 2   | ![](images/vl8RF4iXhvG4IFYwq1fc6JhmF2c.png) | `vl8RF4iXhvG4IFYwq1fc6JhmF2c.png` (5118x2879)  | Dark Blue Decorative Illustration |
-| 3   | ![](images/JEiyjUqswVbHLA4wnNdJYRZMTFQ.png) | `JEiyjUqswVbHLA4wnNdJYRZMTFQ.png` (1920x1080) | Abstract geometric illustration with translucent cubes on light blue-purple gradient |
+| 1   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/Sfz6mVl5Wq1Zdym07lodksvCE.png) | `Sfz6mVl5Wq1Zdym07lodksvCE.png` (1920x1080)     | 3D blue cubes illustrating AI-powered accounting accuracy |
+| 2   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/vl8RF4iXhvG4IFYwq1fc6JhmF2c.png) | `vl8RF4iXhvG4IFYwq1fc6JhmF2c.png` (5118x2879)  | Dark Blue Decorative Illustration |
+| 3   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/JEiyjUqswVbHLA4wnNdJYRZMTFQ.png) | `JEiyjUqswVbHLA4wnNdJYRZMTFQ.png` (1920x1080) | Abstract geometric illustration with translucent cubes on light blue-purple gradient |
 
 ---
 
@@ -33,7 +33,7 @@ These images appear on every page (or nearly every page) via Framer's global hea
 
 | #   | Preview | Framer Filename                      | Description                                                              | Fixed Alt Text       |
 | --- | ------- | ------------------------------------ | ------------------------------------------------------------------------ | ------------------------ |
-| 1   | ![](images/JVFEzfu6Sw8C2ZRuuYT19mjzI0.png) | `JVFEzfu6Sw8C2ZRuuYT19mjzI0.png` | Hero/section background on /how-it-works, /careers, /about, /product-overview, /security | Decorative Illustration  | 
+| 1   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/JVFEzfu6Sw8C2ZRuuYT19mjzI0.png) | `JVFEzfu6Sw8C2ZRuuYT19mjzI0.png` | Hero/section background on /how-it-works, /careers, /about, /product-overview, /security | Decorative Illustration  | 
 
 ---
 
@@ -41,8 +41,8 @@ These images appear on every page (or nearly every page) via Framer's global hea
 
 | #   | Preview | Framer Filename                      | Description                                                              | Suggested Alt Text              | Status                                                |
 | --- | ------- | ------------------------------------ | ------------------------------------------------------------------------ | ------------------------------- | ----------------------------------------------------- |
-| 1   | ![](images/w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png) | `w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png` | Article template shared image (13 article pages)                         | "Maxima logo icon"              | Fixed                                                 |
-| 2   | ![](images/iW3LdIyUUysMh7pga9J8nbZx70.png) | `iW3LdIyUUysMh7pga9J8nbZx70.png` | Article author headshot or shared illustration (CFO 2030, Accuracy, AI tools articles) | "Maxima AI blog post header"    | Updated the alt tag to "Maxima AI blog post header"   |
+| 1   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png) | `w4qDXkV1aaFbj3Sqhn4VzNrD0B0.png` | Article template shared image (13 article pages)                         | "Maxima logo icon"              | Fixed                                                 |
+| 2   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/iW3LdIyUUysMh7pga9J8nbZx70.png) | `iW3LdIyUUysMh7pga9J8nbZx70.png` | Article author headshot or shared illustration (CFO 2030, Accuracy, AI tools articles) | "Maxima AI blog post header"    | Updated the alt tag to "Maxima AI blog post header"   |
 
 ---
 
@@ -60,15 +60,15 @@ Shared site-wide images (covered in Section 1) are noted but not repeated in det
 
 | #   | Preview | Framer Filename               | Fixed Alt Text  |
 | --- | ------- | ------------------------ | ------------------- |
-| 1   | ![](images/mI3M74ioo3PzJxjmiwybXMRKg.png) | `mI3M74ioo3PzJxjmiwybXMRKg.png` (1772x756) | "Groupe ADP logo"   |
-| 2   | ![](images/aNadLCO7oIVRXVvqymeSiWwHrg.png) | `aNadLCO7oIVRXVvqymeSiWwHrg.png` (1392x401) | "Owl Labs logo"     |
+| 1   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/mI3M74ioo3PzJxjmiwybXMRKg.png) | `mI3M74ioo3PzJxjmiwybXMRKg.png` (1772x756) | "Groupe ADP logo"   |
+| 2   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/aNadLCO7oIVRXVvqymeSiWwHrg.png) | `aNadLCO7oIVRXVvqymeSiWwHrg.png` (1392x401) | "Owl Labs logo"     |
 
 #### Alt text typos to fix:
 
 | #   | Preview | Framer Filename                      | Current Alt                                    | Fixed to                                  |
 | --- | ------- | ------------------------------------ | ---------------------------------------------- | --------------------------------------- |
-| 1   | ![](images/2xO5dPLiVpqVAWReKw5iab9Cl8.png) | `2xO5dPLiVpqVAWReKw5iab9Cl8.png` | "Vipin Sethi, Controller at **Ripping**"       | "Vipin Sethi, Controller at **Rippling**" |
-| 2   | ![](images/bueD7XevgiYiqgzab1SBd6kaRsQ.png) | `bueD7XevgiYiqgzab1SBd6kaRsQ.png` | "Jack Chalfant, Controller, SpotOn**.png**"    | "Jack Chalfant, Controller, SpotOn"     |
+| 1   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/2xO5dPLiVpqVAWReKw5iab9Cl8.png) | `2xO5dPLiVpqVAWReKw5iab9Cl8.png` | "Vipin Sethi, Controller at **Ripping**"       | "Vipin Sethi, Controller at **Rippling**" |
+| 2   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/bueD7XevgiYiqgzab1SBd6kaRsQ.png) | `bueD7XevgiYiqgzab1SBd6kaRsQ.png` | "Jack Chalfant, Controller, SpotOn**.png**"    | "Jack Chalfant, Controller, SpotOn"     |
 
 ---
 
@@ -89,36 +89,36 @@ This page has 30 team member headshots, all missing alt text.
 
 | #   | Preview | Framer Filename                   | Fixed Alt Text                            |
 | --- | ------- | --------------------------------- | --------------------------------------------- |
-| 1   | ![](images/5HtYALpXnnTQ71W59GG0DI5G6g.png) | `5HtYALpXnnTQ71W59GG0DI5G6g.png`  | "Aaron Ko, Software Engineer at Maxima"       |
-| 2   | ![](images/gdptJjSKG515QhOiz5DvIBZff3s.png) | `gdptJjSKG515QhOiz5DvIBZff3s.png` | "Abby He, Software Engineer at Maxima"        |
-| 3   | ![](images/tB4YAfEWM1rteItSU5FvHerQLw.png) | `tB4YAfEWM1rteItSU5FvHerQLw.png`  | "Akshaya Srivatsa, CPO & Cofounder at Maxima" |
-| 4   | ![](images/fw8okcjTn9ejWhaCgOLipMSY3kg.png) | `fw8okcjTn9ejWhaCgOLipMSY3kg.png` | "Anna Hsiao, Product Design at Maxima"        |
-| 5   | ![](images/S5gggwHeKzsJulyeIjRtRvIvg3s.png) | `S5gggwHeKzsJulyeIjRtRvIvg3s.png` | "Darshit Doshi, Software Engineer at Maxima"  |
-| 6   | ![](images/tkXxpHSLhUcyObJFeCCYKQXxI.png) | `tkXxpHSLhUcyObJFeCCYKQXxI.png`   | "Jack Liao, CTO & Cofounder at Maxima"        |
-| 7   | ![](images/BmHUd1EcZsnt6GHFRzjLUgFOKGA.png) | `BmHUd1EcZsnt6GHFRzjLUgFOKGA.png` | "Jacob Tuffli, Enterprise Sales at Maxima"    |
-| 8   | ![](images/DZgJAp7BEEQGIj6mtMbGejkPmw.png) | `DZgJAp7BEEQGIj6mtMbGejkPmw.png`  | "Jake Eagle, Enterprise Sales at Maxima"      |
-| 9   | ![](images/bHr2dpXr7tBuIOECVHRXa8EfUA.png) | `bHr2dpXr7tBuIOECVHRXa8EfUA.png`  | "James Varga, Enterprise Sales at Maxima"     |
-| 10  | ![](images/sIWUoe0IM2EmroxonmKtie3I0YY.png) | `sIWUoe0IM2EmroxonmKtie3I0YY.png` | "Justin Gu, Software Engineer at Maxima"      |
-| 11  | ![](images/f2hWUTOT1fT1Rgwxixbo3np1WE.png) | `f2hWUTOT1fT1Rgwxixbo3np1WE.png`  | "Kayla Kwon, Software Engineer at Maxima"     |
-| 12  | ![](images/Vz8PqYnHqDGyv7EMzmJPHNjAc.png) | `Vz8PqYnHqDGyv7EMzmJPHNjAc.png`   | "Kyle Mook, Enterprise Sales at Maxima"       |
-| 13  | ![](images/WmybgkQNLrF7IyBoAg1MRtHxRE.png) | `WmybgkQNLrF7IyBoAg1MRtHxRE.png`  | "Laura Hendrix, Enterprise Sales at Maxima"   |
-| 14  | ![](images/r7lIwtpt82p7V8GH3XPJkaKS8.png) | `r7lIwtpt82p7V8GH3XPJkaKS8.png`   | "Mark Ma, Software Engineer at Maxima"        |
-| 15  | ![](images/iDxHlo4RXdVOtJKwtORH6Qtuys.png) | `iDxHlo4RXdVOtJKwtORH6Qtuys.png`  | "Milo Becker, HR at Maxima"                   |
-| 16  | ![](images/lX0ffBivcB1J4ijb0qb7LBpZ0.png) | `lX0ffBivcB1J4ijb0qb7LBpZ0.png`   | "Olivia Gilmour, Enterprise Sales at Maxima"  |
-| 17  | ![](images/zzYk78agza2Krm5El7HJ3swNA.png) | `zzYk78agza2Krm5El7HJ3swNA.png`   | "Parisa Morris, Enterprise Sales at Maxima"   |
-| 18  | ![](images/Ap378bOOARfP7YErNDCV9RWdkxw.png) | `Ap378bOOARfP7YErNDCV9RWdkxw.png` | "Pav Kang, Enterprise Sales at Maxima"        |
-| 19  | ![](images/oGlRVxzTI9bfSkxoso1d06s87zY.png) | `oGlRVxzTI9bfSkxoso1d06s87zY.png` | "Raniz Bordoloi, Marketing at Maxima"         |
-| 20  | ![](images/A9XsAuXVtopTadD2YPZJdAkbc0.png) | `A9XsAuXVtopTadD2YPZJdAkbc0.png`  | "Reed Mitteness, Enterprise Sales at Maxima"  |
-| 21  | ![](images/0rT9GKetjF82Gqp1ou4EWLSpw0.png) | `0rT9GKetjF82Gqp1ou4EWLSpw0.png`  | "Rundong Lyu, Software Engineer at Maxima"    |
-| 22  | ![](images/b5eaKCdNdS42bwsgrXt5cjCQCQ.png) | `b5eaKCdNdS42bwsgrXt5cjCQCQ.png`  | "Sean Park, Enterprise Sales at Maxima"       |
-| 23  | ![](images/yKyI2XNMer111tXBc1ywWxMnP8A.png) | `yKyI2XNMer111tXBc1ywWxMnP8A.png` | "Shawn Bunch, Enterprise Sales at Maxima"     |
-| 24  | ![](images/eAnZt8ZCt642VcHddUEwF8pK1ZU.png) | `eAnZt8ZCt642VcHddUEwF8pK1ZU.png` | "Shawn Shen, Deployment Strategy at Maxima"   |
-| 25  | ![](images/J5bytvQQtdNJA6kw8nMmNgCiBa8.png) | `J5bytvQQtdNJA6kw8nMmNgCiBa8.png` | "Skip Kovar, Enterprise Sales at Maxima"      |
-| 26  | ![](images/UB6Er6PgtXYWMgFvleEO1fshC8.png) | `UB6Er6PgtXYWMgFvleEO1fshC8.png`  | "Taylor Bauer, Enterprise Sales at Maxima"    |
-| 27  | ![](images/POxfJz2aHqtVW2zyJGJaB7VnU9s.png) | `POxfJz2aHqtVW2zyJGJaB7VnU9s.png` | "Terence Wong, Software Engineer at Maxima"   |
-| 28  | ![](images/xNtfJKiiTNTxN4ul5klerhfdA.png) | `xNtfJKiiTNTxN4ul5klerhfdA.png`   | "Xiao Xi, Software Engineer at Maxima"        |
-| 29  | ![](images/aK6NdacTnbw3Y96mpbTe7WuV8.png) | `aK6NdacTnbw3Y96mpbTe7WuV8.png`   | "Yogi Goel, CEO & Cofounder at Maxima"        |
-| 30  | ![](images/to9I1IQ7TvCPsbII1kIlXUhVQs.png) | `to9I1IQ7TvCPsbII1kIlXUhVQs.png`  | "Zack Mitkin, Software Development at Maxima" |
+| 1   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/5HtYALpXnnTQ71W59GG0DI5G6g.png) | `5HtYALpXnnTQ71W59GG0DI5G6g.png`  | "Aaron Ko, Software Engineer at Maxima"       |
+| 2   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/gdptJjSKG515QhOiz5DvIBZff3s.png) | `gdptJjSKG515QhOiz5DvIBZff3s.png` | "Abby He, Software Engineer at Maxima"        |
+| 3   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/tB4YAfEWM1rteItSU5FvHerQLw.png) | `tB4YAfEWM1rteItSU5FvHerQLw.png`  | "Akshaya Srivatsa, CPO & Cofounder at Maxima" |
+| 4   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/fw8okcjTn9ejWhaCgOLipMSY3kg.png) | `fw8okcjTn9ejWhaCgOLipMSY3kg.png` | "Anna Hsiao, Product Design at Maxima"        |
+| 5   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/S5gggwHeKzsJulyeIjRtRvIvg3s.png) | `S5gggwHeKzsJulyeIjRtRvIvg3s.png` | "Darshit Doshi, Software Engineer at Maxima"  |
+| 6   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/tkXxpHSLhUcyObJFeCCYKQXxI.png) | `tkXxpHSLhUcyObJFeCCYKQXxI.png`   | "Jack Liao, CTO & Cofounder at Maxima"        |
+| 7   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/BmHUd1EcZsnt6GHFRzjLUgFOKGA.png) | `BmHUd1EcZsnt6GHFRzjLUgFOKGA.png` | "Jacob Tuffli, Enterprise Sales at Maxima"    |
+| 8   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/DZgJAp7BEEQGIj6mtMbGejkPmw.png) | `DZgJAp7BEEQGIj6mtMbGejkPmw.png`  | "Jake Eagle, Enterprise Sales at Maxima"      |
+| 9   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/bHr2dpXr7tBuIOECVHRXa8EfUA.png) | `bHr2dpXr7tBuIOECVHRXa8EfUA.png`  | "James Varga, Enterprise Sales at Maxima"     |
+| 10  | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/sIWUoe0IM2EmroxonmKtie3I0YY.png) | `sIWUoe0IM2EmroxonmKtie3I0YY.png` | "Justin Gu, Software Engineer at Maxima"      |
+| 11  | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/f2hWUTOT1fT1Rgwxixbo3np1WE.png) | `f2hWUTOT1fT1Rgwxixbo3np1WE.png`  | "Kayla Kwon, Software Engineer at Maxima"     |
+| 12  | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/Vz8PqYnHqDGyv7EMzmJPHNjAc.png) | `Vz8PqYnHqDGyv7EMzmJPHNjAc.png`   | "Kyle Mook, Enterprise Sales at Maxima"       |
+| 13  | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/WmybgkQNLrF7IyBoAg1MRtHxRE.png) | `WmybgkQNLrF7IyBoAg1MRtHxRE.png`  | "Laura Hendrix, Enterprise Sales at Maxima"   |
+| 14  | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/r7lIwtpt82p7V8GH3XPJkaKS8.png) | `r7lIwtpt82p7V8GH3XPJkaKS8.png`   | "Mark Ma, Software Engineer at Maxima"        |
+| 15  | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/iDxHlo4RXdVOtJKwtORH6Qtuys.png) | `iDxHlo4RXdVOtJKwtORH6Qtuys.png`  | "Milo Becker, HR at Maxima"                   |
+| 16  | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/lX0ffBivcB1J4ijb0qb7LBpZ0.png) | `lX0ffBivcB1J4ijb0qb7LBpZ0.png`   | "Olivia Gilmour, Enterprise Sales at Maxima"  |
+| 17  | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/zzYk78agza2Krm5El7HJ3swNA.png) | `zzYk78agza2Krm5El7HJ3swNA.png`   | "Parisa Morris, Enterprise Sales at Maxima"   |
+| 18  | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/Ap378bOOARfP7YErNDCV9RWdkxw.png) | `Ap378bOOARfP7YErNDCV9RWdkxw.png` | "Pav Kang, Enterprise Sales at Maxima"        |
+| 19  | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/oGlRVxzTI9bfSkxoso1d06s87zY.png) | `oGlRVxzTI9bfSkxoso1d06s87zY.png` | "Raniz Bordoloi, Marketing at Maxima"         |
+| 20  | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/A9XsAuXVtopTadD2YPZJdAkbc0.png) | `A9XsAuXVtopTadD2YPZJdAkbc0.png`  | "Reed Mitteness, Enterprise Sales at Maxima"  |
+| 21  | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/0rT9GKetjF82Gqp1ou4EWLSpw0.png) | `0rT9GKetjF82Gqp1ou4EWLSpw0.png`  | "Rundong Lyu, Software Engineer at Maxima"    |
+| 22  | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/b5eaKCdNdS42bwsgrXt5cjCQCQ.png) | `b5eaKCdNdS42bwsgrXt5cjCQCQ.png`  | "Sean Park, Enterprise Sales at Maxima"       |
+| 23  | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/yKyI2XNMer111tXBc1ywWxMnP8A.png) | `yKyI2XNMer111tXBc1ywWxMnP8A.png` | "Shawn Bunch, Enterprise Sales at Maxima"     |
+| 24  | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/eAnZt8ZCt642VcHddUEwF8pK1ZU.png) | `eAnZt8ZCt642VcHddUEwF8pK1ZU.png` | "Shawn Shen, Deployment Strategy at Maxima"   |
+| 25  | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/J5bytvQQtdNJA6kw8nMmNgCiBa8.png) | `J5bytvQQtdNJA6kw8nMmNgCiBa8.png` | "Skip Kovar, Enterprise Sales at Maxima"      |
+| 26  | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/UB6Er6PgtXYWMgFvleEO1fshC8.png) | `UB6Er6PgtXYWMgFvleEO1fshC8.png`  | "Taylor Bauer, Enterprise Sales at Maxima"    |
+| 27  | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/POxfJz2aHqtVW2zyJGJaB7VnU9s.png) | `POxfJz2aHqtVW2zyJGJaB7VnU9s.png` | "Terence Wong, Software Engineer at Maxima"   |
+| 28  | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/xNtfJKiiTNTxN4ul5klerhfdA.png) | `xNtfJKiiTNTxN4ul5klerhfdA.png`   | "Xiao Xi, Software Engineer at Maxima"        |
+| 29  | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/aK6NdacTnbw3Y96mpbTe7WuV8.png) | `aK6NdacTnbw3Y96mpbTe7WuV8.png`   | "Yogi Goel, CEO & Cofounder at Maxima"        |
+| 30  | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/to9I1IQ7TvCPsbII1kIlXUhVQs.png) | `to9I1IQ7TvCPsbII1kIlXUhVQs.png`  | "Zack Mitkin, Software Development at Maxima" |
 
 
 ---
@@ -132,11 +132,11 @@ This page has 30 team member headshots, all missing alt text.
 
 | #   | Preview | Framer Filename                   | Fixed Alt Text                                                                  |
 | --- | ------- | --------------------------------- | ----------------------------------------------------------------------------------- |
-| 1   | ![](images/oSCs67tz1q007qoOCmTmCOUzLvU.png) | `oSCs67tz1q007qoOCmTmCOUzLvU.png` | "The office of the CFO in 2030: how AI Agents change the equation" (article thumbnail) |
-| 2   | ![](images/7Megt5YYEEUMfEwmCgM9HZPFI9k.png) | `7Megt5YYEEUMfEwmCgM9HZPFI9k.png` | "Reconciliations in accounting: the definitive guide"                 |
-| 3   | ![](images/OMTw88vPFqJzaiaSmbYqndjFGU.png) | `OMTw88vPFqJzaiaSmbYqndjFGU.png`  | "7 best financial close software solutions to evaluate in 2026"       |
-| 4   | ![](images/PTvcVBayFg0cqO5C2sDLc5KD8.png) | `PTvcVBayFg0cqO5C2sDLc5KD8.png`   | "AI tools for accounting: best software, categories, and buyer guide" |
-| 5   | ![](images/iee3e1EfvQdYNE5a9EhBmAIfgpo.png) | `iee3e1EfvQdYNE5a9EhBmAIfgpo.png` | "Variance analysis: the definitive guide to explaining the numbers"   |
+| 1   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/oSCs67tz1q007qoOCmTmCOUzLvU.png) | `oSCs67tz1q007qoOCmTmCOUzLvU.png` | "The office of the CFO in 2030: how AI Agents change the equation" (article thumbnail) |
+| 2   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/7Megt5YYEEUMfEwmCgM9HZPFI9k.png) | `7Megt5YYEEUMfEwmCgM9HZPFI9k.png` | "Reconciliations in accounting: the definitive guide"                 |
+| 3   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/OMTw88vPFqJzaiaSmbYqndjFGU.png) | `OMTw88vPFqJzaiaSmbYqndjFGU.png`  | "7 best financial close software solutions to evaluate in 2026"       |
+| 4   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/PTvcVBayFg0cqO5C2sDLc5KD8.png) | `PTvcVBayFg0cqO5C2sDLc5KD8.png`   | "AI tools for accounting: best software, categories, and buyer guide" |
+| 5   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/iee3e1EfvQdYNE5a9EhBmAIfgpo.png) | `iee3e1EfvQdYNE5a9EhBmAIfgpo.png` | "Variance analysis: the definitive guide to explaining the numbers"   |
 
 
 ---
@@ -148,13 +148,13 @@ This page has 30 team member headshots, all missing alt text.
 
 | #   | Preview | Framer Filename                   | Fixed Alt Text                  |
 | --- | ------- | --------------------------------- | ----------------------------------- |
-| 1   | ![](images/ED3hsTQ3LEeIySbLRVlbGg0dSd4.png) | `ED3hsTQ3LEeIySbLRVlbGg0dSd4.png` | "TBPN logo"                         |
-| 2   | ![](images/9H3yHdrmyxt1xPG0X0L4ZnwChTg.png) | `9H3yHdrmyxt1xPG0X0L4ZnwChTg.png` | "FintechTV Exponential Voices logo" |
-| 3   | ![](images/aD3QabVBTs47OgmXph0lxmiKgeg.png) | `aD3QabVBTs47OgmXph0lxmiKgeg.png` | "Finimize logo"                     |
-| 4   | ![](images/dbBES67ciKLqTaakFnv4qoBRs2E.png) | `dbBES67ciKLqTaakFnv4qoBRs2E.png` | "Kleiner Perkins logo"              |
-| 5   | ![](images/diLXsJ7yohKZoAbDL6JEO5BEbko.png) | `diLXsJ7yohKZoAbDL6JEO5BEbko.png` | "PYMNTS logo"                       |
-| 6   | ![](images/X7pEzANd3psWwBZE0aPIr2npYjE.png) | `X7pEzANd3psWwBZE0aPIr2npYjE.png` | "EY (Ernst & Young) logo"           |
-| 7   | ![](images/OsrleOMaq3qRD5WRSnuTVIm9yUU.png) | `OsrleOMaq3qRD5WRSnuTVIm9yUU.png` | "CPA Practice Advisor logo"         |
+| 1   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/ED3hsTQ3LEeIySbLRVlbGg0dSd4.png) | `ED3hsTQ3LEeIySbLRVlbGg0dSd4.png` | "TBPN logo"                         |
+| 2   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/9H3yHdrmyxt1xPG0X0L4ZnwChTg.png) | `9H3yHdrmyxt1xPG0X0L4ZnwChTg.png` | "FintechTV Exponential Voices logo" |
+| 3   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/aD3QabVBTs47OgmXph0lxmiKgeg.png) | `aD3QabVBTs47OgmXph0lxmiKgeg.png` | "Finimize logo"                     |
+| 4   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/dbBES67ciKLqTaakFnv4qoBRs2E.png) | `dbBES67ciKLqTaakFnv4qoBRs2E.png` | "Kleiner Perkins logo"              |
+| 5   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/diLXsJ7yohKZoAbDL6JEO5BEbko.png) | `diLXsJ7yohKZoAbDL6JEO5BEbko.png` | "PYMNTS logo"                       |
+| 6   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/X7pEzANd3psWwBZE0aPIr2npYjE.png) | `X7pEzANd3psWwBZE0aPIr2npYjE.png` | "EY (Ernst & Young) logo"           |
+| 7   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/OsrleOMaq3qRD5WRSnuTVIm9yUU.png) | `OsrleOMaq3qRD5WRSnuTVIm9yUU.png` | "CPA Practice Advisor logo"         |
 
 
 ---
@@ -166,10 +166,10 @@ This page has 30 team member headshots, all missing alt text.
 
 | #   | Preview | Framer Filename                   | Fixed Alt Text                                      |
 | --- | ------- | --------------------------------- | ------------------------------------------------------- |
-| 1   | ![](images/FFNcjyi8WJ7aW7sXOOL0txwkw.webp) | `FFNcjyi8WJ7aW7sXOOL0txwkw.webp`  | Identify -- e.g. "G2 badge" or "[Company] logo"         |
-| 2   | ![](images/jSJTx8xWClKJEVWqUbZZhSkZM.png) | `jSJTx8xWClKJEVWqUbZZhSkZM.png`   | "Customer logo" (too small/faint to identify precisely) |
-| 3   | ![](images/vZUp1eP4XzpEvfPWortIpfeJc.png) | `vZUp1eP4XzpEvfPWortIpfeJc.png`   | "Rippling logo"                                         |
-| 4   | ![](images/VRrbQoRqaK06OBmVmnXn3EJgARU.png) | `VRrbQoRqaK06OBmVmnXn3EJgARU.png` | "Gorgias logo"                                          |
+| 1   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/FFNcjyi8WJ7aW7sXOOL0txwkw.webp) | `FFNcjyi8WJ7aW7sXOOL0txwkw.webp`  | Decorative Illustration         |
+| 2   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/jSJTx8xWClKJEVWqUbZZhSkZM.png) | `jSJTx8xWClKJEVWqUbZZhSkZM.png`   | Scale AI logo |
+| 3   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/vZUp1eP4XzpEvfPWortIpfeJc.png) | `vZUp1eP4XzpEvfPWortIpfeJc.png`   | "Rippling logo"                                         |
+| 4   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/VRrbQoRqaK06OBmVmnXn3EJgARU.png) | `VRrbQoRqaK06OBmVmnXn3EJgARU.png` | "Gorgias logo"                                          |
 
 
 ---
@@ -183,10 +183,10 @@ This page has 30 team member headshots, all missing alt text.
 
 | #   | Preview | Framer Filename                    | Fixed Alt Text              |
 | --- | ------- | ---------------------------------- | ------------------------------- |
-| 1   | ![](images/45E0cvGSRszAJnnlVamFD8Gec.jpeg) | `45E0cvGSRszAJnnlVamFD8Gec.jpeg`   | Jason Lai, Financial Controller |
-| 2   | ![](images/b4SAq6WcvsRoMgWzPYLaFL2CX0.jpeg) | `b4SAq6WcvsRoMgWzPYLaFL2CX0.jpeg`  | Mervyn Haw, Senior Accountant   |
-| 3   | ![](images/9WElAoGejJcGiyHN56SLSXWJ2U.jpeg) | `9WElAoGejJcGiyHN56SLSXWJ2U.jpeg`  | Jason Lopez, Controller         |
-| 4   | ![](images/1G7SVddymDiD7MafqecJSKzz4ts.jpeg) | `1G7SVddymDiD7MafqecJSKzz4ts.jpeg` | Josh Waldron, CAO               |
+| 1   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/45E0cvGSRszAJnnlVamFD8Gec.jpeg) | `45E0cvGSRszAJnnlVamFD8Gec.jpeg`   | Jason Lai, Financial Controller |
+| 2   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/b4SAq6WcvsRoMgWzPYLaFL2CX0.jpeg) | `b4SAq6WcvsRoMgWzPYLaFL2CX0.jpeg`  | Mervyn Haw, Senior Accountant   |
+| 3   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/9WElAoGejJcGiyHN56SLSXWJ2U.jpeg) | `9WElAoGejJcGiyHN56SLSXWJ2U.jpeg`  | Jason Lopez, Controller         |
+| 4   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/1G7SVddymDiD7MafqecJSKzz4ts.jpeg) | `1G7SVddymDiD7MafqecJSKzz4ts.jpeg` | Josh Waldron, CAO               |
 
 
 #### Comparison graphics & icons (missing alt):
@@ -194,13 +194,13 @@ This page has 30 team member headshots, all missing alt text.
 
 | #   | Preview | Framer Filename                   | Fixed Alt Text                                                        |
 | --- | ------- | --------------------------------- | ------------------------------------------------------------------------- |
-| 1   | ![](images/6stZUxUReRn72GHdCCPoD4SGskI.png) | `6stZUxUReRn72GHdCCPoD4SGskI.png` | Decorative illustration                |
-| 2   | ![](images/uNag2J6pd8UlLeQ9myHyTIvJXIA.png) | `uNag2J6pd8UlLeQ9myHyTIvJXIA.png` | "FloQast logo"                                                            |
-| 3   | ![](images/HfaLCxdC3xfmlQGeH9kcFsXYnk.png) | `HfaLCxdC3xfmlQGeH9kcFsXYnk.png`  | Josh Waldron, SVP Finance & Accounting, Scale AI          |
-| 4   | ![](images/xBqVUrTX51Ag560dM2AzeQGhg.png) | `xBqVUrTX51Ag560dM2AzeQGhg.png`   | Scale AI Logo |
-| 5   | ![](images/sk3MG8zImcTybJZRLQTHybRcBI.png) | `sk3MG8zImcTybJZRLQTHybRcBI.png`  | Jack Chalfant, Controller, SpotOn    |
-| 6   | ![](images/E28cFQQ3Thz0y0tODm7GpCMNQ4.png) | `E28cFQQ3Thz0y0tODm7GpCMNQ4.png`  | "SpotOn logo"                                                             |
-| 7   | ![](images/YuB06E5QQYPr5l0rr28J7C7Fk.png) | `YuB06E5QQYPr5l0rr28J7C7Fk.png`   | "Rippling logo"                                                           |
+| 1   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/6stZUxUReRn72GHdCCPoD4SGskI.png) | `6stZUxUReRn72GHdCCPoD4SGskI.png` | Decorative illustration                |
+| 2   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/uNag2J6pd8UlLeQ9myHyTIvJXIA.png) | `uNag2J6pd8UlLeQ9myHyTIvJXIA.png` | "FloQast logo"                                                            |
+| 3   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/HfaLCxdC3xfmlQGeH9kcFsXYnk.png) | `HfaLCxdC3xfmlQGeH9kcFsXYnk.png`  | Josh Waldron, SVP Finance & Accounting, Scale AI          |
+| 4   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/xBqVUrTX51Ag560dM2AzeQGhg.png) | `xBqVUrTX51Ag560dM2AzeQGhg.png`   | Scale AI Logo |
+| 5   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/sk3MG8zImcTybJZRLQTHybRcBI.png) | `sk3MG8zImcTybJZRLQTHybRcBI.png`  | Jack Chalfant, Controller, SpotOn    |
+| 6   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/E28cFQQ3Thz0y0tODm7GpCMNQ4.png) | `E28cFQQ3Thz0y0tODm7GpCMNQ4.png`  | "SpotOn logo"                                                             |
+| 7   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/YuB06E5QQYPr5l0rr28J7C7Fk.png) | `YuB06E5QQYPr5l0rr28J7C7Fk.png`   | "Rippling logo"                                                           |
 
 
 ---
@@ -212,17 +212,17 @@ This page has 30 team member headshots, all missing alt text.
 
 | #   | Preview | Framer Filename                    | Fixed Alt Text                                                                                        |
 | --- | ------- | ---------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| 1   | ![](images/R7L9UulqDSwlrgho13ecW7XE.png) | `R7L9UulqDSwlrgho13ecW7XE.png`     | "Maxima platform screenshot showing PTO Accruals journal entry automation with NetSuite integration"      |
-| 2   | ![](images/f571vQy8CgopN7b1nHR4VtFig.jpg) | `f571vQy8CgopN7b1nHR4VtFig.jpg`    | "BlackLine dashboard"             |
-| 3   | ![](images/UzC6B82Iksh9N8HPr4klrxBBq8o.png) | `UzC6B82Iksh9N8HPr4klrxBBq8o.png`  | "FloQast dashboard showing checklists"            |
-| 4   | ![](images/8Zgyo3gRtYcZF2zZ2WkKQBcNI.png) | `8Zgyo3gRtYcZF2zZ2WkKQBcNI.png`    | "Tabs AR Automation dashboard"         |
-| 5   | ![](images/vCQIi9K2toANtomgMZyD42Cr7hk.png) | `vCQIi9K2toANtomgMZyD42Cr7hk.png`  | "Zuora consumption dashboard"                          |
-| 6   | ![](images/iPzE1gzhHfNQrX7oowVeKjxjaOQ.webp) | `iPzE1gzhHfNQrX7oowVeKjxjaOQ.webp` | "Brex reports dashboard"           |
-| 7   | ![](images/3VEzpWFX1ncDEYQR7fGfW3V5SCQ.png) | `3VEzpWFX1ncDEYQR7fGfW3V5SCQ.png`  | "Ramp insights dashboard"                   |
-| 8   | ![](images/PbqTwH8d4iNdMkcToFGfB441VPY.webp) | `PbqTwH8d4iNdMkcToFGfB441VPY.webp` | "Trullion dashboard"    |
-| 9   | ![](images/4Y3o6CZKEV7aIA2DdmGBZ9X3s.png) | `4Y3o6CZKEV7aIA2DdmGBZ9X3s.png`    | "Klarity Dashboard"          |
-| 10  | ![](images/mkvJdzhs6WyRPJZbGdQoV0GwUo.png) | `mkvJdzhs6WyRPJZbGdQoV0GwUo.png`   | "Pigment Dashboard" |
-| 11  | ![](images/8NTuUnklud4HHSVdsP9eSecuEQ.png) | `8NTuUnklud4HHSVdsP9eSecuEQ.png`   | "Abacum Dashboard"     |
+| 1   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/R7L9UulqDSwlrgho13ecW7XE.png) | `R7L9UulqDSwlrgho13ecW7XE.png`     | "Maxima platform screenshot showing PTO Accruals journal entry automation with NetSuite integration"      |
+| 2   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/f571vQy8CgopN7b1nHR4VtFig.jpg) | `f571vQy8CgopN7b1nHR4VtFig.jpg`    | "BlackLine dashboard"             |
+| 3   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/UzC6B82Iksh9N8HPr4klrxBBq8o.png) | `UzC6B82Iksh9N8HPr4klrxBBq8o.png`  | "FloQast dashboard showing checklists"            |
+| 4   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/8Zgyo3gRtYcZF2zZ2WkKQBcNI.png) | `8Zgyo3gRtYcZF2zZ2WkKQBcNI.png`    | "Tabs AR Automation dashboard"         |
+| 5   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/vCQIi9K2toANtomgMZyD42Cr7hk.png) | `vCQIi9K2toANtomgMZyD42Cr7hk.png`  | "Zuora consumption dashboard"                          |
+| 6   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/iPzE1gzhHfNQrX7oowVeKjxjaOQ.webp) | `iPzE1gzhHfNQrX7oowVeKjxjaOQ.webp` | "Brex reports dashboard"           |
+| 7   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/3VEzpWFX1ncDEYQR7fGfW3V5SCQ.png) | `3VEzpWFX1ncDEYQR7fGfW3V5SCQ.png`  | "Ramp insights dashboard"                   |
+| 8   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/PbqTwH8d4iNdMkcToFGfB441VPY.webp) | `PbqTwH8d4iNdMkcToFGfB441VPY.webp` | "Trullion dashboard"    |
+| 9   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/4Y3o6CZKEV7aIA2DdmGBZ9X3s.png) | `4Y3o6CZKEV7aIA2DdmGBZ9X3s.png`    | "Klarity Dashboard"          |
+| 10  | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/mkvJdzhs6WyRPJZbGdQoV0GwUo.png) | `mkvJdzhs6WyRPJZbGdQoV0GwUo.png`   | "Pigment Dashboard" |
+| 11  | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/8NTuUnklud4HHSVdsP9eSecuEQ.png) | `8NTuUnklud4HHSVdsP9eSecuEQ.png`   | "Abacum Dashboard"     |
 
 
 ---
@@ -234,8 +234,8 @@ This page has 30 team member headshots, all missing alt text.
 
 | #   | Preview | Framer Filename                   | Fixed Alt Text                                                                                                                                                                                                                                                                      |
 | --- | ------- | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | ![](images/3UVdFS4uFQpoDZ00KLKs4Br4HAI.png) | `3UVdFS4uFQpoDZ00KLKs4Br4HAI.png` | "Account Balance Accuracy chart comparing AI models"                                                                                                                                                  |
-| 2   | ![](images/vADRg9PkaoVtnP3Nbp7G3QTxqeQ.png) | `vADRg9PkaoVtnP3Nbp7G3QTxqeQ.png` | "Iceberg diagram comparing generalized LLM models vs Maxima" |
+| 1   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/3UVdFS4uFQpoDZ00KLKs4Br4HAI.png) | `3UVdFS4uFQpoDZ00KLKs4Br4HAI.png` | "Account Balance Accuracy chart comparing AI models"                                                                                                                                                  |
+| 2   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/vADRg9PkaoVtnP3Nbp7G3QTxqeQ.png) | `vADRg9PkaoVtnP3Nbp7G3QTxqeQ.png` | "Iceberg diagram comparing generalized LLM models vs Maxima" |
 
 
 ---
@@ -247,10 +247,10 @@ This page has 30 team member headshots, all missing alt text.
 
 | #   | Preview | Framer Filename                   | Fixed Alt Text                                                                                                                                                                                               |
 | --- | ------- | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | ![](images/oSCs67tz1q007qoOCmTmCOUzLvU.png) | `oSCs67tz1q007qoOCmTmCOUzLvU.png` | "The office of the CFO in 2030: how AI Agents change the equation" (article hero image) |
-| 2   | ![](images/VEgoeMjxNcZHyt6gs3u0mnM5du4.png) | `VEgoeMjxNcZHyt6gs3u0mnM5du4.png` | "Diagram of traditional CFO office workflow" |
-| 3   | ![](images/eLJiMRSgNORQAVepTBi0336jGk.png) | `eLJiMRSgNORQAVepTBi0336jGk.png`  | "Diagram of Maxima-powered workflow"                                       |
-| 4   | ![](images/mpAqItRV41cXj4GeLRmTfUkJY.png) | `mpAqItRV41cXj4GeLRmTfUkJY.png`   | "Actionable vs Dynamic AI comparison illustration"                                                                                           |
+| 1   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/oSCs67tz1q007qoOCmTmCOUzLvU.png) | `oSCs67tz1q007qoOCmTmCOUzLvU.png` | "The office of the CFO in 2030: how AI Agents change the equation" (article hero image) |
+| 2   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/VEgoeMjxNcZHyt6gs3u0mnM5du4.png) | `VEgoeMjxNcZHyt6gs3u0mnM5du4.png` | "Diagram of traditional CFO office workflow" |
+| 3   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/eLJiMRSgNORQAVepTBi0336jGk.png) | `eLJiMRSgNORQAVepTBi0336jGk.png`  | "Diagram of Maxima-powered workflow"                                       |
+| 4   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/mpAqItRV41cXj4GeLRmTfUkJY.png) | `mpAqItRV41cXj4GeLRmTfUkJY.png`   | "Actionable vs Dynamic AI comparison illustration"                                                                                           |
 
 
 ---
@@ -262,7 +262,7 @@ This page has 30 team member headshots, all missing alt text.
 
 | #   | Preview | Framer Filename                   | Fixed Alt Text                                                                                                                                                                       |
 | --- | ------- | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | ![](images/bb7hBnvbLl86twSqj0nYm1cBLLU.jpg) | `bb7hBnvbLl86twSqj0nYm1cBLLU.jpg` | "Maxima $41M Seed and Series A funding announcement" |
+| 1   | ![](https://raw.githubusercontent.com/MeetChopra/Maxima/main/maxima_09-apr-2026_all-issues_2026-04-14_10-56-04/images/bb7hBnvbLl86twSqj0nYm1cBLLU.jpg) | `bb7hBnvbLl86twSqj0nYm1cBLLU.jpg` | "Maxima $41M Seed and Series A funding announcement" |
 
 
 ---
