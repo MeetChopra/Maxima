@@ -95,15 +95,9 @@ On some pages, subtitles and section descriptions are tagged as H1 instead of th
 | /security     | "Designed from the ground up to protect the most sensitive financial data..." (intro paragraph) | `<p>`         |
 
 
-**Fix in Framer:** In the layer panel for these text elements, change the tag from H1 to the appropriate semantic tag (`<p>` for paragraphs, `<h2>` for section headings).
-
 ---
 
 ## 2. Indexation Audit
-
-### Pages to Submit to IndexNow
-
-The Ahrefs audit flagged **all 32 pages** in the sitemap as candidates for IndexNow submission. This suggests these pages have been updated recently but haven't been re-crawled by search engines.
 
 ### Pages with Organic Traffic Drops:
 
@@ -112,6 +106,8 @@ The Ahrefs audit flagged **all 32 pages** in the sitemap as candidates for Index
 | ----------------------------------------------------------------------- | ---------------------------- |
 | /articles/7-best-financial-close-software-solutions-to-evaluate-in-2026 | Organic traffic dropped to 0 |
 
+
+There's a fluctuation in organic traffic estimated by Ahrefs. Although the traffic is quite low on this page, so at this scale it does not hold much relevance.
 
 ### Referring Domain Drops:
 
@@ -123,7 +119,7 @@ The Ahrefs audit flagged **all 32 pages** in the sitemap as candidates for Index
 | /legal/cookie-policy    | Referring domains dropped |
 
 
-**Recommendation:** Submit updated pages via IndexNow or Google Search Console. Investigate the ranking drops for the homepage and "7 best financial close software" article - check for algorithm updates or competitor movement.
+Number of referring domains dropped: a few domains that previously linked to us have removed their mention. You can see exactly which ones dropped off here. This is normal backlink churn — some sites update or remove old content over time.
 
 ---
 
