@@ -1,4 +1,5 @@
-# Schema Markup Implementation - [maxima.ai](http://maxima.ai)  
+# Schema Markup Implementation - [maxima.ai](http://maxima.ai)
+
 **Date:** April 16, 2026
 
 ## Current Issues
@@ -768,20 +769,6 @@ All articles use one shared schema template added to the CMS collection page in 
 }
 </script>
 ```
-
-**CMS variables used:**
-
-
-| Variable                         | What it pulls                                 |
-| -------------------------------- | --------------------------------------------- |
-| `{{ Slug | json }}`              | Article URL slug                              |
-| `{{ Title | json }}`             | Article headline                              |
-| `{{ Meta Description | json }}`  | Article meta description                      |
-| `{{ Header Image | json }}`      | Featured image URL                            |
-| `{{ Blog Author.Title | json }}` | Author name from linked Author collection     |
-| `{{ Date | json }}`              | Publish date                                  |
-| `{{ Category.Title | json }}`    | Category name from linked Category collection |
-
 
 ---
 

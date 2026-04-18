@@ -44,13 +44,14 @@
 **Too Short (<30 chars) - 2 pages:**
 
 
-| Page                  | Title          | Length |
-| --------------------- | -------------- | ------ |
-| /legal/privacy-policy | Privacy Policy | 14     |
-| /legal/cookie-policy  | Cookie Policy  | 13     |
+| Page                    | Title            | Length | Fix Implemented                                    | New Length |
+| ----------------------- | ---------------- | ------ | -------------------------------------------------- | ---------- |
+| /legal/privacy-policy   | Privacy Policy   | 14     | Privacy Policy - Maxima AI Accounting Platform      | 47         |
+| /legal/terms-of-service | Terms of Service | 16     | Terms of Service - Maxima AI Accounting Platform    | 49         |
+| /legal/cookie-policy    | Cookie Policy    | 13     | Cookie Policy - Maxima AI Accounting Platform       | 46         |
 
 
-**Recommendation:** Shorten long titles to under 60 characters. For legal pages, consider adding brand: "Privacy Policy | Maxima" (still short but branded).
+**Recommendation:** Shorten long titles to under 60 characters.
 
 ### H1 Tag Issues
 
@@ -445,52 +446,6 @@ More detailed document on this:
 3. **Ensure /newsroom and /blog listing pages** have enough unique introductory content beyond just article cards
 
 ---
-
-## 14. Priority Action Items
-
-### Critical (Fix Immediately)
-
-
-| #   | Issue                                                                                | Impact                                                 | Pages Affected |
-| --- | ------------------------------------------------------------------------------------ | ------------------------------------------------------ | -------------- |
-| 1   | **Remove site-wide FAQPage schema** - same FAQ duplicated on all 32 pages            | High - risk of structured data manual action           | All 32 pages   |
-| 2   | **Fix multiple H1 tags** - nav/footer elements rendered as H1                        | High - confuses search engines about page topic        | All pages      |
-| 3   | **Add Article/BlogPosting JSON-LD** to blog articles (requires new Framer component) | High - missing rich result eligibility for 18 articles | 18 articles    |
-
-
-### High Priority
-
-
-| #   | Issue                                                           | Impact                                                | Pages Affected                   |
-| --- | --------------------------------------------------------------- | ----------------------------------------------------- | -------------------------------- |
-| 4   | **Fix orphan pages** - add internal links                       | High - 4 pages invisible to crawlers via links        | 4 pages                          |
-| 5   | **Fix generic meta descriptions**                               | Medium-High - 8 pages with wrong/generic descriptions | 8 pages                          |
-| 6   | **Add canonical tags** to 2 articles                            | Medium - duplicate content risk                       | 2 pages                          |
-| 7   | **Add alt text** to all images (see `ALT_TEXT_AUDIT_MAXIMA.md`) | Medium - accessibility and image SEO                  | 83 unique images across 30 pages |
-
-
-### Medium Priority
-
-
-| #   | Issue                                                                                           | Impact                                      | Pages Affected  |
-| --- | ----------------------------------------------------------------------------------------------- | ------------------------------------------- | --------------- |
-| 8   | **Improve internal linking** - ~72 new links needed (see `INTERNAL_LINKING_STRATEGY_MAXIMA.md`) | Medium - link equity not flowing to content | All 18 articles |
-| 9   | **Shorten long titles**                                                                         | Low-Medium - truncation in SERPs            | 3 pages         |
-| 10  | **Shorten long meta descriptions**                                                              | Low - truncation in SERPs                   | 2 pages         |
-| 11  | **Add lastmod to sitemap**                                                                      | Low-Medium - crawl efficiency               | All 32 pages    |
-
-
-### Low Priority / Long-term
-
-
-| #   | Issue                                                                | Impact                                | Pages Affected |
-| --- | -------------------------------------------------------------------- | ------------------------------------- | -------------- |
-| 12  | **Add BreadcrumbList schema**                                        | Low - navigation enhancement in SERPs | All sub-pages  |
-| 13  | **Add WebSite schema with SearchAction**                             | Low - site search feature in SERPs    | Homepage       |
-| 14  | **Image filenames** - Framer limitation, optimize for future uploads | Low                                   | Ongoing        |
-| 15  | **URL slug length** - optimize for future articles                   | Low                                   | Future content |
-| 16  | **Submit pages via IndexNow**                                        | Low-Medium - speed up re-indexation   | 32 pages       |
-
 
 ---
 
