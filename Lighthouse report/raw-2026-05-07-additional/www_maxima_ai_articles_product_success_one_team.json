@@ -1,0 +1,13 @@
+{
+  "url": "https://www.maxima.ai/articles/product-success-one-team",
+  "mobile": {
+    "error": {
+      "message": "HTTP 429"
+    }
+  },
+  "desktop": {
+    "error": {
+      "message": "HTTP 429"
+    }
+  }
+}

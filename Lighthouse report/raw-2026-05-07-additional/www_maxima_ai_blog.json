@@ -1,0 +1,13 @@
+{
+  "url": "https://www.maxima.ai/blog",
+  "mobile": {
+    "error": {
+      "message": "HTTP 429"
+    }
+  },
+  "desktop": {
+    "error": {
+      "message": "HTTP 429"
+    }
+  }
+}

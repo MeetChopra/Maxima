@@ -1,0 +1,13 @@
+{
+  "url": "https://www.maxima.ai/bank-integrations",
+  "mobile": {
+    "error": {
+      "message": "HTTP 429"
+    }
+  },
+  "desktop": {
+    "error": {
+      "message": "HTTP 429"
+    }
+  }
+}

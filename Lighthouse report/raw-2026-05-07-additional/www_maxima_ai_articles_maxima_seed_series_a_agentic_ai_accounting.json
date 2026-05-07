@@ -1,0 +1,13 @@
+{
+  "url": "https://www.maxima.ai/articles/maxima-seed-series-a-agentic-ai-accounting",
+  "mobile": {
+    "error": {
+      "message": "HTTP 429"
+    }
+  },
+  "desktop": {
+    "error": {
+      "message": "HTTP 429"
+    }
+  }
+}

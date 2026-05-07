@@ -1,0 +1,13 @@
+{
+  "url": "https://www.maxima.ai/articles/maxima-named-to-ai64-s-top-enterprise-ai-companies",
+  "mobile": {
+    "error": {
+      "message": "HTTP 429"
+    }
+  },
+  "desktop": {
+    "error": {
+      "message": "HTTP 429"
+    }
+  }
+}

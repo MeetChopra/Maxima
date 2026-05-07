@@ -1,0 +1,13 @@
+{
+  "url": "https://www.maxima.ai/articles/gorgias-on-the-forefront-of-accounting-automation-with-maxima",
+  "mobile": {
+    "error": {
+      "message": "HTTP 429"
+    }
+  },
+  "desktop": {
+    "error": {
+      "message": "HTTP 429"
+    }
+  }
+}
