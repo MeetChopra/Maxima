@@ -1,14 +1,49 @@
-# Per-Page Lighthouse Fix Checklist — maxima.ai
+# Lighthouse Remediation — Per-Page Fix Checklist
 
+**Site:** maxima.ai
 **Date:** 2026-05-07
 **Source audit:** `[FRESH]seo-audit-site-lighthouse-2026-05-07 (1).md`
-**Pages:** 35
+**Pages covered:** 35 (full sitemap)
 
-**How to use:** every page below lists each user-fixable Lighthouse issue with its precise location in the rendered HTML and the exact Framer setting to change. Platform-controlled issues (JS bundle size, cache headers, etc.) are excluded — see `LIGHTHOUSE_REMEDIATION_PLAN_MAXIMA.md` §5 for the rationale. Color contrast (`§4.1`) is also excluded here — it requires a brand decision and is tracked separately.
+Each page below lists every user-fixable Lighthouse finding, with the precise location in the rendered HTML and the exact Framer setting to change. The companion document `LIGHTHOUSE_REMEDIATION_PLAN_MAXIMA.md` provides the strategic context, scoring summary, and recommended sequencing.
 
-**Heading hint:** for skips ending at `h5` or `h6`, the recommendation is to change the Tag to `<p>` rather than another heading level — those elements are almost always decorative eyebrows/labels rather than real headings. For skips ending at `h3` or `h4`, change to the heading level directly above the parent (the recommended level is shown in each entry).
+**Excluded from this checklist:**
 
-**Caveat on the drill-down counts:** the "found N `<a>`/`<li>`/`<img>`" numbers come from a static fetch of the rendered HTML. Lighthouse runs the page in headless Chrome with axe-core, which inspects the live DOM tree (including direct-parent relationships and post-hydration changes). When the static count is lower than what Lighthouse reports, the real offender is usually an element with a non-list direct parent (e.g. `<li>` inside a `<div>` inside an outer `<ul>`) or content rendered after page load. In those cases use Chrome DevTools' Accessibility panel on the live page to locate the exact element — but the listed Framer fix still applies.
+- Items resolved at the template / shared-component level (listed in the next section).
+- Platform-controlled items (JavaScript bundle size, cache lifetimes, render pipeline, etc.) — see remediation plan §5.
+- Color contrast — requires a brand-color decision and is tracked separately in remediation plan §4.1.
+
+---
+
+## Already Resolved at the Template Level
+
+The following fixes have been applied to shared components and propagate to every page on the site. Per-page entries below exclude any finding addressed by these fixes.
+
+### Heading order — eyebrow / label texts changed from `<h6>` / `<h4>` → `<p>`
+
+- "Insights, news and content"
+- "Company"
+- "Article"
+- "Agentic AI"
+- "News"
+- "Accounting"
+- "Platform"
+- "COMPANY INFO"
+
+These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")** skips site-wide.
+
+### Accessible link names
+
+- The site logo link (in every page header) has `aria-label="Maxima — go to homepage"`.
+
+### Follow-ups recommended in the same Smart-Component pass
+
+- **Article-card titles in the "The latest" block.** With the eyebrow categories now `<p>`, each article-card title follows `<h2>The latest</h2>` directly. Change the article-card title's Tag from `<h4>` to `<h3>` so the section descends correctly. The fix propagates to every page that shows the latest-news block.
+- **Footer column labels.** "Platform" is being changed to `<p>`; the sibling footer columns "Company", "Comparison", "Social", and "Compliance" sit alongside it in the footer component and were previously `<h4>` too. Apply the same change so the footer is consistent.
+
+### Audits suppressed
+
+- *List items (`<li>`) are not contained within `<ul>`, `<ol>` or `<menu>` parent elements.* — verified clean in the live DOM on 2026-05-07; Lighthouse's flag appears to have been a transient false positive. Re-confirm with a fresh Lighthouse run after the next deploy.
 
 ## Index
 
@@ -60,7 +95,30 @@
 
 **Scores —** Mobile: Perf 26 / A11y 95 / BP 81 / SEO 100  •  Desktop: Perf 35 / A11y 90 / BP 81 / SEO 92
 
-**Skiped this page as it's being redirected.**
+**Accessibility**
+
+- **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
+- **Heading order**
+  - **Heading skips (1).** In each, change the lower heading's Framer **Tag** to the recommended level.
+    - **h1→h5** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
+      - "In brief"
+- **Elements with visible text labels do not have matching accessible names.** — An aria-label conflicts with the visible button/link text. Audit aria-labels added during the recent ARIA pass and either remove them or rewrite so the visible text appears at the start.
+
+**SEO**
+
+- **Anchors without href** — found 7 `<a>` element(s) with no href in the rendered HTML.
+  - **Fix in Framer:** for each — Properties panel → Link field → set a real URL or page reference. Avoid driving navigation via Interactions only.
+
+**Best Practices**
+
+- **LCP request discovery** — Place hero image as a top-level Image element on the canvas so Framer's heuristic marks it as eager.
+- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 15 KiB)*
+
+**Other (review manually)**
+
+- `[role]`s are not contained by their required parent element
+
+*20 platform-controlled audit(s) on this page are out of scope (see remediation plan §5).*
 
 ---
 
@@ -78,25 +136,17 @@
     - h1: "Transform your accounting operations with AI agents"
     - h1: "Transform your accounting operations with AI agents"
     - **Fix:** keep only the visible hero h1; change duplicates' Tag to `<p>` (or consolidate variants).
-  - **Heading skips (18 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
+  - **Heading skips (1).** In each, change the lower heading's Framer **Tag** to the recommended level.
     - **h1→h4** (1× on this page) — change Tag → `<h2>`:
       - "Close faster with confidence"
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (13× on this page) — changed Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-      - "Platform"
 
-- **Links without an accessible name** — found 1 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fixed in Framer:** set `aria-label` to the logo link
-  - **Loose `<li>` elements** — 0 of 7 `<li>` elements are not inside a `<ul>/<ol>/<menu>` parent.
-  - **Fix in Framer:** rebuild the list block inside a CMS Rich Text field using the bullet/numbered list controls so Framer emits proper `<ul><li>` markup. The Framer canvas does not expose `ul`/`ol`/`li` in the Tag dropdown.
+**Best Practices**
+
+- **LCP request discovery** — Place hero image as a top-level Image element on the canvas so Framer's heuristic marks it as eager.
+- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
+- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 395 KiB)*
+
+*15 platform-controlled audit(s) on this page are out of scope (see remediation plan §5).*
 
 ---
 
@@ -110,25 +160,9 @@
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Heading skips (18 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
+  - **Heading skips (1).** In each, change the lower heading's Framer **Tag** to the recommended level.
     - **h1→h4** (1× on this page) — change Tag → `<h2>`:
       - "What are Cookies?"
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
-      - "Platform"
-- **Links without an accessible name** — found 1 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 1):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="../"`
 - **Touch targets do not have sufficient size or spacing.** — Increase target size to ≥24×24 CSS px or add padding/line-height.
 
 **Best Practices**
@@ -150,23 +184,7 @@
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Heading skips (17 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
-      - "Platform"
-- **Links without an accessible name** — found 1 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 1):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="../"`
+  - ✅ Heading order: all skips on this page are resolved by the template-level fixes.
 
 **Best Practices**
 
@@ -187,25 +205,9 @@
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Heading skips (18 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
+  - **Heading skips (1).** In each, change the lower heading's Framer **Tag** to the recommended level.
     - **h1→h4** (1× on this page) — change Tag → `<h2>`:
       - "What is Personal Information?"
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
-      - "Platform"
-- **Links without an accessible name** — found 1 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 1):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="../"`
 
 **Best Practices**
 
@@ -229,25 +231,9 @@
     - h1: "How SpotOn streamlined high volume cash complexity with Maxima"
     - h1: "About SpotOn"
     - **Fix:** keep only the visible hero h1; change duplicates' Tag to `<p>` (or consolidate variants).
-  - **Heading skips (18 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
-    - **h1→h6** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "COMPANY INFO"
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
-      - "Platform"
-- **Links without an accessible name** — found 2 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 2):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="../"`
+- **Links / buttons without an accessible name** — 1 `<a>` element(s) on this page lack visible text and an `aria-label`.
+  - **Fix in Framer:** select each → Properties → Accessibility → set `aria-label` to a concise description of the destination or action. Most offenders are icon-only links in shared header/footer/CTA components — fix once at the component level to propagate.
+  - Example element attributes:
     - `class="framer-text framer-styles-preset-1ue32gk" data-styles-preset="ZglCJHLIv" href="https://www.spoton.com" target="_b…`
 
 **Best Practices**
@@ -270,26 +256,11 @@
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Heading skips (19 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
+  - **Heading skips (2).** In each, change the lower heading's Framer **Tag** to the recommended level.
     - **h1→h3** (1× on this page) — change Tag → `<h2>`:
       - "What is a journal entry in accounting?"
-    - **h2→h4** (2× on this page) — change Tag → `<h3>`:
+    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
       - "Example 1: unbilled revenue accrual with reversal"
-      - "Platform"
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-- **Links without an accessible name** — found 1 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 1):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="../"`
 - **Tables without `<th>` headers** — 7 table(s) on page; cells without headers detected.
   - Table 1: 0 `<th>` / 24 `<td>`
   - Table 2: 0 `<th>` / 27 `<td>`
@@ -298,7 +269,7 @@
   - Table 5: 0 `<th>` / 12 `<td>`
   - Table 6: 0 `<th>` / 12 `<td>`
   - Table 7: 0 `<th>` / 48 `<td>`
-  - **Fix in Framer:** open the article CMS entry → in the Rich Text Table → right-click the first row's cells → **Set as header**. If the "table" is a hand-built grid of frames, rebuild it inside a CMS Rich Text field.
+  - **Fixed in Framer:** Made the first row as header.
 
 **Best Practices**
 
@@ -321,28 +292,13 @@
   - **Multiple `<h1>` elements (2).** A page should have exactly one. Hero may be duplicated for mobile/desktop variants.
     - h1: "Work at Maxima"
     - h1: "Join us to tackle a decades-old problem and leverage LLMs and agents to eliminat…"
-    - **Fix:** keep only the visible hero h1; change duplicates' Tag to `<p>` (or consolidate variants).
-  - **Heading skips (20 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
-    - **h1→h3** (1× on this page) — change Tag → `<h2>`:
+    - **Fixed:** kept "Work at Maxima" as h1; change duplicate Tag to `<p>`
+  - **Heading skips (3).** In each, change the lower heading's Framer **Tag** to the recommended level.
+    - **h1→h3** (1× on this page) — change Tag → `<p>`:
       - "Closing the books is one of enterprise’s hardest problems—billions of transactio…"
-    - **h2→h4** (3× on this page) — change Tag → `<h3>`:
+    - **h2→h4** (2× on this page) — change Tag → `<p>`:
       - "Equity and top of market salary"
       - "Engineering and Product"
-      - "Platform"
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-- **Links without an accessible name** — found 1 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 1):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="./"`
 
 **Best Practices**
 
@@ -365,29 +321,14 @@
 - **Elements use prohibited ARIA attributes** — ARIA attribute applied to an element role that doesn't accept it. Audit aria attributes from the recent ARIA pass on this page.
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Heading skips (22 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
-    - **h2→h4** (6× on this page) — change Tag → `<h3>`:
+  - **Heading skips (5).** In each, change the lower heading's Framer **Tag** to the recommended level.
+    - **Fixed: h2→h4** (5× on this page) — change Tag → `<h3>`:
       - "Data segregation"
       - "Zero model training"
       - "Dedicated security leadership"
       - "Nothing posts without approval"
       - "How does Maxima define customer data?"
-      - "Platform"
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-- **Links without an accessible name** — found 1 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 1):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="./"`
-- **Add `<main>` landmark** — confirmed missing in HTML. Top-level content frame → Properties → Accessibility → Tag → `Main`.
+- **Missing** `<main>` **landmark** mentioned here: [https://docs.google.com/document/d/1Q6-2iGHJg-Bl9pKlnlKLI8OhM9YCoS_Ao2Ev9H5ENKY/edit?tab=t.nubzrmnxq7qt#heading=h.bc8x0fx0r9kd](https://docs.google.com/document/d/1Q6-2iGHJg-Bl9pKlnlKLI8OhM9YCoS_Ao2Ev9H5ENKY/edit?tab=t.nubzrmnxq7qt#heading=h.bc8x0fx0r9kd)
 
 **Best Practices**
 
@@ -413,23 +354,6 @@
     - h1: "Why BlackLine's former CMO is investing in Maxima"
     - h1: "About Andres"
     - **Fix:** keep only the visible hero h1; change duplicates' Tag to `<p>` (or consolidate variants).
-  - **Heading skips (17 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
-      - "Platform"
-- **Links without an accessible name** — found 1 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 1):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="../"`
 
 **Best Practices**
 
@@ -452,25 +376,10 @@
 - **Elements use prohibited ARIA attributes** — ARIA attribute applied to an element role that doesn't accept it. Audit aria attributes from the recent ARIA pass on this page.
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Heading skips (19 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
-    - **h2→h4** (3× on this page) — change Tag → `<h3>`:
+  - **Fixed Heading skips (2).** In each, change the lower heading's Framer **Tag** to the recommended level.
+    - **h2→h4** (2× on this page) — change Tag → `<h3>`:
       - "Legacy systems"
       - "Transaction-level foundation"
-      - "Platform"
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-- **Links without an accessible name** — found 1 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 1):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="./"`
 - **Add `<main>` landmark** — confirmed missing in HTML. Top-level content frame → Properties → Accessibility → Tag → `Main`.
 
 **Best Practices**
@@ -493,25 +402,9 @@
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Heading skips (18 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
+  - **Heading skips (1).** In each, change the lower heading's Framer **Tag** to the recommended level.
     - **h1→h3** (1× on this page) — change Tag → `<h2>`:
       - "What is the best bank reconciliation software?"
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
-      - "Platform"
-- **Links without an accessible name** — found 1 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 1):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="../"`
 
 **Best Practices**
 
@@ -535,25 +428,9 @@
     - h1: "How Rewst automated revenue recognition and prepaids with Maxima"
     - h1: "About Rewst"
     - **Fix:** keep only the visible hero h1; change duplicates' Tag to `<p>` (or consolidate variants).
-  - **Heading skips (18 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
-    - **h1→h6** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "COMPANY INFO"
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
-      - "Platform"
-- **Links without an accessible name** — found 2 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 2):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="../"`
+- **Links / buttons without an accessible name** — 1 `<a>` element(s) on this page lack visible text and an `aria-label`.
+  - **Fix in Framer:** select each → Properties → Accessibility → set `aria-label` to a concise description of the destination or action. Most offenders are icon-only links in shared header/footer/CTA components — fix once at the component level to propagate.
+  - Example element attributes:
     - `class="framer-text framer-styles-preset-1ue32gk" data-styles-preset="ZglCJHLIv" href="https://www.rewst.io" target="_bla…`
 
 **Best Practices**
@@ -578,25 +455,9 @@
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Heading skips (18 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
+  - **Heading skips (1).** In each, change the lower heading's Framer **Tag** to the recommended level.
     - **h1→h4** (1× on this page) — change Tag → `<h2>`:
       - "What is Personal Information?"
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
-      - "Platform"
-- **Links without an accessible name** — found 1 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 1):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="../"`
 
 **Best Practices**
 
@@ -616,27 +477,11 @@
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Heading skips (19 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
+  - **Heading skips (2).** In each, change the lower heading's Framer **Tag** to the recommended level.
     - **h1→h3** (1× on this page) — change Tag → `<h2>`:
       - "How do you set materiality thresholds for variance analysis?"
     - **h2→h5** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
       - "Example 1: revenue decline that is not actually a decline"
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
-      - "Platform"
-- **Links without an accessible name** — found 1 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 1):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="../"`
 
 **Best Practices**
 
@@ -663,31 +508,15 @@
     - h1: "100%"
     - h1: "150+"
     - **Fix:** keep only the visible hero h1; change duplicates' Tag to `<p>` (or consolidate variants).
-  - **Heading skips (22 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
+  - **Heading skips (5).** In each, change the lower heading's Framer **Tag** to the recommended level.
     - **h1→h6** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
       - "TRUSTED BY ICONIC PUBLIC AND PRIVATE ENTERPRISES"
-    - **h2→h6** (4× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
+    - **h2→h6** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
       - "Agent Prepared"
-      - "Insights, news and content"
-      - "Company"
-    - **h2→h4** (3× on this page) — change Tag → `<h3>`:
+    - **h2→h4** (2× on this page) — change Tag → `<h3>`:
       - "The most complete view of your financial data"
-      - "Platform"
     - **h2→h5** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
       - "$300B+"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-- **Links without an accessible name** — found 1 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 1):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="./" data-framer-page-link-current="true…`
-- **Loose `<li>` elements** — 0 of 123 `<li>` elements are not inside a `<ul>/<ol>/<menu>` parent.
-  - **Fix in Framer:** rebuild the list block inside a CMS Rich Text field using the bullet/numbered list controls so Framer emits proper `<ul><li>` markup. The Framer canvas does not expose `ul`/`ol`/`li` in the Tag dropdown.
 
 **SEO**
 
@@ -713,28 +542,12 @@
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Heading skips (20 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
+  - **Heading skips (3).** In each, change the lower heading's Framer **Tag** to the recommended level.
     - **h1→h5** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
       - "What’s the difference between close software and consolidation software?"
     - **h2→h5** (2× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
       - "Data integration and ERP connectivity"
       - "What’s the difference between close software and consolidation software?"
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
-      - "Platform"
-- **Links without an accessible name** — found 1 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 1):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="../"`
 
 **Best Practices**
 
@@ -758,25 +571,9 @@
     - h1: "How Rippling built SOX-ready cash accounting with Maxima"
     - h1: "About Rippling"
     - **Fix:** keep only the visible hero h1; change duplicates' Tag to `<p>` (or consolidate variants).
-  - **Heading skips (18 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
-    - **h1→h6** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "COMPANY INFO"
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
-      - "Platform"
-- **Links without an accessible name** — found 2 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 2):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="../"`
+- **Links / buttons without an accessible name** — 1 `<a>` element(s) on this page lack visible text and an `aria-label`.
+  - **Fix in Framer:** select each → Properties → Accessibility → set `aria-label` to a concise description of the destination or action. Most offenders are icon-only links in shared header/footer/CTA components — fix once at the component level to propagate.
+  - Example element attributes:
     - `class="framer-text framer-styles-preset-1ue32gk" data-styles-preset="ZglCJHLIv" href="https://www.rippling.com" target="…`
 
 **Best Practices**
@@ -799,29 +596,14 @@
 - **Elements use prohibited ARIA attributes** — ARIA attribute applied to an element role that doesn't accept it. Audit aria attributes from the recent ARIA pass on this page.
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Heading skips (22 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
+  - **Heading skips (5).** In each, change the lower heading's Framer **Tag** to the recommended level.
     - **h1→h6** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
       - "proven in production By Leading Accounting Teams"
-    - **h2→h4** (5× on this page) — change Tag → `<h3>`:
+    - **h2→h4** (4× on this page) — change Tag → `<h3>`:
       - "Native integrations + transaction level lineage"
       - "1"
       - "Close faster with confidence"
       - "How is Maxima different from FloQast?"
-      - "Platform"
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-- **Links without an accessible name** — found 1 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 1):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="./"`
 - **Add `<main>` landmark** — confirmed missing in HTML. Top-level content frame → Properties → Accessibility → Tag → `Main`.
 - **Elements with visible text labels do not have matching accessible names.** — An aria-label conflicts with the visible button/link text. Audit aria-labels added during the recent ARIA pass and either remove them or rewrite so the visible text appears at the start.
 
@@ -845,25 +627,9 @@
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Heading skips (18 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
+  - **Heading skips (1).** In each, change the lower heading's Framer **Tag** to the recommended level.
     - **h1→h3** (1× on this page) — change Tag → `<h2>`:
       - "From human-prepared to agent-prepared"
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
-      - "Platform"
-- **Links without an accessible name** — found 1 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 1):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="../"`
 
 **Best Practices**
 
@@ -886,7 +652,7 @@
 **Accessibility**
 
 - **Heading order**
-  - **Heading skips (1 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
+  - **Heading skips (1).** In each, change the lower heading's Framer **Tag** to the recommended level.
     - **h1→h4** (1× on this page) — change Tag → `<h2>`:
       - "By"
 - **Touch targets do not have sufficient size or spacing.** — Increase target size to ≥24×24 CSS px or add padding/line-height.
@@ -916,23 +682,7 @@
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Heading skips (17 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
-      - "Platform"
-- **Links without an accessible name** — found 1 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 1):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="../"`
+  - ✅ Heading order: all skips on this page are resolved by the template-level fixes.
 
 **Best Practices**
 
@@ -957,25 +707,6 @@
     - h1: "How Scale AI achieved accuracy at billion-dollar scale with Maxima"
     - h1: "About Scale"
     - **Fix:** keep only the visible hero h1; change duplicates' Tag to `<p>` (or consolidate variants).
-  - **Heading skips (18 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
-    - **h1→h6** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "COMPANY INFO"
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
-      - "Platform"
-- **Links without an accessible name** — found 1 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 1):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="../"`
 
 **Best Practices**
 
@@ -997,29 +728,13 @@
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Heading skips (21 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
+  - **Heading skips (4).** In each, change the lower heading's Framer **Tag** to the recommended level.
     - **h1→h3** (1× on this page) — change Tag → `<h2>`:
       - "What is the difference between reconciliation and matching?"
     - **h2→h5** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
       - "Accounts receivable reconciliation"
       - "Bank reconciliation statement (March 31)"
       - "1. Partial Matches"
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
-      - "Platform"
-- **Links without an accessible name** — found 1 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 1):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="../"`
 
 **Best Practices**
 
@@ -1039,23 +754,7 @@
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Heading skips (17 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
-      - "Platform"
-- **Links without an accessible name** — found 1 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 1):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="../"`
+  - ✅ Heading order: all skips on this page are resolved by the template-level fixes.
 
 **Best Practices**
 
@@ -1077,26 +776,12 @@
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Heading skips (21 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
-    - **h2→h4** (4× on this page) — change Tag → `<h3>`:
+  - **Heading skips (4).** In each, change the lower heading's Framer **Tag** to the recommended level.
+    - **h2→h4** (3× on this page) — change Tag → `<h3>`:
       - "Current reality"
       - "Connect directly to your finance stack"
-      - "Platform"
-    - **h4→h6** (14× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
+    - **h4→h6** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
       - "Integrations"
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-- **Links without an accessible name** — found 1 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 1):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="./"`
 
 **Best Practices**
 
@@ -1118,27 +803,11 @@
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Heading skips (19 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
+  - **Heading skips (2).** In each, change the lower heading's Framer **Tag** to the recommended level.
     - **h1→h5** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
       - "What is the difference between AI-assisted and agentic AI accounting tools?"
     - **h2→h5** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
       - "What is the difference between AI-assisted and agentic AI accounting tools?"
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
-      - "Platform"
-- **Links without an accessible name** — found 1 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 1):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="../"`
 
 **Best Practices**
 
@@ -1159,23 +828,7 @@
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Heading skips (17 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
-      - "Platform"
-- **Links without an accessible name** — found 1 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 1):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="../"`
+  - ✅ Heading order: all skips on this page are resolved by the template-level fixes.
 
 **Best Practices**
 
@@ -1196,33 +849,22 @@
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Heading skips (22 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
-    - **h2→h6** (7× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
+  - **Heading skips (5).** In each, change the lower heading's Framer **Tag** to the recommended level.
+    - **h2→h6** (4× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
       - "About us"
       - "INVESTORS"
       - "The Team"
       - "Formerly at"
-      - "Insights, news and content"
-      - "Company"
     - **h3→h6** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
       - "Founders"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
-      - "Platform"
-- **Links without an accessible name** — found 34 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 5):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="./"`
+- **Links / buttons without an accessible name** — 33 `<a>` element(s) on this page lack visible text and an `aria-label`.
+  - **Fix in Framer:** select each → Properties → Accessibility → set `aria-label` to a concise description of the destination or action. Most offenders are icon-only links in shared header/footer/CTA components — fix once at the component level to propagate.
+  - Example element attributes:
     - `class="framer-1hix09f framer-9g9stw" data-framer-name="linkedin-container" href="https://www.linkedin.com/in/yogi-goel" …`
     - `class="framer-13f6chn framer-9g9stw" data-framer-name="linkedin-container" href="https://www.linkedin.com/in/akshayasriv…`
     - `class="framer-10ppi84 framer-9g9stw" data-framer-name="linkedin-container" href="https://www.linkedin.com/in/jackliao07"…`
     - `class="framer-we7f95 framer-1l2gq4y" data-framer-name="linked-in-container" href="https://www.linkedin.com/in/koaaron/" …`
+    - `class="framer-we7f95 framer-1l2gq4y" data-framer-name="linked-in-container" href="https://www.linkedin.com/in/abbbbyhe/"…`
 
 **SEO**
 
@@ -1248,31 +890,17 @@
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Heading skips (30 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
+  - **Heading skips (13).** In each, change the lower heading's Framer **Tag** to the recommended level.
     - **h1→h6** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
       - "Agent Prepared"
-    - **h2→h6** (14× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
+    - **h2→h6** (11× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
       - "No-code logic"
       - "Materiality and policy"
       - "Continuous matching"
       - "Real-time monitoring"
       - "Daily visibility"
-      - "Insights, news and content"
-      - "Company"
-    - **h2→h4** (2× on this page) — change Tag → `<h3>`:
+    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
       - "Why should I choose Maxima over BlackLine or Floqast?"
-      - "Platform"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-- **Links without an accessible name** — found 1 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 1):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="./"`
 
 **Best Practices**
 
@@ -1294,27 +922,10 @@
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Heading skips (57 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
-    - **h1→h6** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Company"
-    - **h4→h6** (52× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Agentic AI"
-      - "News"
-      - "Accounting"
-      - "Company"
+  - **Heading skips (14).** In each, change the lower heading's Framer **Tag** to the recommended level.
+    - **h4→h6** (14× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
       - "Featured"
       - "Customer stories"
-      - "Article"
-      - "Insights, news and content"
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
-      - "Platform"
-- **Links without an accessible name** — found 1 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 1):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="./"`
 
 **Best Practices**
 
@@ -1336,30 +947,17 @@
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Heading skips (28 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
+  - **Heading skips (11).** In each, change the lower heading's Framer **Tag** to the recommended level.
     - **h1→h6** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
       - "Customer stories"
     - **h3→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
       - "Customer stories"
-    - **h2→h4** (2× on this page) — change Tag → `<h3>`:
+    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
       - "Yogi Goel, founder of Maxima, Live on TBPN"
-      - "Platform"
-    - **h2→h6** (4× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
+    - **h2→h6** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
       - "press release"
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (18× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
+    - **h4→h6** (5× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
       - "press release"
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-- **Links without an accessible name** — found 1 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 1):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="./"`
 - **Add `<main>` landmark** — confirmed missing in HTML. Top-level content frame → Properties → Accessibility → Tag → `Main`.
 
 **Best Practices**
@@ -1386,25 +984,9 @@
     - h1: "How Gorgias automated reconciliation and journal prep with Maxima"
     - h1: "About Gorgias"
     - **Fix:** keep only the visible hero h1; change duplicates' Tag to `<p>` (or consolidate variants).
-  - **Heading skips (18 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
-    - **h1→h6** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "COMPANY INFO"
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
-      - "Platform"
-- **Links without an accessible name** — found 2 `<a>` element(s) and 0 `<button>`(s) in the rendered HTML with no visible text and no aria-label/title.
-  - **Fix in Framer:** for each — Properties → Accessibility → set `aria-label` to a description of the destination/action. Most offenders are icon-only links in shared header/footer/CTA components — fix those once and they propagate site-wide.
-  - Sample anchor attributes (first 2):
-    - `class="framer-6b5j6m framer-tlwedf" data-framer-name="logo-link-container" href="../"`
+- **Links / buttons without an accessible name** — 1 `<a>` element(s) on this page lack visible text and an `aria-label`.
+  - **Fix in Framer:** select each → Properties → Accessibility → set `aria-label` to a concise description of the destination or action. Most offenders are icon-only links in shared header/footer/CTA components — fix once at the component level to propagate.
+  - Example element attributes:
     - `class="framer-text framer-styles-preset-1ue32gk" data-styles-preset="ZglCJHLIv" href="https://www.gorgias.com" target="_…`
 
 **Best Practices**
@@ -1426,21 +1008,9 @@
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Heading skips (18 total).** In each, change the lower heading's Framer **Tag** to the recommended level.
+  - **Heading skips (1).** In each, change the lower heading's Framer **Tag** to the recommended level.
     - **h1→h4** (1× on this page) — change Tag → `<h2>`:
       - "Your use of the sites"
-    - **h2→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Insights, news and content"
-      - "Company"
-    - **h4→h6** (13× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Article"
-      - "Agentic AI"
-      - "News"
-      - "Company"
-      - "Accounting"
-      - "Insights, news and content"
-    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
-      - "Platform"
 - **Touch targets do not have sufficient size or spacing.** — Increase target size to ≥24×24 CSS px or add padding/line-height.
 
 **Best Practices**
