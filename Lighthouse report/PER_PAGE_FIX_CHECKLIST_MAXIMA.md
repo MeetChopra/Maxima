@@ -764,15 +764,14 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 **Accessibility**
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
-- **Heading order**
-  - **Heading skips (5).** Change each heading's Framer **Tag** to the recommended level.
-    - **h2→h6** (4× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "About us"
-      - "INVESTORS"
-      - "The Team"
-      - "Formerly at"
-    - **h3→h6** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Founders"
+- **Fixed Heading skips (5)**
+  - **h2→h6** (4× on this page)
+    - "About us"
+    - "INVESTORS"
+    - "The Team"
+    - "Formerly at"
+  - **h3→h6** (1× on this page)
+    - "Founders"
 - **Fixed Links / buttons without an accessible name** — 33 `<a>` element(s) on this page lack visible text and an `aria-label`.
 
 **SEO**
