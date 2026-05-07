@@ -17,14 +17,10 @@
 | SEO            | 99           | 98            |
 
 
-- **SEO is in great shape** (99 mobile / 98 desktop). Almost every page scores 100. The two outliers that previously dragged the SEO average — `/articles/reuters-exclusive-maxima` and `/articles/kleiner-perkins-investment-perspective` — are now configured as redirects to the Reuters and Kleiner Perkins sites respectively, which removes them from the indexable surface (see §2.4).
-- **Accessibility has the highest ROI for hands-on remediation.** Every accessibility finding raised in the audit is fixable inside Framer's editor, except color contrast which depends on a brand-color decision (§3.1).
+- **SEO is in great shape** (99 mobile / 98 desktop). Almost every page scores 100. The two outliers that previously dragged the SEO average — `/articles/reuters-exclusive-maxima` and `/articles/kleiner-perkins-investment-perspective` — are now configured as redirects to the Reuters and Kleiner Perkins sites respectively, which removes them from the indexable surface.
+- **Accessibility has the highest ROI for hands-on remediation.** Every accessibility finding raised in the audit is fixable inside Framer's editor, except color contrast which depends on a brand-color decision.
 - **A large share of the accessibility findings have already been resolved at the template / shared-component level** — applied but not yet live. See §2.1 for the list. Once published, these template fixes alone close the heading-order finding on most of the 32 pages it appeared on, and the link-accessible-name finding on most of the 30 pages it appeared on.
-- **Performance and Best Practices scores are largely Framer-platform-controlled.** Framer's [official guidance](https://www.framer.com/help/articles/guide-to-lighthouse-scores/) explicitly states that Lighthouse is a debugging tool, not a Google ranking factor, and asks users not to chase a perfect mobile PageSpeed score. Real-user Core Web Vitals from Search Console are the metric that matters for SEO.
-- **Worst-scoring pages worth a focused look:**
-  - `/book-a-demo` — Performance 33 mobile. This is the conversion page; LCP and layout shift issues here have direct revenue impact.
-  - `/security` and `/bank-integrations` — Accessibility 85 mobile (lowest on the site). Heading-order skips on both pages have already been fixed in Framer (not live); the remaining accessibility lift is the missing `<main>` landmark on each (§2.2.2).
-  - `/maxima-vs-floqast` — Accessibility 86 mobile. Same shape as Security and Bank Integrations: heading-order fixes applied; `<main>` landmark still needed.
+- **Performance and Best Practices scores are largely Framer-platform-controlled.** Framer's [official guidance](https://www.framer.com/help/articles/guide-to-lighthouse-scores/) explicitly states that Lighthouse is a debugging tool, not a Google ranking factor, and asks users not to chase a perfect mobile PageSpeed score.
 
 ---
 
