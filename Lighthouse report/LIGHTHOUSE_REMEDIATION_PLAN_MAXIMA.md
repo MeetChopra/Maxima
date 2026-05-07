@@ -142,9 +142,15 @@ Framer auto-converts images to WebP, generates responsive `srcset`, and lazy-loa
 
 **Affected:** `/about`, `/book-a-demo`, `/how-it-works`, `/bank-integrations`, `/security`, `/careers`, `/blog`, `/newsroom`, `/maxima-vs-floqast`, `/product-overview`, plus `/articles/maxima-named-to-ai64-s-top-enterprise-ai-companies` and `/articles/maxima-seed-series-a-agentic-ai-accounting` (12 pages — down from 14 once the redirected articles are excluded).
 
-Framer does not expose a first-class "Loading: Eager" or `fetchpriority="high"` toggle in the editor, but its internal heuristic does mark top-level above-the-fold Image elements as eager. The fact that 12 different pages all fail this check indicates a shared layout pattern is putting hero images one wrapper too deep.
+**T**he big image at the top of each of these pages — the hero — starts loading *after* the rest of the page begins rendering, instead of at the same time. The visitor sees an empty space where the hero should be for a moment, which is what drags the score down.
 
-**Fix in Framer:** for each affected page, confirm the LCP image (typically the hero) is placed as a **top-level Image element directly on the canvas** — not inside a Smart Component, not inside a code component, not inside a CMS rich-text field. If the hero is a CMS-driven image on a collection template (Newsroom, Blog, articles), confirm the binding is on a top-level Image element rather than a nested wrapper. If a single hero component is reused across these pages, fixing it once at the component level closes most of the spread.
+**Why it happens:** Framer only flags an image to load early when it sits as a **direct child of the page** on the canvas. If the hero is nested inside a Stack, Frame, or Smart Component, Framer treats it as "below the fold" by default and delays it. Because all 12 pages show the same symptom, they share the same kind of nested hero wrapper.
+
+**Steps that can be taken (in order of effort):**
+
+1. **Try to lift the hero out of its wrapper.** Open each affected page → click the hero image → look at the Layers panel on the left. If the Image sits inside a Stack or Frame, drag it out so it becomes a direct child of the page itself. On the article templates (the two AI64 / seed-Series-A articles, plus the Newsroom and Blog collection pages), if the hero comes from a single reusable component, doing this once at the component level fixes every page that uses it.
+2. **If the hero must stay nested** — for example because it's a Smart Component bound to a CMS image field, or because removing the wrapper would break the layout — re-upload the source image at a smaller size. Hero images uploaded at 3000 px wide when they only ever display at 1200–1600 px are common; resizing the source so it matches the actual display width takes much less time to download and partially offsets the late start.
+3. **If neither is feasible**, accept this finding as platform-controlled (§4). Framer's eager-loading rule is an internal heuristic and there is no editor toggle to override it.
 
 #### 2.5.4 Browser console errors
 
@@ -160,17 +166,9 @@ Framer does not expose a first-class "Loading: Eager" or `fetchpriority="high"` 
 
 **Affected:** 31 of 33 pages (mobile), 19 of 21 (desktop) — effectively every page
 
-Multiple text/background combinations fall below the 4.5:1 contrast ratio required for normal text (3:1 for large text, 18 pt+ or 14 pt bold+).
+Multiple text / background color combinations fall below the 4.5:1 ratio WCAG 2.1 AA requires for normal text (3:1 for large text 18 pt+ or 14 pt bold+). The flagged colors are Maxima's brand palette, used consistently across the site, the product UI, and marketing assets. 
 
-This is not a Framer platform limitation — colors are fully editable in the design — but the affected colors are part of Maxima's brand palette and existing design system. Changing them unilaterally would break visual consistency across the site, marketing assets, and product UI.
-
-**Recommended next step (for Maxima brand / design team):**
-
-1. Run Framer's marketplace **Contrast Checker** plugin against each page to enumerate every offending text/background pair.
-2. For each pair, decide on a brand-approved adjustment — typically darkening light-grey body text on white backgrounds, or selecting a higher-contrast variant of the brand accent color for buttons/links.
-3. Update the design-system / Framer color tokens once, and let the change propagate site-wide.
-
-This is the highest-leverage accessibility lift remaining on the site, but it must be owned by the brand team rather than executed inside the consulting scope.
+If Maxima ever wants to revisit it, Framer's **Contrast Checker** plugin enumerates every offending pair on a page; once replacement values are agreed, updating the Framer color tokens once propagates the fix site-wide.
 
 ---
 
@@ -197,16 +195,3 @@ The following items are caused by Framer's build pipeline, runtime, or hosting l
 
 
 **Framer's own guidance** ([Guide to Lighthouse Scores](https://www.framer.com/help/articles/guide-to-lighthouse-scores/), [How to optimize PageSpeed Insights](https://www.framer.com/help/articles/how-to-optimize-pagespeed-insights/)): Lighthouse is a debugging tool, not a ranking factor; mobile PSI simulates a 2016 Motorola phone; real-user Core Web Vitals in Search Console are the metric Google uses for SEO.
-
----
-
-## 5. Recommended Sequencing
-
-1. **Publish the template-level fixes** already applied in §2.1. This is the single largest accessibility step and unlocks accurate re-measurement of every page.
-2. **Apply the four `<main>` landmark fixes** (§2.2.2) and the remaining per-page heading-order fixes flagged in `PER_PAGE_FIX_CHECKLIST_MAXIMA.md`.
-3. **Fix the /about LinkedIn anchor** (§2.3.1) — choose between filling in the missing CMS URL (fast) or adding the visibility condition on the Smart Component (durable).
-4. **Add `aria-label` to the customer-website outbound links** on the customer-story articles (§2.2.3).
-5. **Fix the `<th>` markup** on the Journal Entries article tables (§2.2.4) and the touch-target spacing on the legal-pages template (§2.2.5).
-6. **Brand / design team:** schedule the color-contrast review (§3.1) — the highest-leverage accessibility item remaining once §2 is published.
-7. **Re-run Lighthouse** on the same 35-page set after each batch goes live, to confirm the audit deltas land as expected.
-
