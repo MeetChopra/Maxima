@@ -35,9 +35,8 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 ### Other changes
 
 - The site logo link (in every page header) has `aria-label="Maxima — go to homepage"`.
-
 - **Article-card titles in the "The latest" block.** With the categories now `<p>`, each article-card title follows `<h2>The latest</h2>` directly. Changed the article-card title's Tag from `<h4>` to `<h3>` so the section descends correctly.
-- **Footer column labels.** "Platform" is being changed to `<p>`; the sibling footer columns "Company", "Comparison", "Social", and "Compliance" sit alongside it in the footer component and were previously `<h4>` too. 
+- **Footer column labels.** "Platform" is being changed to `<p>`; the sibling footer columns "Company", "Comparison", "Social", and "Compliance" sit alongside it in the footer component and were previously `<h4>` too.
 
 ## Index
 
@@ -303,10 +302,6 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
     - h1: "How Rewst automated revenue recognition and prepaids with Maxima"
     - h1: "About Rewst"
     - **Suggested Fix:** keep only the visible hero h1; change duplicates Tag to `<p>`.
-- **Links / buttons without an accessible name** — 1 `<a>` element(s) on this page lack visible text and an `aria-label`.
-  - **Fix in Framer:** select each → Properties → Accessibility → set `aria-label` to a concise description of the destination or action. Most offenders are icon-only links in shared header/footer/CTA components — fix once at the component level to propagate.
-  - Example element attributes:
-    - `class="framer-text framer-styles-preset-1ue32gk" data-styles-preset="ZglCJHLIv" href="https://www.rewst.io" target="_bla…`
 
 ---
 
@@ -360,10 +355,10 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
     - h1: "$300B+"
     - h1: "100%"
     - h1: "150+"
-    - **Fixed:** kept only "Agentic accounting automation,from record to report"; changed duplicates tag to `<p>` 
+    - **Fixed:** kept only "Agentic accounting automation,from record to report"; changed duplicates tag to `<p>`
   - **Fixed heading skips (5).**
     - **h1→h6** - changed Tag → `<p>`
-      - "TRUSTED BY ICONIC PUBLIC AND PRIVATE ENTERPRISES" 
+      - "TRUSTED BY ICONIC PUBLIC AND PRIVATE ENTERPRISES"
     - **h2→h6** - change Tag → `<p>`
       - "Agent Prepared" and similar sub text
     - **h2→h4** - changed Tag → `<h3>`:
@@ -672,10 +667,6 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
     - h1: "How Gorgias automated reconciliation and journal prep with Maxima"
     - h1: "About Gorgias"
     - **Fix:** keep only the visible hero h1; change duplicates' Tag to `<p>` (or consolidate variants).
-- **Links / buttons without an accessible name** — 1 `<a>` element(s) on this page lack visible text and an `aria-label`.
-  - **Fix in Framer:** select each → Properties → Accessibility → set `aria-label` to a concise description of the destination or action. Most offenders are icon-only links in shared header/footer/CTA components — fix once at the component level to propagate.
-  - Example element attributes:
-    - `class="framer-text framer-styles-preset-1ue32gk" data-styles-preset="ZglCJHLIv" href="https://www.gorgias.com" target="_…`
 
 ---
 
