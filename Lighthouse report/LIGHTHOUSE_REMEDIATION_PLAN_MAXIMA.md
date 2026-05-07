@@ -16,7 +16,7 @@
 | SEO            | 99           | 98            |
 
 
-- **SEO is in great shape** (99 mobile / 98 desktop). Almost every page scores 100. Two outliers drag the average — `/articles/reuters-exclusive-maxima` (SEO 82, see §3.2.4) and `/articles/kleiner-perkins-investment-perspective` (SEO 92). Closing those two will push the site to a flat 100.
+- **SEO is in great shape** (99 mobile / 98 desktop). Almost every page scores 100. Two outliers drag the average — `/articles/reuters-exclusive-maxima` (SEO 82, see §2.2.4) and `/articles/kleiner-perkins-investment-perspective` (SEO 92). Closing those two will push the site to a flat 100.
 - **Accessibility has the highest ROI for hands-on remediation.** Every accessibility issue surfaced is fixable inside Framer's editor, except color contrast which depends on a brand-color decision (§4.1).
 - **Performance and Best Practices scores are largely Framer-platform-controlled.** Framer's [official guidance](https://www.framer.com/help/articles/guide-to-lighthouse-scores/) explicitly states that Lighthouse is a debugging tool, not a Google ranking factor, and asks users not to chase a perfect mobile PageSpeed score. Real-user Core Web Vitals from Search Console are the metric that matters for SEO.
 - **The ARIA regression pattern extends to four pages, not one.** Maxima vs FloQast, Security, Bank Integrations, and the EY Alumni article all show the "prohibited ARIA" or "label / accessible-name mismatch" pattern that surfaced after the recent ARIA pass. These should be remediated together.
@@ -27,23 +27,11 @@
 
 ---
 
-## 2. How to Read This Report
+## 2. Fixable in Framer
 
-Items are grouped into three buckets:
+### 2.1 Accessibility
 
-- **Section 3 — Fixable in Framer:** issues that can be closed from inside the Framer editor without external tooling, code, or brand decisions.
-- **Section 4 — Requires brand / design approval:** issues that need a stakeholder decision (e.g. brand color changes) before remediation.
-- **Section 5 — Platform-controlled (Framer):** issues caused by Framer's runtime, build pipeline, or hosting layer that cannot be remediated from the editor. These should be acknowledged and monitored, not fixed.
-
-WCAG 2.1 references are cited at Level A and AA where relevant.
-
----
-
-## 3. Fixable in Framer
-
-### 3.1 Accessibility
-
-#### 3.1.1 Heading order is not sequentially descending — **WCAG 1.3.1 / 2.4.6**
+#### 2.1.1 Heading order is not sequentially descending — **WCAG 1.2.1 / 2.4.6**
 
 **Affected:** 32 of 33 pages (mobile), 20 of 21 (desktop) — effectively every page
 
@@ -56,7 +44,7 @@ Lighthouse reports heading levels skipping (e.g. `<h2>` followed directly by `<h
 - Each page should have exactly one `<h1>`, then descend without skipping.
 - Because this hits virtually every page, audit the Framer **text styles** first — if a style is set to `<h4>` but visually positioned as a sub-heading after an `<h2>`, fixing the style propagates the fix everywhere it is reused.
 
-#### 3.1.2 Links without a discernible accessible name — **WCAG 2.4.4 / 4.1.2**
+#### 2.1.2 Links without a discernible accessible name — **WCAG 2.4.4 / 4.1.2**
 
 **Affected:** 30 of 33 pages (mobile)
 
@@ -68,7 +56,7 @@ Continuation of the logo-link issue already fixed in `ACCESSIBILITY_AUDIT_REPORT
 - Where the icon already sits next to a visible text label, the visible text becomes the accessible name automatically — no aria-label needed.
 - Audit the shared header/footer/CTA components first (they account for most of the 30-page spread).
 
-#### 3.1.3 Document does not have a `<main>` landmark — **WCAG 1.3.1 / 2.4.1**
+#### 2.1.3 Document does not have a `<main>` landmark — **WCAG 1.2.1 / 2.4.1**
 
 **Affected:** `/maxima-vs-floqast`, `/newsroom`, `/security`, `/bank-integrations`, `/articles/reuters-exclusive-maxima` (5 pages)
 
@@ -79,7 +67,7 @@ These five pages slipped through the site-wide landmark fix from the prior acces
 - Open each page → select the top-level content frame (the wrapper that holds the page body, between header and footer) → **Properties → Accessibility → Tag → Main**.
 - Only one `<main>` per page; it must sit as a child of the document body.
 
-#### 3.1.4 Visible text label does not match accessible name — **WCAG 2.5.3**
+#### 2.1.4 Visible text label does not match accessible name — **WCAG 2.5.3**
 
 **Affected:** `/maxima-vs-floqast`, `/articles/ey-alumni-spotlight-maxima-ceo-yogi-goel`
 
@@ -89,7 +77,7 @@ Triggered when an `aria-label` value differs from the visible button or link tex
 
 - For each page → identify each `aria-label` added in the recent ARIA pass → either remove the `aria-label` (so the visible text becomes the accessible name) or rewrite it so the visible text appears at the start of the label (e.g. visible text "Book a demo" → label "Book a demo with Maxima").
 
-#### 3.1.5 Elements use prohibited ARIA attributes — **WCAG 4.1.2**
+#### 2.1.5 Elements use prohibited ARIA attributes — **WCAG 4.1.2**
 
 **Affected:** `/maxima-vs-floqast`, `/security`, `/bank-integrations`
 
@@ -100,7 +88,7 @@ Some ARIA attributes were added on element roles that do not accept them (for ex
 - Audit each element changed during the ARIA pass on these three pages → in **Properties → Accessibility / Attributes**, remove ARIA attributes from elements where they are not valid, or set the element's role first if the ARIA attribute is intentional.
 - If the offending element is a Smart Component instance, fix it once at the component level so the fix propagates.
 
-#### 3.1.6 `<td>` cells in a large table do not have headers — **WCAG 1.3.1**
+#### 2.1.6 `<td>` cells in a large table do not have headers — **WCAG 1.2.1**
 
 **Affected:** Journal Entries article (`/articles/the-definitive-guide-to-journal-entries-in-accounting`)
 
@@ -111,7 +99,7 @@ Screen readers cannot associate data cells with column or row headers without `<
 - Open the article CMS entry → locate the table inside the Rich Text field → right-click the cells in the first row (and first column if applicable) → **"Set as header"**.
 - This option is only available on tables created inside a CMS Rich Text field. If the table was hand-built as stacked frames on the canvas, rebuild it inside a Rich Text field to gain semantic table markup.
 
-#### 3.1.7 List items not contained within `<ul>` / `<ol>` / `<menu>` — **WCAG 1.3.1**
+#### 2.1.7 List items not contained within `<ul>` / `<ol>` / `<menu>` — **WCAG 1.2.1**
 
 **Affected:** Homepage (`/`), `/book-a-demo`
 
@@ -122,7 +110,7 @@ Loose `<li>` elements appear without a list parent, breaking screen-reader list 
 - The Framer canvas does not expose `ul` / `ol` / `li` in the Tag dropdown for hand-built frames.
 - Locate the visually list-styled content on each page → rebuild the affected block inside a CMS Rich Text field (or a code component) using the bulleted/numbered list controls so Framer emits proper `<ul><li>` markup.
 
-#### 3.1.8 Touch targets do not have sufficient size or spacing — **WCAG 2.5.8 (AA, WCAG 2.2)**
+#### 2.1.8 Touch targets do not have sufficient size or spacing — **WCAG 2.5.8 (AA, WCAG 2.2)**
 
 **Affected:** `/legal/terms-of-service`, `/legal/cookie-policy`, `/articles/kleiner-perkins-investment-perspective`
 
@@ -136,9 +124,9 @@ Inline links inside dense text fall below the 24×24 CSS-pixel minimum spacing r
 
 ---
 
-### 3.2 SEO
+### 2.2 SEO
 
-#### 3.2.1 Links are not crawlable
+#### 2.2.1 Links are not crawlable
 
 **Affected:** `/about`, `/articles/ey-alumni-spotlight-maxima-ceo-yogi-goel`
 
@@ -149,7 +137,7 @@ Lighthouse flagged anchors whose `href` is missing or non-navigable (typically c
 - Open each page → locate the affected element(s) → in the right-side **properties panel → Link** field, set a real URL or page reference.
 - Avoid using Interactions → Navigate as the only navigation mechanism — Interactions trigger on click but the underlying element is not rendered as `<a href>` for crawlers.
 
-#### 3.2.2 Links do not have descriptive text
+#### 2.2.2 Links do not have descriptive text
 
 **Affected:** Homepage (`/`)
 
@@ -159,7 +147,7 @@ Generic anchor text such as "click here", "learn more", or icon-only arrows redu
 
 - Identify the flagged anchors on the homepage → rewrite the visible text to describe the destination (e.g. "Read the Scale AI case study" instead of "Read more").
 
-#### 3.2.3 Document does not have a meta description
+#### 2.2.3 Document does not have a meta description
 
 **Affected:** `/articles/kleiner-perkins-investment-perspective`, `/articles/reuters-exclusive-maxima`
 
@@ -169,7 +157,7 @@ Both articles are missing a `<meta name="description">` tag. Search engines fall
 
 - Open each article's CMS entry → **SEO** section in the right-side panel → fill in the **Description** field (target ~150–160 characters, lead with the article's primary value proposition).
 
-#### 3.2.4 Reuters article — multiple critical SEO issues
+#### 2.2.4 Reuters article — multiple critical SEO issues
 
 **Affected:** `/articles/reuters-exclusive-maxima` (SEO score 82 — the lowest on the site)
 
@@ -177,33 +165,19 @@ This page surfaces three problems that together drag its score down materially:
 
 1. **"Page lacks the HTML doctype, thus triggering quirks-mode"** — the page is being rendered without `<!DOCTYPE html>`, putting browsers into quirks mode. This is unusual for a Framer page and likely indicates the page is configured as a redirect target, an iframe wrapper, or a custom-code page rather than a normal Framer page.
 2. **"Page has unsuccessful HTTP status code"** — the page is returning a non-2xx response (likely a 3xx or 4xx). Search engines may de-index it.
-3. **"Document does not have a meta description"** (also called out in §3.2.3).
-
-**Remediation in Framer:**
-
-- Open the article in Framer → confirm it is a regular Framer page (not a redirect, not a custom Code Override page).
-- If it is meant to be a redirect to the Reuters article on reuters.com, check **Site Settings → Redirects** and decide whether this URL should exist as a Framer page at all, or whether the sitemap should drop it.
-- If it is meant to be a hosted page, fix the response code (likely a missing CMS entry or unpublished state) and add the meta description per §3.2.3.
-
-This one warrants investigation before any other SEO work — it may also be a redirect-loop or 404 hidden behind a soft-200, both of which hurt site-wide crawl budget.
+3. **"Document does not have a meta description"** (also called out in §2.2.3).
 
 ---
 
-### 3.3 Best Practices
+### 2.3 Best Practices
 
-#### 3.3.1 Uses third-party cookies
+#### 2.3.1 Uses third-party cookies
 
 **Affected:** `/articles/spoton-mastering-high-volume-cash-complexity-with-maxima`, `/articles/scale-ai-staying-ahead-of-the-gl-curve-with-maxima`, `/articles/how-rewst-automated-revenue-recognition-and-prepaids-with-maxima`, `/articles/why-blackline-s-former-cmo-is-investing-in-maxima` (5 cookies each)
 
 Cookies originate from third-party scripts loaded via Framer's Custom Code slots — most likely HubSpot (forms), an analytics tag, or a chat widget. The fact that all four affected pages are case studies / investment articles suggests there is a "case study" template-level script that the editorial articles do not load.
 
-**Remediation in Framer:**
-
-- Open **Project Settings → Custom Code** → audit all scripts in the head and end-of-body slots.
-- Identify any script that is loaded conditionally on the case-study template → remove it if no longer needed, or move it from the head slot to the end-of-body slot so it loads after first paint.
-- Where a third-party tool offers a "cookieless" or first-party variant (HubSpot's first-party tracking, Plausible vs GA), evaluate switching.
-
-#### 3.3.2 Browser console errors and DevTools issues
+#### 2.3.2 Browser console errors and DevTools issues
 
 **Affected:** Every page
 
@@ -213,11 +187,11 @@ Cookies originate from third-party scripts loaded via Framer's Custom Code slots
 - Errors originating from `framer.com` runtime files are platform-controlled and out of scope.
 - Errors originating from HubSpot, custom code components, or other user-added scripts should be triaged and fixed (or the scripts removed if no longer needed).
 
-#### 3.3.3 Improve image delivery — partial
+#### 2.3.3 Improve image delivery
 
 **Affected:** 24 of 33 pages (mobile), 15 of 21 (desktop)
 
-Framer auto-converts images to WebP, generates responsive `srcset`, and lazy-loads below-the-fold images by default — but it skips this optimization when images are buried inside CMS rich text, code components, or variable-driven Smart Components.
+Framer auto-converts images to WebP, generates responsive `srcset`, and lazy-loads below-the-fold images by default - but it skips this optimization when images are buried inside CMS rich text, code components, or variable-driven Smart Components.
 
 **Remediation in Framer:**
 
@@ -225,7 +199,7 @@ Framer auto-converts images to WebP, generates responsive `srcset`, and lazy-loa
 - For source images, upload at sensible dimensions — anything larger than ~2× the maximum displayed width is wasted bytes regardless of Framer's compression.
 - Confirm `alt` text is set on every image (already covered in the prior accessibility pass).
 
-#### 3.3.4 LCP image is lazy-loaded
+#### 2.3.4 LCP image is lazy-loaded
 
 **Affected:** 14 pages — `/about`, `/book-a-demo`, `/how-it-works`, `/bank-integrations`, `/security`, `/careers`, `/blog`, `/newsroom`, `/maxima-vs-floqast`, `/product-overview`, plus 4 articles (`/ey-alumni-spotlight`, `/kleiner-perkins`, `/maxima-named-to-ai64`, `/maxima-seed-series-a`)
 
@@ -239,9 +213,9 @@ This is now visible as a **site-wide pattern**, not isolated cases. Framer does 
 
 ---
 
-## 4. Requires Brand / Design Approval
+## 3. Requires Brand / Design Approval
 
-### 4.1 Background and foreground colors do not have a sufficient contrast ratio — **WCAG 1.4.3 (AA)**
+### 3.1 Background and foreground colors do not have a sufficient contrast ratio — **WCAG 1.4.3 (AA)**
 
 **Affected:** 31 of 33 pages (mobile), 19 of 21 (desktop) — effectively every page
 
@@ -259,7 +233,7 @@ This is the highest-leverage accessibility lift remaining on the site, but it mu
 
 ---
 
-## 5. Platform-Controlled (Framer) — Out of Scope
+## 4. Platform-Controlled (Framer)
 
 The following items are caused by Framer's build pipeline, runtime, or hosting layer and **cannot be remediated from the Framer editor**. They should be acknowledged in the audit record but not actioned.
 
@@ -282,35 +256,3 @@ The following items are caused by Framer's build pipeline, runtime, or hosting l
 
 
 **Framer's own guidance** ([Guide to Lighthouse Scores](https://www.framer.com/help/articles/guide-to-lighthouse-scores/), [How to optimize PageSpeed Insights](https://www.framer.com/help/articles/how-to-optimize-pagespeed-insights/)): Lighthouse is a debugging tool, not a ranking factor; mobile PSI simulates a 2016 Motorola phone; real-user Core Web Vitals in Search Console are the metric Google uses for SEO.
-
----
-
-## 6. Recommended Sequencing
-
-1. **Investigate the Reuters article (§3.2.4) first.** A page returning a non-2xx code with no doctype is anomalous — it may be eating crawl budget and should be diagnosed before any other work.
-2. **Fix the four-page ARIA-regression cluster** (§3.1.4, §3.1.5) — Maxima vs FloQast, Security, Bank Integrations, EY Alumni article. These were introduced during the recent ARIA pass and likely share a common Smart Component, so they can be closed in one pass.
-3. **Apply the `<main>` landmark to the five affected pages** (§3.1.3). Newsroom is a CMS template — fix once and it propagates across all collection items. The other four are direct page edits.
-4. **Site-wide heading-order audit** (§3.1.1) — start with Framer text styles; fixing styles propagates the change to every page they're used on.
-5. **Site-wide aria-label pass for icon-only links** (§3.1.2) — extend the logo fix to social icons, carousel arrows, expand toggles. Likely concentrated in shared header/footer components.
-6. **Site-wide LCP image placement audit** (§3.3.4). 14 pages share the issue — likely one shared hero pattern is placing the image one wrapper too deep. Fix the shared component once.
-7. **Hand the remaining single-page issues** in a single sprint:
-  - §3.1.6 table headers on Journal Entries.
-  - §3.1.7 list structure on Homepage and Book-a-Demo.
-  - §3.1.8 touch targets on the two legal pages and the Kleiner Perkins article.
-  - §3.2.1 crawlable links on About and EY Alumni.
-  - §3.2.2 descriptive link text on Homepage.
-  - §3.2.3 meta descriptions on Kleiner Perkins and Reuters articles.
-8. **Best-practices clean-up** (§3.3.1 third-party cookies on the four case-study articles, §3.3.2 console errors, §3.3.3 image element placement).
-9. **Brand-team color contrast workstream** (§4.1) — kicked off as a separate workstream with Maxima's design team.
-
----
-
-## 7. Verification
-
-After the items in §3 are remediated, re-run the Lighthouse audit (mobile and desktop) on every page in the source audit to confirm closure. Expected outcomes:
-
-- **Accessibility:** mobile average from 91 → 95+ (color contrast remains until §4.1 is resolved, which would push it to 98+). Security and Bank Integrations should move from 85 to 95+ once their ARIA + landmark fixes ship.
-- **SEO:** mobile and desktop from 99 / 98 → 100 once the Reuters article (§3.2.4) and the two missing meta descriptions (§3.2.3) are resolved.
-- **Best Practices:** modest improvement (third-party cookies and console errors closed); the headline 75-something score will remain anchored by Framer-platform items in §5.
-- **Performance:** little change is expected from this remediation pass alone — performance is dominated by §5 items. The two outliers worth re-checking after §3.3.4 is applied are `/articles/ey-alumni-spotlight` (currently 26 mobile) and `/book-a-demo` (currently 33 mobile). If their hero-image placement is the cause, both should jump materially. Real-user CrUX data in Search Console is the more meaningful follow-up metric.
-

@@ -289,7 +289,7 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 
 ---
 
-### (Pending) Maxima.ai — Agentic AI Accounting for Modern Finance Teams
+### Maxima.ai — Agentic AI Accounting for Modern Finance Teams
 
 **URL:** [https://www.maxima.ai/articles/how-rewst-automated-revenue-recognition-and-prepaids-with-maxima](https://www.maxima.ai/articles/how-rewst-automated-revenue-recognition-and-prepaids-with-maxima)
 
@@ -299,20 +299,14 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Multiple `<h1>` elements (2).** A page should have exactly one. Hero may be duplicated for mobile/desktop variants.
+  - **Multiple** `<h1>` **elements (2)**
     - h1: "How Rewst automated revenue recognition and prepaids with Maxima"
     - h1: "About Rewst"
-    - **Fix:** keep only the visible hero h1; change duplicates' Tag to `<p>` (or consolidate variants).
+    - **Suggested Fix:** keep only the visible hero h1; change duplicates Tag to `<p>`.
 - **Links / buttons without an accessible name** — 1 `<a>` element(s) on this page lack visible text and an `aria-label`.
   - **Fix in Framer:** select each → Properties → Accessibility → set `aria-label` to a concise description of the destination or action. Most offenders are icon-only links in shared header/footer/CTA components — fix once at the component level to propagate.
   - Example element attributes:
     - `class="framer-text framer-styles-preset-1ue32gk" data-styles-preset="ZglCJHLIv" href="https://www.rewst.io" target="_bla…`
-
-**Best Practices**
-
-- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 348 KiB)*
-- **Uses third-party cookies** — Project Settings → Custom Code → audit and remove/defer non-essential third-party scripts. *(LH: 5 cookies found)*
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
 
 ---
 
@@ -327,14 +321,9 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 **Accessibility**
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
-- **Heading order**
-  - **Heading skips (1).** Change each heading's Framer **Tag** to the recommended level.
-    - **FAQ schema headings — h1→h4** (1× on this page) — fix in the FAQ schema block, change Tag → `<h2>`:
-      - "What is Personal Information?"
-
-**Best Practices**
-
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
+- **Suggested Heading Order**
+  - **Headings - h1→h4**, change Tag → `<h2>`:
+    - "What is Personal Information?"
 
 ---
 
@@ -354,10 +343,6 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
     - **h2→h5** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
       - "Example 1: revenue decline that is not actually a decline"
 
-**Best Practices**
-
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
-
 ---
 
 ### Maxima | AI Accounting & Financial Close Automation Platform
@@ -370,32 +355,26 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Multiple `<h1>` elements (5).** A page should have exactly one. Hero may be duplicated for mobile/desktop variants.
+  - **Fixed Multiple** `<h1>` **elements (5).**
     - h1: "Agentic accounting automation,from record to report"
-    - h1: "Agentic accounting automation, from record to report"
     - h1: "$300B+"
     - h1: "100%"
     - h1: "150+"
-    - **Fix:** keep only the visible hero h1; change duplicates' Tag to `<p>` (or consolidate variants).
-  - **Heading skips (5).** Change each heading's Framer **Tag** to the recommended level.
-    - **h1→h6** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "TRUSTED BY ICONIC PUBLIC AND PRIVATE ENTERPRISES"
-    - **h2→h6** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Agent Prepared"
-    - **h2→h4** (2× on this page) — change Tag → `<h3>`:
+    - **Fixed:** kept only "Agentic accounting automation,from record to report"; changed duplicates tag to `<p>` 
+  - **Fixed heading skips (5).**
+    - **h1→h6** - changed Tag → `<p>`
+      - "TRUSTED BY ICONIC PUBLIC AND PRIVATE ENTERPRISES" 
+    - **h2→h6** - change Tag → `<p>`
+      - "Agent Prepared" and similar sub text
+    - **h2→h4** - changed Tag → `<h3>`:
       - "The most complete view of your financial data"
-    - **h2→h5** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "$300B+"
+    - **h2→h5** - changed Tag → `<p>` 
+      - "$300B+" and similar numbers
 
 **SEO**
 
 - **Links with non-descriptive text** — found 4 anchor(s) with generic text ("click here", "learn more", arrow chars, etc.).
-  - **Fix in Framer:** rewrite anchor text to describe the destination (e.g., "Read the Scale AI case study" instead of "Read more").
-
-**Best Practices**
-
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
-- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 483 KiB)*
+  - **Recommendation:** mostly contexual CTA text hence can be ignored
 
 ---
 
@@ -409,16 +388,11 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Heading skips (3).** Change each heading's Framer **Tag** to the recommended level.
-    - **"What’s the difference between close software and consolidation software?"** appears 2× with different tags:
-      1. Fixed heading in FAQ schema (h1→h5, change Tag → `<h2>`).
-      2. Other suggested heading fix in blog content (h2→h5, change Tag → `<h3>`).
+  - **Heading skips (3).**
+    - **Fixed headings** in FAQ schema (h1→h5, changed Tag → `<h2>`).
+  - Other suggested heading fix in blog content (h2→h5, change Tag → `<h3>`).
     - **h2→h5** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
       - "Data integration and ERP connectivity"
-
-**Best Practices**
-
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
 
 ---
 
@@ -432,19 +406,13 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Multiple `<h1>` elements (2).** A page should have exactly one. Hero may be duplicated for mobile/desktop variants.
+  - **Multiple `<h1>` elements (2)**
     - h1: "How Rippling built SOX-ready cash accounting with Maxima"
     - h1: "About Rippling"
-    - **Fix:** keep only the visible hero h1; change duplicates' Tag to `<p>` (or consolidate variants).
-- **Links / buttons without an accessible name** — 1 `<a>` element(s) on this page lack visible text and an `aria-label`.
-  - **Fix in Framer:** select each → Properties → Accessibility → set `aria-label` to a concise description of the destination or action. Most offenders are icon-only links in shared header/footer/CTA components — fix once at the component level to propagate.
+    - **Fixed:** keep only the visible hero H1; change duplicate tag to `<p>`.
+- **Links / buttons without an accessible name**
   - Example element attributes:
     - `class="framer-text framer-styles-preset-1ue32gk" data-styles-preset="ZglCJHLIv" href="https://www.rippling.com" target="…`
-
-**Best Practices**
-
-- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 348 KiB)*
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
 
 ---
 
@@ -458,22 +426,16 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Heading skips (5).** Change each heading's Framer **Tag** to the recommended level.
-    - **FAQ schema headings — h2→h4** (1× on this page), fixed in the FAQ schema block:
+  - **Heading skips (5)**
+    - **Fixed FAQ headings - h2→h4**. Changed tag to `<h3>`:
       - "How is Maxima different from FloQast?"
-    - **Fixed h1→h6** (1× on this page)
+    - **Fixed h1→h6**. Changed tag to `<p>`:
       - "proven in production By Leading Accounting Teams"
-    - **Fixed h2→h4**:
+    - **Fixed h2→h4.** Changed tag to `<p>`:
       - "Native integrations + transaction level lineage" and similar points
       - 1, 2, 3
       - "Close faster with confidence" and similar points
 - **Add** `<main>` **landmark, as mentioned in** [https://docs.google.com/document/d/1Q6-2iGHJg-Bl9pKlnlKLI8OhM9YCoS_Ao2Ev9H5ENKY/edit?tab=t.nubzrmnxq7qt#heading=h.bc8x0fx0r9kd](https://docs.google.com/document/d/1Q6-2iGHJg-Bl9pKlnlKLI8OhM9YCoS_Ao2Ev9H5ENKY/edit?tab=t.nubzrmnxq7qt#heading=h.bc8x0fx0r9kd)
-
-**Best Practices**
-
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
-- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 99 KiB)*
-- **LCP request discovery** — Place hero image as a top-level Image element on the canvas so Framer's heuristic marks it as eager.
 
 ---
 
@@ -489,12 +451,6 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 - **Suggested Heading order**
   - **h1→h3** (1× on this page) — change Tag → `<h2>`:
     - "From human-prepared to agent-prepared"
-
-**Best Practices**
-
-- **LCP request discovery** — Place hero image as a top-level Image element on the canvas so Framer's heuristic marks it as eager.
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
-- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 598 KiB)*
 
 ---
 
@@ -518,11 +474,6 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 - **Heading order**
   - ✅ Heading order: all skips on this page are resolved by the template-level fixes.
 
-**Best Practices**
-
-- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 367 KiB)*
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
-
 ---
 
 ### How Scale AI achieved accuracy at billion-dollar scale with Maxima
@@ -535,16 +486,10 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Multiple** `<h1>` **elements (2).** A page should have exactly one. Hero may be duplicated for mobile/desktop variants.
+  - **Multiple** `<h1>` **elements (2).**
     - h1: "How Scale AI achieved accuracy at billion-dollar scale with Maxima"
     - h1: "About Scale"
-    - **Fix:** keep only the visible hero h1; change duplicates' Tag to `<p>` (or consolidate variants).
-
-**Best Practices**
-
-- **Uses third-party cookies** — Project Settings → Custom Code → audit and remove/defer non-essential third-party scripts. *(LH: 5 cookies found)*
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
-- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 388 KiB)*
+    - **Fix:** keep only "How Scale AI achieved..." ; change duplicates Tag to `<p>`
 
 ---
 
@@ -558,17 +503,13 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Heading skips (4).** Change each heading's Framer **Tag** to the recommended level.
-    - **Fixed FAQ schema headings — h1→h3**:
+  - **Heading skips (4).**
+    - **Fixed FAQ schema headings - h1→h3**:
       - "What is the difference between reconciliation and matching?"
-    - **h2→h5** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
+    - **h2→h5** (3× on this page) - change Tag → `<p>` /next heading
       - "Accounts receivable reconciliation"
       - "Bank reconciliation statement (March 31)"
       - "1. Partial Matches"
-
-**Best Practices**
-
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
 
 ---
 
@@ -584,12 +525,6 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 - **Heading order**
   - ✅ Heading order: all skips on this page are resolved by the template-level fixes.
 
-**Best Practices**
-
-- **LCP request discovery** — Place hero image as a top-level Image element on the canvas so Framer's heuristic marks it as eager.
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
-- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 348 KiB)*
-
 ---
 
 ### How AI Accounting Automation Works | Maxima
@@ -601,18 +536,12 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 **Accessibility**
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
-- **Fixed Heading skips (4).** Change each heading's Framer **Tag** to the recommended level.
-  - **h2→h4** (3× on this page) — change Tag → `<h3>`:
+- **Fixed Heading skips (4)**
+  - **h2→h4** - changed Tag → `<h3>`:
     - "Current reality" and similar
     - "Connect directly to your finance stack"  and similar
-  - **h4→h6** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
+  - **h4→h6** - changed Tag → `<p>`
     - "Integrations"
-
-**Best Practices**
-
-- **LCP request discovery** — Place hero image as a top-level Image element on the canvas so Framer's heuristic marks it as eager.
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
-- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 440 KiB)*
 
 ---
 
@@ -625,14 +554,9 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 **Accessibility**
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
-- **Heading skips (2).** Change each heading's Framer **Tag** to the recommended level.
-  - Fixed heading in FAQ schema
-  - **Other suggested heading fix in blog content (h2→h5, change Tag →** `<h3>`**).**
-
-**Best Practices**
-
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
-- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 56 KiB)*
+- **Heading skips (2)**
+  - **Fixed:** heading in FAQ schema
+  - **Suggested:** Blog content heading fix **(h2→h5, change Tag →** `<h3>`**).**
 
 ---
 
@@ -648,11 +572,6 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 - **Heading order**
   - ✅ Heading order: all skips on this page are resolved by the template-level fixes.
 
-**Best Practices**
-
-- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 62 KiB)*
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
-
 ---
 
 ### About Maxima | AI-Native Accounting Automation
@@ -665,24 +584,19 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Fixed Heading skips (5)**
-  - **h2→h6** (4× on this page)
+  - **h2→h6**
     - "About us"
     - "INVESTORS"
     - "The Team"
     - "Formerly at"
-  - **h3→h6** (1× on this page)
+  - **h3→h6**
     - "Founders"
-- **Fixed Links / buttons without an accessible name** — 33 `<a>` element(s) on this page lack visible text and an `aria-label`.
+- **Fixed Links / buttons without an accessible name** - 33 `<a>` element(s) on this page lack visible text and an `aria-label`.
 
 **SEO**
 
-- **Anchors without href** — found 1 `<a>` element(s) with no href in the rendered HTML.
+- **Anchors without href** - found 1 `<a>` element(s) with no href in the rendered HTML.
   - **Fix in Framer:** for each — Properties panel → Link field → set a real URL or page reference. Avoid driving navigation via Interactions only.
-
-**Best Practices**
-
-- **LCP request discovery** — Place hero image as a top-level Image element on the canvas so Framer's heuristic marks it as eager.
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
 
 ---
 
@@ -708,12 +622,6 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
     - "Daily visibility"
     - and other points in similar blocks
 
-**Best Practices**
-
-- **LCP request discovery** — Place hero image as a top-level Image element on the canvas so Framer's heuristic marks it as eager.
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
-- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 85 KiB)*
-
 ---
 
 ### Accounting, Financial Close, and AI Insights | Maxima Blog
@@ -727,12 +635,6 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Fixed Heading skips (14).**
   - **h4→h6:** "Featured", "Customer stories" and other tags on blog card
-
-**Best Practices**
-
-- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 488 KiB)*
-- **LCP request discovery** — Place hero image as a top-level Image element on the canvas so Framer's heuristic marks it as eager.
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
 
 ---
 
@@ -753,12 +655,6 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
   - **h2→h6 -** changed Tag → `<p>`
     - "press release"
 - **Add** `<main>` **landmark** mentioned in [https://docs.google.com/document/d/1Q6-2iGHJg-Bl9pKlnlKLI8OhM9YCoS_Ao2Ev9H5ENKY/edit?tab=t.nubzrmnxq7qt#heading=h.bc8x0fx0r9kd](https://docs.google.com/document/d/1Q6-2iGHJg-Bl9pKlnlKLI8OhM9YCoS_Ao2Ev9H5ENKY/edit?tab=t.nubzrmnxq7qt#heading=h.bc8x0fx0r9kd)
-
-**Best Practices**
-
-- **LCP request discovery** — Place hero image as a top-level Image element on the canvas so Framer's heuristic marks it as eager.
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
-- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 383 KiB)*
 
 ---
 
@@ -781,11 +677,6 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
   - Example element attributes:
     - `class="framer-text framer-styles-preset-1ue32gk" data-styles-preset="ZglCJHLIv" href="https://www.gorgias.com" target="_…`
 
-**Best Practices**
-
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
-- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 1,093 KiB)*
-
 ---
 
 ### Maxima.ai — Agentic AI Accounting for Modern Finance Teams
@@ -800,12 +691,6 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 - **Suggested Heading order**
   - **h1→h4** (1× on this page) — change Tag → `<h2>`:
     - "Your use of the sites"
-- **Touch targets do not have sufficient size or spacing.** — Increase target size to ≥24×24 CSS px or add padding/line-height.
-
-**Best Practices**
-
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
-- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 1,093 KiB)*
 
 ---
 
