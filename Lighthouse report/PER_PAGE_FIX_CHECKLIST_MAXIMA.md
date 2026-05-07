@@ -511,7 +511,7 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 - **Heading order**
   - **Heading skips (3).** Change each heading's Framer **Tag** to the recommended level.
     - **"What’s the difference between close software and consolidation software?"** appears 2× with different tags:
-      1. Fix heading in FAQ schema (h1→h5, change Tag → `<h2>`).
+      1. Fixed heading in FAQ schema (h1→h5, change Tag → `<h2>`).
       2. Other suggested heading fix in blog content (h2→h5, change Tag → `<h3>`).
     - **h2→h5** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
       - "Data integration and ERP connectivity"
@@ -559,16 +559,15 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
   - **Heading skips (5).** Change each heading's Framer **Tag** to the recommended level.
-    - **FAQ schema headings — h2→h4** (1× on this page) — fix in the FAQ schema block, change Tag → `<h3>`:
+    - **FAQ schema headings — h2→h4** (1× on this page), fixed in the FAQ schema block:
       - "How is Maxima different from FloQast?"
-    - **h1→h6** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
+    - **Fixed h1→h6** (1× on this page)
       - "proven in production By Leading Accounting Teams"
-    - **h2→h4** (3× on this page) — change Tag → `<h3>`:
-      - "Native integrations + transaction level lineage"
-      - "1"
-      - "Close faster with confidence"
-- **Add `<main>` landmark** — confirmed missing in HTML. Top-level content frame → Properties → Accessibility → Tag → `Main`.
-- **Elements with visible text labels do not have matching accessible names.** — An aria-label conflicts with the visible button/link text. Audit aria-labels added during the recent ARIA pass and either remove them or rewrite so the visible text appears at the start.
+    - **Fixed h2→h4**:
+      - "Native integrations + transaction level lineage" and similar points
+      - 1, 2, 3
+      - "Close faster with confidence" and similar points
+- **Add** `<main>` **landmark, as mentioned in** [https://docs.google.com/document/d/1Q6-2iGHJg-Bl9pKlnlKLI8OhM9YCoS_Ao2Ev9H5ENKY/edit?tab=t.nubzrmnxq7qt#heading=h.bc8x0fx0r9kd](https://docs.google.com/document/d/1Q6-2iGHJg-Bl9pKlnlKLI8OhM9YCoS_Ao2Ev9H5ENKY/edit?tab=t.nubzrmnxq7qt#heading=h.bc8x0fx0r9kd)
 
 **Best Practices**
 
@@ -587,10 +586,9 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 **Accessibility**
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
-- **Heading order**
-  - **Heading skips (1).** Change each heading's Framer **Tag** to the recommended level.
-    - **h1→h3** (1× on this page) — change Tag → `<h2>`:
-      - "From human-prepared to agent-prepared"
+- **Suggested Heading order**
+  - **h1→h3** (1× on this page) — change Tag → `<h2>`:
+    - "From human-prepared to agent-prepared"
 
 **Best Practices**
 
@@ -605,27 +603,6 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 **URL:** [https://www.maxima.ai/articles/kleiner-perkins-investment-perspective](https://www.maxima.ai/articles/kleiner-perkins-investment-perspective)
 
 > Note: redirected to [https://www.kleinerperkins.com/perspectives/maxima-bringing-ai-agents-to-the-heart-of-enterprise-accounting/](https://www.kleinerperkins.com/perspectives/maxima-bringing-ai-agents-to-the-heart-of-enterprise-accounting/)
-
-**Scores —** Mobile: Perf 55 / A11y 95 / BP 96 / SEO 92  •  Desktop: Perf 74 / A11y 95 / BP 96 / SEO 92
-
-**Accessibility**
-
-- **Heading order**
-  - **Heading skips (1).** Change each heading's Framer **Tag** to the recommended level.
-    - **h1→h4** (1× on this page) — change Tag → `<h2>`:
-      - "By"
-- **Touch targets do not have sufficient size or spacing.** — Increase target size to ≥24×24 CSS px or add padding/line-height.
-
-**SEO**
-
-- **Missing meta description** — confirmed: no `<meta name="description">` tag in HTML.
-  - **Fix in Framer:** open the page (or CMS entry) → SEO section in the right-side panel → fill in **Description** field (target ~150-160 chars).
-
-**Best Practices**
-
-- **LCP request discovery** — Place hero image as a top-level Image element on the canvas so Framer's heuristic marks it as eager.
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
-- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 1,058 KiB)*
 
 ---
 
@@ -658,7 +635,7 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Multiple `<h1>` elements (2).** A page should have exactly one. Hero may be duplicated for mobile/desktop variants.
+  - **Multiple** `<h1>` **elements (2).** A page should have exactly one. Hero may be duplicated for mobile/desktop variants.
     - h1: "How Scale AI achieved accuracy at billion-dollar scale with Maxima"
     - h1: "About Scale"
     - **Fix:** keep only the visible hero h1; change duplicates' Tag to `<p>` (or consolidate variants).
@@ -682,7 +659,7 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
   - **Heading skips (4).** Change each heading's Framer **Tag** to the recommended level.
-    - **FAQ schema headings — h1→h3** (1× on this page) — fix in the FAQ schema block, change Tag → `<h2>`:
+    - **Fixed FAQ schema headings — h1→h3**:
       - "What is the difference between reconciliation and matching?"
     - **h2→h5** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
       - "Accounts receivable reconciliation"
@@ -724,13 +701,12 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 **Accessibility**
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
-- **Heading order**
-  - **Heading skips (4).** Change each heading's Framer **Tag** to the recommended level.
-    - **h2→h4** (3× on this page) — change Tag → `<h3>`:
-      - "Current reality"
-      - "Connect directly to your finance stack"
-    - **h4→h6** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Integrations"
+- **Fixed Heading skips (4).** Change each heading's Framer **Tag** to the recommended level.
+  - **h2→h4** (3× on this page) — change Tag → `<h3>`:
+    - "Current reality" and similar
+    - "Connect directly to your finance stack"  and similar
+  - **h4→h6** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
+    - "Integrations"
 
 **Best Practices**
 
@@ -749,11 +725,9 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 **Accessibility**
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
-- **Heading order**
-  - **Heading skips (2).** Change each heading's Framer **Tag** to the recommended level.
-    - **"What is the difference between AI-assisted and agentic AI accounting tools?"** appears 2× with different tags:
-      1. Fix heading in FAQ schema (h1→h5, change Tag → `<h2>`).
-      2. Other suggested heading fix in blog content (h2→h5, change Tag → `<h3>`).
+- **Heading skips (2).** Change each heading's Framer **Tag** to the recommended level.
+  - Fixed heading in FAQ schema
+  - **Other suggested heading fix in blog content (h2→h5, change Tag →** `<h3>`**).**
 
 **Best Practices**
 
@@ -799,14 +773,7 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
       - "Formerly at"
     - **h3→h6** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
       - "Founders"
-- **Links / buttons without an accessible name** — 33 `<a>` element(s) on this page lack visible text and an `aria-label`.
-  - **Fix in Framer:** select each → Properties → Accessibility → set `aria-label` to a concise description of the destination or action. Most offenders are icon-only links in shared header/footer/CTA components — fix once at the component level to propagate.
-  - Example element attributes:
-    - `class="framer-1hix09f framer-9g9stw" data-framer-name="linkedin-container" href="https://www.linkedin.com/in/yogi-goel" …`
-    - `class="framer-13f6chn framer-9g9stw" data-framer-name="linkedin-container" href="https://www.linkedin.com/in/akshayasriv…`
-    - `class="framer-10ppi84 framer-9g9stw" data-framer-name="linkedin-container" href="https://www.linkedin.com/in/jackliao07"…`
-    - `class="framer-we7f95 framer-1l2gq4y" data-framer-name="linked-in-container" href="https://www.linkedin.com/in/koaaron/" …`
-    - `class="framer-we7f95 framer-1l2gq4y" data-framer-name="linked-in-container" href="https://www.linkedin.com/in/abbbbyhe/"…`
+- **Fixed Links / buttons without an accessible name** — 33 `<a>` element(s) on this page lack visible text and an `aria-label`.
 
 **SEO**
 
