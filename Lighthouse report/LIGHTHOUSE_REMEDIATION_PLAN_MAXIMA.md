@@ -2,7 +2,6 @@
 
 **Date:** 2026-05-07
 **Pages covered:** 35
-**Companion document:** `PER_PAGE_FIX_CHECKLIST_MAXIMA.md` (precise locations and Framer steps for every per-page fix)
 
 ---
 
