@@ -15,7 +15,7 @@ Each page below lists every user-fixable Lighthouse finding, with the precise lo
 
 ---
 
-## Already Resolved at the Template Level
+## Resolved at the Template Level
 
 The following fixes have been applied to shared components and propagate to every page on the site. Per-page entries below exclude any finding addressed by these fixes.
 
@@ -32,19 +32,12 @@ The following fixes have been applied to shared components and propagate to ever
 
 These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")** skips site-wide.
 
-### Accessible link names
+### Other changes
 
 - The site logo link (in every page header) has `aria-label="Maxima — go to homepage"`.
 
-### Follow-ups recommended in the same Smart-Component pass
-
-- **Article-card titles in the "The latest" block.** With the eyebrow categories now `<p>`, each article-card title follows `<h2>The latest</h2>` directly. Change the article-card title's Tag from `<h4>` to `<h3>` so the section descends correctly. The fix propagates to every page that shows the latest-news block.
-- **Footer column labels.** "Platform" is being changed to `<p>`; the sibling footer columns "Company", "Comparison", "Social", and "Compliance" sit alongside it in the footer component and were previously `<h4>` too. Apply the same change so the footer is consistent.
-
-### Audits suppressed
-
-- *List items (`<li>`) are not contained within `<ul>`, `<ol>` or `<menu>` parent elements.* — verified clean in the live DOM on 2026-05-07; Lighthouse's flag appears to have been a transient false positive. Re-confirm with a fresh Lighthouse run after the next deploy.
-- *Elements use prohibited ARIA attributes* and *ARIA attributes are not valid* — these flag `aria-label` set on plain `<div>` elements (decorative ✓ / ✗ icons in comparison tables, and the FAQ accordion `+` toggles on Maxima vs FloQast, Security, and Bank Integrations). The decorative icons have no real-world impact; the FAQ toggles have a soft keyboard/screen-reader impact (no `role="button"`). Recommend addressing only if WCAG 2.1 AA conformance is required for enterprise procurement. The fix in that case: remove the aria-label on decorative icons; convert the FAQ toggle Frame to a Button component (or add `role="button"` via the Attributes panel) — one Smart Component change covers both pages.
+- **Article-card titles in the "The latest" block.** With the categories now `<p>`, each article-card title follows `<h2>The latest</h2>` directly. Changed the article-card title's Tag from `<h4>` to `<h3>` so the section descends correctly.
+- **Footer column labels.** "Platform" is being changed to `<p>`; the sibling footer columns "Company", "Comparison", "Social", and "Compliance" sit alongside it in the footer component and were previously `<h4>` too. 
 
 ## Index
 
@@ -94,31 +87,6 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 
 > Note: redirected to [https://www.ey.com/en_us/alumni/yogi-goel-tech-teamwork-and-triumphs](https://www.ey.com/en_us/alumni/yogi-goel-tech-teamwork-and-triumphs)
 
-**Scores —** Mobile: Perf 26 / A11y 95 / BP 81 / SEO 100  •  Desktop: Perf 35 / A11y 90 / BP 81 / SEO 92
-
-**Accessibility**
-
-- **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
-- **Heading order**
-  - **Heading skips (1).** Change each heading's Framer **Tag** to the recommended level.
-    - **h1→h5** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "In brief"
-- **Elements with visible text labels do not have matching accessible names.** — An aria-label conflicts with the visible button/link text. Audit aria-labels added during the recent ARIA pass and either remove them or rewrite so the visible text appears at the start.
-
-**SEO**
-
-- **Anchors without href** — found 7 `<a>` element(s) with no href in the rendered HTML.
-  - **Fix in Framer:** for each — Properties panel → Link field → set a real URL or page reference. Avoid driving navigation via Interactions only.
-
-**Best Practices**
-
-- **LCP request discovery** — Place hero image as a top-level Image element on the canvas so Framer's heuristic marks it as eager.
-- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 15 KiB)*
-
-**Other (review manually)**
-
-- `[role]`s are not contained by their required parent element
-
 ---
 
 ### Book a Demo of Maxima | AI Accounting Automation
@@ -131,19 +99,13 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Multiple `<h1>` elements (2).** A page should have exactly one. Hero may be duplicated for mobile/desktop variants.
+  - **Multiple** `<h1>` **elements (2)** duplicated due to mobile/desktop variants.
     - h1: "Transform your accounting operations with AI agents"
     - h1: "Transform your accounting operations with AI agents"
     - **Fix:** keep only the visible hero h1; change duplicates' Tag to `<p>` (or consolidate variants).
-  - **Heading skips (1).** Change each heading's Framer **Tag** to the recommended level.
-    - **h1→h4** (1× on this page) — change Tag → `<h2>`:
-      - "Close faster with confidence"
-
-**Best Practices**
-
-- **LCP request discovery** — Place hero image as a top-level Image element on the canvas so Framer's heuristic marks it as eager.
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
-- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 395 KiB)*
+  - **Fixed Heading skips**
+    - **h1→h4** — changed Tag → `<h2>`:
+      - "Close faster with confidence" and similar bullet points
 
 ---
 
@@ -156,16 +118,10 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 **Accessibility**
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
-- **Heading order**
-  - **Heading skips (1).** Change each heading's Framer **Tag** to the recommended level.
-    - **FAQ schema headings — h1→h4** (1× on this page) — fix in the FAQ schema block, change Tag → `<h2>`:
-      - "What are Cookies?"
+- **Suggested Heading order fixes**
+  - **In conent headings — h1→h4** on this page - fix by changing Tag → `<h2>`:
+    - "What are Cookies?"
 - **Touch targets do not have sufficient size or spacing.** — Increase target size to ≥24×24 CSS px or add padding/line-height.
-
-**Best Practices**
-
-- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 348 KiB)*
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
 
 ---
 
@@ -178,13 +134,6 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 **Accessibility**
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
-- **Heading order**
-  - ✅ Heading order: all skips on this page are resolved by the template-level fixes.
-
-**Best Practices**
-
-- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 134 KiB)*
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
 
 ---
 
@@ -197,14 +146,9 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 **Accessibility**
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
-- **Heading order**
-  - **Heading skips (1).** Change each heading's Framer **Tag** to the recommended level.
-    - **FAQ schema headings — h1→h4** (1× on this page) — fix in the FAQ schema block, change Tag → `<h2>`:
-      - "What is Personal Information?"
-
-**Best Practices**
-
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
+- **Suggested Heading order**
+  - **Inside content h1 jumping to h4**, change Tag → `<h2>`:
+    - "What is Personal Information?"
 
 ---
 
@@ -218,20 +162,10 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Multiple `<h1>` elements (2).** A page should have exactly one. Hero may be duplicated for mobile/desktop variants.
+  - **Multiple** `<h1>` **elements (2).** A page should have exactly one.
     - h1: "How SpotOn streamlined high volume cash complexity with Maxima"
     - h1: "About SpotOn"
-    - **Fix:** keep only the visible hero h1; change duplicates' Tag to `<p>` (or consolidate variants).
-- **Links / buttons without an accessible name** — 1 `<a>` element(s) on this page lack visible text and an `aria-label`.
-  - **Fix in Framer:** select each → Properties → Accessibility → set `aria-label` to a concise description of the destination or action. Most offenders are icon-only links in shared header/footer/CTA components — fix once at the component level to propagate.
-  - Example element attributes:
-    - `class="framer-text framer-styles-preset-1ue32gk" data-styles-preset="ZglCJHLIv" href="https://www.spoton.com" target="_b…`
-
-**Best Practices**
-
-- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 348 KiB)*
-- **Uses third-party cookies** — Project Settings → Custom Code → audit and remove/defer non-essential third-party scripts. *(LH: 5 cookies found)*
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
+    - **Suggested Fix:** Keep the heading inside content ("About SpotOn") to h2
 
 ---
 
@@ -246,11 +180,11 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
   - **Heading skips (2).** Change each heading's Framer **Tag** to the recommended level.
-    - **FAQ schema headings — h1→h3** (1× on this page) — fix in the FAQ schema block, change Tag → `<h2>`:
-      - "What is a journal entry in accounting?"
-    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
-      - "Example 1: unbilled revenue accrual with reversal"
-- **Fixed Tables without** `<th>` **headers** — 7 table(s) on page; cells without headers detected.
+    - **Fixed FAQ schema headings — h1→h3**. Fix applied in the FAQ schema block, Tag → `<h2>`:
+      - "What is a journal entry in accounting?" and other FAQ questions
+  - **Suggested fix: h2→h4**. Change Tag → `<h3>` inside content:
+    - "Example 1: unbilled revenue accrual with reversal"
+- **Fixed Tables without** `<th>` **headers** — 7 table(s) on page;
   - Table 1: 0 `<th>` / 24 `<td>`
   - Table 2: 0 `<th>` / 27 `<td>`
   - Table 3: 0 `<th>` / 12 `<td>`
@@ -258,10 +192,6 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
   - Table 5: 0 `<th>` / 12 `<td>`
   - Table 6: 0 `<th>` / 12 `<td>`
   - Table 7: 0 `<th>` / 48 `<td>`
-
-**Best Practices**
-
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
 
 ---
 
@@ -275,22 +205,16 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
 - **Heading order**
-  - **Multiple `<h1>` elements (2).** A page should have exactly one. Hero may be duplicated for mobile/desktop variants.
+  - **Fixed Multiple** `<h1>` **elements (2)**
     - h1: "Work at Maxima"
     - h1: "Join us to tackle a decades-old problem and leverage LLMs and agents to eliminat…"
-    - **Fix:** keep only the visible hero h1; change duplicates' Tag to `<p>` (or consolidate variants).
-  - **Heading skips (3).** Change each heading's Framer **Tag** to the recommended level.
-    - **h1→h3** (1× on this page) — change Tag → `<h2>`:
+    - **Fixed:** kept only "Work at Maxima" as h1; changed duplicates Tag to `<p>`
+  - **Fixed Heading skips (3).**
+    - **h1→h3** - changed Tag → `<h2>`:
       - "Closing the books is one of enterprise’s hardest problems—billions of transactio…"
-    - **h2→h4** (2× on this page) — change Tag → `<h3>`:
+    - **h2→h4** - changed Tag → `<h3>`:
       - "Equity and top of market salary"
       - "Engineering and Product"
-
-**Best Practices**
-
-- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 519 KiB)*
-- **LCP request discovery** — Place hero image as a top-level Image element on the canvas so Framer's heuristic marks it as eager.
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
 
 ---
 
@@ -303,22 +227,16 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 **Accessibility**
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
-- **Heading order**
-  - **Heading skips (5).** Change each heading's Framer **Tag** to the recommended level.
-    - **FAQ schema headings — h2→h4** (1× on this page) — fix in the FAQ schema block, change Tag → `<h3>`:
-      - "How does Maxima define customer data?"
-    - **h2→h4** (4× on this page) — change Tag → `<h3>`:
+- **Fixed Heading order**
+  - **Heading skips (5).**
+    - **FAQ headings — h2→h4**, changed Tag → `<h3>`:
+      - "How does Maxima define customer data?" and similar questions
+    - **h2→h4**, changed Tag → `<h3>`:
       - "Data segregation"
       - "Zero model training"
       - "Dedicated security leadership"
       - "Nothing posts without approval"
-- **Add `<main>` landmark** — confirmed missing in HTML. Top-level content frame → Properties → Accessibility → Tag → `Main`.
-
-**Best Practices**
-
-- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 348 KiB)*
-- **LCP request discovery** — Place hero image as a top-level Image element on the canvas so Framer's heuristic marks it as eager.
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
+- **Add** `<main>` **landmark** as mentioned in [https://docs.google.com/document/d/1Q6-2iGHJg-Bl9pKlnlKLI8OhM9YCoS_Ao2Ev9H5ENKY/edit?tab=t.nubzrmnxq7qt#heading=h.bc8x0fx0r9kd](https://docs.google.com/document/d/1Q6-2iGHJg-Bl9pKlnlKLI8OhM9YCoS_Ao2Ev9H5ENKY/edit?tab=t.nubzrmnxq7qt#heading=h.bc8x0fx0r9kd)
 
 ---
 
@@ -331,17 +249,11 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 **Accessibility**
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
-- **Heading order**
-  - **Multiple `<h1>` elements (2).** A page should have exactly one. Hero may be duplicated for mobile/desktop variants.
+- **Suggested Heading order**
+  - **Multiple** `<h1>` **elements (2).**
     - h1: "Why BlackLine's former CMO is investing in Maxima"
     - h1: "About Andres"
-    - **Fix:** keep only the visible hero h1; change duplicates' Tag to `<p>` (or consolidate variants).
-
-**Best Practices**
-
-- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 348 KiB)*
-- **Uses third-party cookies** — Project Settings → Custom Code → audit and remove/defer non-essential third-party scripts. *(LH: 5 cookies found)*
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
+    - **Fix:** keep only the visible hero h1; change duplicates' Tag to `<p>`
 
 ---
 
@@ -354,18 +266,11 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 **Accessibility**
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
-- **Heading order**
-  - **Heading skips (2).** Change each heading's Framer **Tag** to the recommended level.
-    - **h2→h4** (2× on this page) — change Tag → `<h3>`:
-      - "Legacy systems"
-      - "Transaction-level foundation"
-- **Add `<main>` landmark** — confirmed missing in HTML. Top-level content frame → Properties → Accessibility → Tag → `Main`.
-
-**Best Practices**
-
-- **LCP request discovery** — Place hero image as a top-level Image element on the canvas so Framer's heuristic marks it as eager.
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
-- **Improve image delivery** — Confirm hero/large images are top-level Image elements (not nested in Smart Components, code components, or rich text). Upload at sensible source dimensions. *(LH: Est savings of 408 KiB)*
+- **Heading skips (2).**
+  - **h2→h4**, changed Tag → `<h3>`:
+    - "Legacy systems"
+    - "Transaction-level foundation"
+- **Add** `<main>` **landmark** as mentioned in [https://docs.google.com/document/d/1Q6-2iGHJg-Bl9pKlnlKLI8OhM9YCoS_Ao2Ev9H5ENKY/edit?tab=t.nubzrmnxq7qt#heading=h.bc8x0fx0r9kd](https://docs.google.com/document/d/1Q6-2iGHJg-Bl9pKlnlKLI8OhM9YCoS_Ao2Ev9H5ENKY/edit?tab=t.nubzrmnxq7qt#heading=h.bc8x0fx0r9kd)
 
 ---
 
@@ -378,18 +283,13 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 **Accessibility**
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
-- **Heading order**
-  - **Heading skips (1).** Change each heading's Framer **Tag** to the recommended level.
-    - **FAQ schema headings — h1→h3** (1× on this page) — fix in the FAQ schema block, change Tag → `<h2>`:
-      - "What is the best bank reconciliation software?"
-
-**Best Practices**
-
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
+- **Heading skips (1)**.
+  - **Fixed FAQ schema headings — h1→h3**. Fixed in the FAQ schema block, changed Tag → `<h2>`:
+    - "What is the best bank reconciliation software?" and other questions
 
 ---
 
-### Maxima.ai — Agentic AI Accounting for Modern Finance Teams
+### (Pending) Maxima.ai — Agentic AI Accounting for Modern Finance Teams
 
 **URL:** [https://www.maxima.ai/articles/how-rewst-automated-revenue-recognition-and-prepaids-with-maxima](https://www.maxima.ai/articles/how-rewst-automated-revenue-recognition-and-prepaids-with-maxima)
 
@@ -795,18 +695,18 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 **Accessibility**
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
-- **Heading order**
-  - **Heading skips (13).** Change each heading's Framer **Tag** to the recommended level.
-    - **FAQ schema headings — h2→h4** (1× on this page) — fix in the FAQ schema block, change Tag → `<h3>`:
-      - "Why should I choose Maxima over BlackLine or Floqast?"
-    - **h1→h6** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Agent Prepared"
-    - **h2→h6** (11× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "No-code logic"
-      - "Materiality and policy"
-      - "Continuous matching"
-      - "Real-time monitoring"
-      - "Daily visibility"
+- **Fixed Heading skips (13).** Change each heading's Framer **Tag** to the recommended level.
+  - **FAQ schema headings —h2→h4**
+    - "Why should I choose Maxima over BlackLine or Floqast?" and other questions
+  - **h1→h6** (1× on this page) 
+    - "Agent Prepared" and more sub titles
+  - **h2→h6** (11× on this page)
+    - "No-code logic"
+    - "Materiality and policy"
+    - "Continuous matching"
+    - "Real-time monitoring"
+    - "Daily visibility"
+    - and other points in similar blocks
 
 **Best Practices**
 
@@ -825,11 +725,8 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 **Accessibility**
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
-- **Heading order**
-  - **Heading skips (14).** Change each heading's Framer **Tag** to the recommended level.
-    - **h4→h6** (14× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Featured"
-      - "Customer stories"
+- **Fixed Heading skips (14).**
+  - **h4→h6:** "Featured", "Customer stories" and other tags on blog card
 
 **Best Practices**
 
@@ -848,19 +745,14 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 **Accessibility**
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
-- **Heading order**
-  - **Heading skips (11).** Change each heading's Framer **Tag** to the recommended level.
-    - **h1→h6** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Customer stories"
-    - **h3→h6** (3× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "Customer stories"
-    - **h2→h4** (1× on this page) — change Tag → `<h3>`:
-      - "Yogi Goel, founder of Maxima, Live on TBPN"
-    - **h2→h6** (1× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "press release"
-    - **h4→h6** (5× on this page) — change Tag → `<p>` (these are eyebrow/decorative labels, not headings):
-      - "press release"
-- **Add `<main>` landmark** — confirmed missing in HTML. Top-level content frame → Properties → Accessibility → Tag → `Main`.
+- **Fixed Heading skips (11).** Change each heading's Framer **Tag** to the recommended level.
+  - **h1→h6** — changed Tag → `<p>`
+    - "Customer stories"
+  - **h2→h4** - changed Tag → `<h3>`:
+    - "Yogi Goel, founder of Maxima, Live on TBPN" and similar news cards
+  - **h2→h6 -** changed Tag → `<p>`
+    - "press release"
+- **Add** `<main>` **landmark** mentioned in [https://docs.google.com/document/d/1Q6-2iGHJg-Bl9pKlnlKLI8OhM9YCoS_Ao2Ev9H5ENKY/edit?tab=t.nubzrmnxq7qt#heading=h.bc8x0fx0r9kd](https://docs.google.com/document/d/1Q6-2iGHJg-Bl9pKlnlKLI8OhM9YCoS_Ao2Ev9H5ENKY/edit?tab=t.nubzrmnxq7qt#heading=h.bc8x0fx0r9kd)
 
 **Best Practices**
 
@@ -879,7 +771,7 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 **Accessibility**
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
-- **Heading order**
+- **Suggested Heading order**
   - **Multiple `<h1>` elements (2).** A page should have exactly one. Hero may be duplicated for mobile/desktop variants.
     - h1: "How Gorgias automated reconciliation and journal prep with Maxima"
     - h1: "About Gorgias"
@@ -905,10 +797,9 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 **Accessibility**
 
 - **Background and foreground colors do not have a sufficient contrast ratio.** — Brand-color decision required (see §4.1 of remediation plan).
-- **Heading order**
-  - **Heading skips (1).** Change each heading's Framer **Tag** to the recommended level.
-    - **h1→h4** (1× on this page) — change Tag → `<h2>`:
-      - "Your use of the sites"
+- **Suggested Heading order**
+  - **h1→h4** (1× on this page) — change Tag → `<h2>`:
+    - "Your use of the sites"
 - **Touch targets do not have sufficient size or spacing.** — Increase target size to ≥24×24 CSS px or add padding/line-height.
 
 **Best Practices**
@@ -922,23 +813,5 @@ These resolve the recurring **h2→h6**, **h4→h6**, and **h2→h4 ("Platform")
 
 **URL:** [https://www.maxima.ai/articles/reuters-exclusive-maxima](https://www.maxima.ai/articles/reuters-exclusive-maxima)
 
-> ⚠️ HTML fetch returned HTTP 401. Drill-down skipped.
-
-**Scores —** Mobile: Perf — / A11y 94 / BP 92 / SEO 82  •  Desktop: Perf — / A11y 94 / BP 92 / SEO 82
-
-**Accessibility**
-
-- **Document does not have a main landmark.** — Page is missing a `<main>` landmark. Top-level content frame → Properties → Accessibility → Tag → Main.
-
-**SEO**
-
-- **Page lacks the HTML doctype, thus triggering quirks-mode** — Investigate page configuration — likely a redirect/custom-code page rather than normal Framer page.
-- **Document does not have a meta description** — CMS entry → SEO section → Description (~150-160 chars).
-- **Page has unsuccessful HTTP status code** — Page returns non-2xx. Check publish state, redirects, and CMS entry status. *(LH: 401)*
-
-**Best Practices**
-
-- **Browser errors were logged to the console** — Open DevTools Console → triage user-script errors (HubSpot, custom code components). framer.com errors are out of scope.
-
----
+> Redirected to: [https://www.reuters.com/business/ai-accounting-startup-maxima-raises-41-million-kleiner-perkins-backed-round-2025-11-18/](https://www.reuters.com/business/ai-accounting-startup-maxima-raises-41-million-kleiner-perkins-backed-round-2025-11-18/)
 
